@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import React from 'react';
 import { Route, Routes, Link } from "react-router-dom";
 import Home from './Home';
@@ -18,6 +18,7 @@ class App extends React.Component {
         </div>
         <Routes>
           <Route exact path="/" element={<Home/>} />
+          <Route exact path="/home" element={<Home/>} />
         </Routes>
       </div>
     );
