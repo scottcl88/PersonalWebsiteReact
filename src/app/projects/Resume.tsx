@@ -1,9 +1,8 @@
-import './App.scss';
 import React from 'react';
-// import target01 from "./assets/images/Profile.png";
-const target01 = require("./assets/images/001-target.svg").default;
+const target01 = require("../../assets/images/001-target.svg").default;
 
-class Home extends React.Component {
+
+class Projects extends React.Component {
     render() {
         return (
             <div className="Home">
@@ -171,4 +170,4 @@ class Home extends React.Component {
 
 }
 
-export default Home;
+export default Projects;
