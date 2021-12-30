@@ -1,5 +1,4 @@
 import React from 'react';
-const target01 = require("../../assets/images/001-target.svg").default;
 
 class About extends React.Component {
     render() {

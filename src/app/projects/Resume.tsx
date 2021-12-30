@@ -1,6 +1,4 @@
 import React from 'react';
-const target01 = require("../../assets/images/001-target.svg").default;
-
 
 class Projects extends React.Component {
     render() {
@@ -88,7 +86,7 @@ class Projects extends React.Component {
                         <div className="row">
                             <div className="media service-card col-lg-6">
                                 <div className="service-icon">
-                                    <img src={target01} alt="target" />
+                                    <img alt="target" />
                                 </div>
                                 <div className="media-body">
                                     <h5 className="service-title">web designing</h5>
