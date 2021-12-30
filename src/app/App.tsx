@@ -5,23 +5,26 @@ import Home from './home/Home';
 import About from './about/About';
 import Header from './shared/Header';
 import bootstrap from 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 import LightMode from './shared/LightMode';
 import Footer from './shared/Footer';
+import '../site';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
         <Header />
-        <div style={{ marginTop: "50px" }}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </div>
+        <main role="main">
+          <div style={{ marginTop: "50px" }}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </div>
+        </main>
         <Footer />
       </div>
     );
