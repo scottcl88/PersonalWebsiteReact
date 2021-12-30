@@ -9,7 +9,7 @@ import bootstrap from 'bootstrap';
 import { Container } from 'react-bootstrap';
 import LightMode from './shared/LightMode';
 import Footer from './shared/Footer';
-import '../site';
+// import '../site';
 
 class App extends React.Component {
   render() {
