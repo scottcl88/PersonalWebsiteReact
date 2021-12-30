@@ -8,22 +8,21 @@ import bootstrap from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 import LightMode from './shared/LightMode';
+import Footer from './shared/Footer';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Container>
-          <Header />
-          <LightMode />
-          <div style={{ marginTop: "50px" }}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/about" element={<About />} />
-            </Routes>
-          </div>
-        </Container>
+        <Header />
+        <div style={{ marginTop: "50px" }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </div>
+        <Footer />
       </div>
     );
   }
