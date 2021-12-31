@@ -14,6 +14,9 @@ header{
 .bg-primary {
   background-color: #259bd1 !important;
 }
+.portfolio .portfolio-item .portfolio-item-caption {
+  background-color: #259bd13d;
+}
 .pb-25,
 .py-25 {
   padding-bottom: 25rem !important;
@@ -10239,7 +10242,7 @@ h3 {
   left: 0;
   transition: all 0.2s ease-in-out;
   opacity: 0;
-  background-color: rgba(26, 188, 156, 0.9);
+  // background-color: #1ABC9C;
 }
 .portfolio .portfolio-item .portfolio-item-caption:hover {
   opacity: 1;

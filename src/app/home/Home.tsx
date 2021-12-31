@@ -5,7 +5,7 @@ class Home extends React.Component {
     render() {
         return (
             <div className="home">
-                <header className="masthead bg-primary text-white text-center">
+                <header className="masthead bg-primary text-white text-center" id="page-top">
                     <div className="container d-flex align-items-center flex-column">
                         <img className="masthead-avatar mb-5" src={require("../../assets/img/ProfilePic2.png")} alt="" />
                         <h1 className="masthead-heading text-uppercase mb-0">Scott Lewis</h1>
@@ -14,7 +14,7 @@ class Home extends React.Component {
                             <div className="divider-custom-icon"><i className="fas fa-star"></i></div>
                             <div className="divider-custom-line"></div>
                         </div>
-                        <p className="masthead-subheading font-weight-light mb-0">Full Stack Developer</p>
+                        <p className="masthead-subheading font-weight-light mb-0">Senior Full Stack Developer</p>
                     </div>
                 </header>
                 <section className="page-section portfolio" id="portfolio">
@@ -29,54 +29,54 @@ class Home extends React.Component {
                             <div className="col-md-6 col-lg-4 mb-5">
                                 <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
                                     <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                        <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
+                                        <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                     </div>
-                                    <img className="img-fluid" src={require("../../assets/img/portfolio/cabin.png").default} alt="" />
+                                    <img className="img-fluid" style={{ marginLeft: "20%" }} src={require("../../assets/img/portfolio/surf_n_eat.png")} alt="" />
                                 </div>
                                 <h5 className="text-center mb-0">Surf-N-Eat</h5>
                             </div>
                             <div className="col-md-6 col-lg-4 mb-5">
                                 <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
                                     <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                        <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
+                                        <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                     </div>
-                                    <img className="img-fluid" src="assets/img/portfolio/cake.png" alt="" />
+                                    <img className="img-fluid" src={require("../../assets/img/portfolio/magicMirrorLogo.png")} alt="" />
                                 </div>
-                                <h5 className="text-center mb-0">Benji World</h5>
+                                <h5 className="text-center mb-0">MMM-DynamicWeather</h5>
                             </div>
                             <div className="col-md-6 col-lg-4 mb-5">
                                 <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
                                     <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                        <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
+                                        <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                     </div>
-                                    <img className="img-fluid" src="assets/img/portfolio/circus.png" alt="" />
+                                    <img className="img-fluid" style={{ height: "100px", marginLeft: "28%" }} src={require("../../assets/img/logo.svg").default} alt="" />
                                 </div>
-                                <h5 className="text-center mb-0">Recipe Lewis</h5>
+                                <h5 className="text-center mb-0">Portfolio</h5>
                             </div>
                             <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
                                 <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
                                     <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                        <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
+                                        <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                     </div>
-                                    <img className="img-fluid" src="assets/img/portfolio/game.png" alt="" />
+                                    <i className="fas fa-paw" style={{ fontSize: "100px", marginLeft: "35%" }}></i>
                                 </div>
-                                <h5 className="text-center mb-0">MMM-DynamicWeather</h5>
+                                <h5 className="text-center mb-0">Benji World</h5>
                             </div>
                             <div className="col-md-6 col-lg-4 mb-5 mb-md-0">
                                 <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
                                     <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                        <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
+                                        <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                     </div>
-                                    <img className="img-fluid" src="assets/img/portfolio/safe.png" alt="" />
+                                    <i className="fas fa-book" style={{ fontSize: "100px", marginLeft: "35%" }}></i>
                                 </div>
-                                <h5 className="text-center mb-0">Profile Website</h5>
+                                <h5 className="text-center mb-0">Recipe Lewis</h5>
                             </div>
                             <div className="col-md-6 col-lg-4">
                                 <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
                                     <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                        <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
+                                        <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                     </div>
-                                    <img className="img-fluid" src="assets/img/portfolio/submarine.png" alt="" />
+                                    <img className="img-fluid" style={{ marginLeft: "33%" }} src={require("../../assets/img/portfolio/asteroid.png")} alt="" />
                                 </div>
                                 <h5 className="text-center mb-0">Asteroid Collector</h5>
                             </div>
@@ -96,7 +96,7 @@ class Home extends React.Component {
                         </div>
                         <div className="text-center mt-4">
                             <a className="btn btn-xl btn-outline-light" target="_blank" href="~/Public_SCLewis_Resume.pdf">
-                                <i className="fas fa-download mr-2"></i>
+                                <i className="fas fa-file-alt mr-2"></i>
                                 Resume
                             </a>
                         </div>
