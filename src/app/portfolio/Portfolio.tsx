@@ -1,23 +1,10 @@
 import React from 'react';
-import '../../site';
 
-class Home extends React.Component {
+class Portfolio extends React.Component {
     render() {
         return (
-            <div className="home">
-                <header className="masthead bg-primary text-white text-center" id="page-top">
-                    <div className="container d-flex align-items-center flex-column">
-                        <img className="masthead-avatar mb-5" src={require("../../assets/img/ProfilePic2.png")} alt="" />
-                        <h1 className="masthead-heading text-uppercase mb-0">Scott Lewis</h1>
-                        <div className="divider-custom divider-light">
-                            <div className="divider-custom-line"></div>
-                            <div className="divider-custom-icon"><i className="fas fa-star"></i></div>
-                            <div className="divider-custom-line"></div>
-                        </div>
-                        <p className="masthead-subheading font-weight-light mb-0">Senior Full Stack Developer</p>
-                    </div>
-                </header>
-                <section className="page-section portfolio" id="portfolio">
+            <div className="resume">
+               <section className="page-section portfolio" id="portfolio">
                     <div className="container">
                         <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
                         <div className="divider-custom">
@@ -83,35 +70,6 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </section>
-                <section className="page-section bg-primary text-white mb-0 pb-25" id="about">
-                    <div className="container">
-                        <h2 className="page-section-heading text-center text-uppercase text-white">About</h2>
-                        <div className="divider-custom divider-light">
-                            <div className="divider-custom-line"></div>
-                            <div className="divider-custom-icon"><i className="fas fa-star"></i></div>
-                            <div className="divider-custom-line"></div>
-                        </div>
-                        <div className="row justify-content-center text-white">
-                            <div className="col-auto"><p className="lead">Hello, I am Scott Lewis.
-                                I am a senior full stack developer with 6 years of professional experience, including team leadership and a variety of industries from small to large businesses and teams.
-                                I have a wide range of front-end and back-end skills including C#, SQL, Angular, React and more. I enjoy taking on challenges and embracing changes, and will deliver quality solutions to any system or product.</p></div>
-                        </div>
-                        <div className="text-center mt-4">
-                            <a className="btn btn-xl btn-outline-light mr-3" href="/PersonalWebsiteReact/about">
-                                <i className="fas fa-address-card mr-2"></i>
-                                More About Me
-                            </a>
-                            <a className="btn btn-xl btn-outline-light mr-3" href="/PersonalWebsiteReact/resume">
-                                <i className="fas fa-file-alt mr-2"></i>
-                                View Resume
-                            </a>
-                            <a className="btn btn-xl btn-outline-light" href="/PersonalWebsiteReact/contact">
-                                <i className="fas fa-paper-plane mr-2"></i>
-                                Contact Me
-                            </a>
-                        </div>
-                    </div>
-                </section>
             </div>
 
         );
@@ -119,4 +77,4 @@ class Home extends React.Component {
 
 }
 
-export default Home;
+export default Portfolio;

@@ -6,7 +6,24 @@ for details on configuring this project to bundle and minify static web assets. 
 #mainNav{
     background-color: #2c3e50 !important;
 }
-
+.contact{
+  margin-top: 8rem;
+}
+.resume{
+  margin-top: 8rem;
+}
+.about{
+  margin-top: 8rem;
+  p{
+    font-size: 18px;
+  }
+}
+.WordSection1{
+  margin-left: 35%;
+  margin-right: auto;
+  // margin-top: 8rem;
+  margin-bottom: 16rem;
+}
 header{
     // background-color: #1abc9c !important;
     background-color: #1a89bc !important;

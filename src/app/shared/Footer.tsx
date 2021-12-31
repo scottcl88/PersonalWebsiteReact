@@ -17,7 +17,7 @@ class Footer extends React.Component {
                             </div>
                             <div className="col-lg-4">
                                 <p className="mb-0">
-                                    Freelance Bootstrap theme created by&nbsp;
+                                    Freelancer Bootstrap theme created by&nbsp;
                                     <a href="http://startbootstrap.com" target="_blank">Start Bootstrap</a>
                                 </p>
                             </div>
