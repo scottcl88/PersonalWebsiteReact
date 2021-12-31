@@ -83,7 +83,7 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </section>
-                <section className="page-section bg-primary text-white mb-0" id="about">
+                <section className="page-section bg-primary text-white mb-0 pb-25" id="about">
                     <div className="container">
                         <h2 className="page-section-heading text-center text-uppercase text-white">About</h2>
                         <div className="divider-custom divider-light">
@@ -91,18 +91,18 @@ class Home extends React.Component {
                             <div className="divider-custom-icon"><i className="fas fa-star"></i></div>
                             <div className="divider-custom-line"></div>
                         </div>
-                        <div className="row justify-content-center">
-                            <div className="col-auto"><p className="lead">I am a full stack developer with professional experience for over 5 years.</p></div>
+                        <div className="row justify-content-center text-white">
+                            <div className="col-auto"><p className="lead">I am a full stack developer with professional experience of over 5 years.</p></div>
                         </div>
                         <div className="text-center mt-4">
                             <a className="btn btn-xl btn-outline-light" target="_blank" href="~/Public_SCLewis_Resume.pdf">
                                 <i className="fas fa-download mr-2"></i>
-                                View Resume
+                                Resume
                             </a>
                         </div>
                     </div>
                 </section>
-                <section className="page-section" id="contact">
+                {/* <section className="page-section" id="contact">
                     <div className="container">
                         <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
                         <div className="divider-custom">
@@ -148,7 +148,7 @@ class Home extends React.Component {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
             </div>
 
         );

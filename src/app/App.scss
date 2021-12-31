@@ -8,7 +8,15 @@ for details on configuring this project to bundle and minify static web assets. 
 }
 
 header{
-    background-color: #1abc9c !important;
+    // background-color: #1abc9c !important;
+    background-color: #1a89bc !important;
+}
+.bg-primary {
+  background-color: #259bd1 !important;
+}
+.pb-25,
+.py-25 {
+  padding-bottom: 25rem !important;
 }
 
 a.navbar-brand {
@@ -6153,9 +6161,6 @@ a.close.disabled {
   vertical-align: text-top !important;
 }
 
-.bg-primary {
-  background-color: #1abc9c !important;
-}
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
