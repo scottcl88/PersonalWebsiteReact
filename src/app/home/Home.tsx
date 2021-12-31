@@ -1,12 +1,14 @@
 import React from 'react';
+import '../../site';
+
 class Home extends React.Component {
     render() {
         return (
             <div className="home">
                 <header className="masthead bg-primary text-white text-center">
                     <div className="container d-flex align-items-center flex-column">
-                        <img className="masthead-avatar mb-5" src={require("../../assets/img/avataaars.svg").default} alt="" />
-                        <h1 className="masthead-heading text-uppercase mb-0">Scott C Lewis</h1>
+                        <img className="masthead-avatar mb-5" src={require("../../assets/img/ProfilePic2.png")} alt="" />
+                        <h1 className="masthead-heading text-uppercase mb-0">Scott Lewis</h1>
                         <div className="divider-custom divider-light">
                             <div className="divider-custom-line"></div>
                             <div className="divider-custom-icon"><i className="fas fa-star"></i></div>

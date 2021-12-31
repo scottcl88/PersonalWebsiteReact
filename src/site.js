@@ -3,7 +3,6 @@
     * Copyright 2013-2020 Start Bootstrap
     * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
     */
-import $ from 'jquery';
 import jQuery from 'jquery';
 
 (function($) {
@@ -39,12 +38,14 @@ import jQuery from 'jquery';
   });
 
   // Activate scrollspy to add active class to navbar items on scroll
-  $('body').scrollspy({
-    target: '#mainNav',
-    offset: 80
-  });
+  // $('body').scrollspy({
+  //   target: '#mainNav',
+  //   offset: 80
+  // });
 
   // Collapse Navbar
+  setTimeout(() => {
+    
   var navbarCollapse = function() {
     if ($("#mainNav").offset().top > 100) {
       $("#mainNav").addClass("navbar-shrink");
@@ -56,6 +57,7 @@ import jQuery from 'jquery';
   navbarCollapse();
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
+}, (500));
 
   // Floating label headings for the contact form
   $(function() {
