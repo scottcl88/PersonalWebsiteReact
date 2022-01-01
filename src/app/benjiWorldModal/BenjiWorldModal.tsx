@@ -1,20 +1,14 @@
-import React, { useState } from 'react';
 import { Button, Col, Modal, Row } from 'react-bootstrap';
 import '../../site';
 
-function SurfNEatModal() {
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
+function BenjiWorldModal() {
     return (
-        <div className="surfNEatModal">
+        <div className="benjiWorldModal">
             <Modal.Header closeButton>
-                <Modal.Title>Surf-N-Eat</Modal.Title>
+                <Modal.Title>Benji World</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <img className="mb-3" style={{ width: "100%" }} src={require("../../assets/img/portfolio/surf_n_eat2.png")} />
+                <i className="fas fa-paw" style={{ fontSize: "100px", margin: "0 auto", width: "100%" }}></i>
                 <Row>
                     <Col>
                         <h6>Technologies</h6><p>.Net 6, Angular, Ionic Capacitor v3, AWS, Azure</p>
@@ -54,9 +48,7 @@ function SurfNEatModal() {
                 </Row>
             </Modal.Body>
         </div>
-
     );
-
 }
 
-export default SurfNEatModal;
+export default BenjiWorldModal;

@@ -1,20 +1,14 @@
-import React, { useState } from 'react';
 import { Button, Col, Modal, Row } from 'react-bootstrap';
 import '../../site';
 
-function SurfNEatModal() {
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
+function PortfolioModal() {
     return (
-        <div className="surfNEatModal">
+        <div className="portfolioModal">
             <Modal.Header closeButton>
-                <Modal.Title>Surf-N-Eat</Modal.Title>
+                <Modal.Title>Portfolio</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <img className="mb-3" style={{ width: "100%" }} src={require("../../assets/img/portfolio/surf_n_eat2.png")} />
+                <img className="mb-3" style={{ width: "100%" }} src={require("../../assets/img/portfolio/logo.svg").default} />
                 <Row>
                     <Col>
                         <h6>Technologies</h6><p>.Net 6, Angular, Ionic Capacitor v3, AWS, Azure</p>
@@ -27,7 +21,7 @@ function SurfNEatModal() {
                 </Row>
                 <Row>
                     <Col>
-                        <h6>Website</h6><p><a href="https://www.surf-n-eat.com" target="_blank">surf-n-eat.com</a></p>
+                        <h6>Website</h6><p><a href="https://www.scottcl.com" target="_blank">scottcl.com</a></p>
                     </Col>
                 </Row>
                 <Row>
@@ -35,12 +29,6 @@ function SurfNEatModal() {
                         <Row>
                             <Col md="4">
                                 <h6>API</h6><p><a href="https://github.com/scottcl88/FoodAPI" target="_blank">github.com/scottcl88/FoodAPI</a></p>
-                            </Col>
-                            <Col md="4">
-                                <h6>App</h6><p><a href="https://github.com/scottcl88/food-app" target="_blank">github.com/scottcl88/food-app</a></p>
-                            </Col>
-                            <Col md="4">
-                                <h6>Landing Website</h6><p><a href="https://github.com/scottcl88/food-landing" target="_blank">github.com/scottcl88/food-landing</a></p>
                             </Col>
                         </Row>
                     </Col>
@@ -54,9 +42,7 @@ function SurfNEatModal() {
                 </Row>
             </Modal.Body>
         </div>
-
     );
-
 }
 
-export default SurfNEatModal;
+export default PortfolioModal;

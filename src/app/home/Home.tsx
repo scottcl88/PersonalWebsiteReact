@@ -1,12 +1,39 @@
 import React, { useState } from 'react';
 import { Button, Col, Modal, Row } from 'react-bootstrap';
 import '../../site';
+import AsteroidCollectorModal from '../asteroidCollectorModal/AsteroidCollectorModal';
+import BenjiWorldModal from '../benjiWorldModal/BenjiWorldModal';
+import DynamicWeatherModal from '../dynamicWeatherModal/DynamicWeatherModal';
+import PortfolioModal from '../portfolioModal/PortfolioModal';
+import RecipeLewisModal from '../recipeLewisModal/RecipeLewisModal';
+import SurfNEatModal from '../surfNEatModal/SurfNEatModal';
 
 function Home() {
-    const [show, setShow] = useState(false);
+    const [surfNEatShow, setSurfNEatShow] = useState(false);
+    const [dynamicWeatherShow, setDynamicWeatherShow] = useState(false);
+    const [portfolioShow, setPortfolioShow] = useState(false);
+    const [benjiWorldShow, setBenjiWorldShow] = useState(false);
+    const [recipeLewisShow, setRecipeLewisShow] = useState(false);
+    const [asteroidCollectorShow, setAsteroidCollectorShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const surfNEatClose = () => setSurfNEatShow(false);
+    const surfNEatDoShow = () => setSurfNEatShow(true);
+
+    const dynamicWeatherClose = () => setDynamicWeatherShow(false);
+    const dynamicWeatherDoShow = () => setDynamicWeatherShow(true);
+
+    const portfolioClose = () => setPortfolioShow(false);
+    const portfolioDoShow = () => setPortfolioShow(true);
+
+    const benjiWorldClose = () => setBenjiWorldShow(false);
+    const benjiWorldDoShow = () => setBenjiWorldShow(true);
+
+    const recipeLewisClose = () => setRecipeLewisShow(false);
+    const recipeLewisDoShow = () => setRecipeLewisShow(true);
+
+    const asteroidCollectorClose = () => setAsteroidCollectorShow(false);
+    const asteroidCollectorDoShow = () => setAsteroidCollectorShow(true);
+    
 
     return (
         <div className="home">
@@ -32,7 +59,7 @@ function Home() {
                     </div>
                     <div className="row justify-content-center">
                         <div className="col-md-6 col-lg-4 mb-5">
-                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1" onClick={handleShow}>
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1" onClick={surfNEatDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
@@ -41,7 +68,7 @@ function Home() {
                             <h5 className="text-center mb-0">Surf-N-Eat</h5>
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5">
-                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2" onClick={dynamicWeatherDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
@@ -50,16 +77,16 @@ function Home() {
                             <h5 className="text-center mb-0">MMM-DynamicWeather</h5>
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5">
-                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3" onClick={portfolioDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ height: "100px", marginLeft: "28%" }} src={require("../../assets/img/logo.svg").default} alt="" />
+                                <img className="img-fluid" style={{ height: "100px", marginLeft: "28%" }} src={require("../../assets/img/portfolio/logo.svg").default} alt="" />
                             </div>
                             <h5 className="text-center mb-0">Portfolio</h5>
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4" onClick={benjiWorldDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
@@ -68,7 +95,7 @@ function Home() {
                             <h5 className="text-center mb-0">Benji World</h5>
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5 mb-md-0">
-                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={recipeLewisDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
@@ -77,7 +104,7 @@ function Home() {
                             <h5 className="text-center mb-0">Recipe Lewis</h5>
                         </div>
                         <div className="col-md-6 col-lg-4">
-                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6" onClick={asteroidCollectorDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
@@ -117,50 +144,23 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <Modal show={show} onHide={handleClose} size="lg">
-                <Modal.Header closeButton>
-                    <Modal.Title>Surf-N-Eat</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <img className="mb-3" style={{ width: "100%" }} src={require("../../assets/img/portfolio/surf_n_eat2.png")} />
-                    <Row>
-                        <Col>
-                            <h6>Technologies</h6><p>.Net 6, Angular, Ionic Capacitor v3, AWS, Azure</p>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <h6>Created</h6><p>2021</p>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <h6>Website</h6><p><a href="https://www.surf-n-eat.com" target="_blank">surf-n-eat.com</a></p>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col><h6>Repository</h6>
-                            <Row>
-                                <Col md="4">
-                                    <h6>API</h6><p><a href="https://github.com/scottcl88/FoodAPI" target="_blank">github.com/scottcl88/FoodAPI</a></p>
-                                </Col>
-                                <Col md="4">
-                                    <h6>App</h6><p><a href="https://github.com/scottcl88/food-app" target="_blank">github.com/scottcl88/food-app</a></p>
-                                </Col>
-                                <Col md="4">
-                                    <h6>Landing Website</h6><p><a href="https://github.com/scottcl88/food-landing" target="_blank">github.com/scottcl88/food-landing</a></p>
-                                </Col>
-                            </Row>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col><h6>Description</h6>
-                            <p>
-                                Surf-N-Eat is a free app that uses your personal history, preferences and ratings to find the best place to eat! It even works with groups, no more hassle trying to coordinate group outings, just Surf n' Eat!
-                            </p>
-                        </Col>
-                    </Row>
-                </Modal.Body>
+            <Modal show={surfNEatShow} onHide={surfNEatClose} size="lg">
+                <SurfNEatModal></SurfNEatModal>
+            </Modal>
+            <Modal show={dynamicWeatherShow} onHide={dynamicWeatherClose} size="lg">
+                <DynamicWeatherModal></DynamicWeatherModal>
+            </Modal>
+            <Modal show={portfolioShow} onHide={portfolioClose} size="lg">
+                <PortfolioModal></PortfolioModal>
+            </Modal>
+            <Modal show={benjiWorldShow} onHide={benjiWorldClose} size="lg">
+                <BenjiWorldModal></BenjiWorldModal>
+            </Modal>
+            <Modal show={recipeLewisShow} onHide={recipeLewisClose} size="lg">
+                <RecipeLewisModal></RecipeLewisModal>
+            </Modal>
+            <Modal show={asteroidCollectorShow} onHide={asteroidCollectorClose} size="lg">
+                <AsteroidCollectorModal></AsteroidCollectorModal>
             </Modal>
         </div>
 
