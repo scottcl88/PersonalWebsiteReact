@@ -2,7 +2,7 @@
   "name": "PersonalWebsiteReact",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://scottcl88.github.io/PersonalWebsiteReact",
+  "homepage": "https://www.scottcl.com/PersonalWebsiteReact",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
