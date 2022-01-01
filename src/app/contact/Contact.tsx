@@ -61,12 +61,12 @@ class Contact extends React.Component {
                         </div>
                         <form onSubmit={this.submitForm} className="contact-form">
                             <div className="form-group form-group-name">
-                                <label htmlFor="name" className="sr-only">Name</label>
-                                <input type="text" name="name" id="name" className="form-control" placeholder="NAME" required value={this.state?.name} onChange={this.handleInputChange} />
+                                <label htmlFor="name" className="sr-only">Your Name</label>
+                                <input type="text" name="name" id="name" className="form-control" placeholder="YOUR NAME" required value={this.state?.name} onChange={this.handleInputChange} />
                             </div>
                             <div className="form-group form-group-email">
-                                <label htmlFor="email" className="sr-only">Email</label>
-                                <input type="email" name="email" id="email" className="form-control" placeholder="EMAIL" required value={this.state?.fromEmail} onChange={this.handleInputChange}/>
+                                <label htmlFor="email" className="sr-only">Your Email</label>
+                                <input type="email" name="email" id="email" className="form-control" placeholder="YOUR EMAIL" required value={this.state?.fromEmail} onChange={this.handleInputChange}/>
                             </div>
                             <div className="form-group form-group-subject">
                                 <label htmlFor="subject" className="sr-only">Subject</label>

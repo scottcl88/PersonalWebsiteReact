@@ -3,8 +3,41 @@ for details on configuring this project to bundle and minify static web assets. 
 
 // @charset "UTF-8";
 
-#mainNav{
-    background-color: #2c3e50 !important;
+#mainNav {
+  background-color: #2c3e50 !important;
+}
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 2rem 1rem;
+}
+
+.fade {
+  // transition: opacity 0.15s linear;
+
+  opacity: 1;
+  -webkit-transition: opacity 0.15s;
+  -moz-transition: opacity 0.15s;
+  transition: opacity 0.15s linear;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade {
+    transition: none;
+  }
+}
+.fade:not(.show) {
+  opacity: 0;
+}
+.btn-close {
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  padding: 0.25em;
+  color: #000;
+  background: transparent url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3E%3Cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3E%3C/svg%3E") 50%/1em auto no-repeat;
+  border: 0;
+  border-radius: 0.25rem;
+  opacity: .5;
 }
 .contact{
   margin-top: 8rem;
