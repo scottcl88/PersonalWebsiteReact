@@ -49,7 +49,7 @@ function Home() {
                     <p className="masthead-subheading font-weight-light mb-0">Senior Full Stack Developer</p>
                 </div>
             </header>
-            <section className="page-section portfolio" id="portfolio">
+            <section className="page-section portfolio-home" id="portfolio">
                 <div className="container">
                     <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
                     <div className="divider-custom">
