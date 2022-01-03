@@ -19,7 +19,16 @@ span:not(.dropup) > .caret:after {
   flex: 1 1 auto;
   padding: 2rem 1rem;
 }
-
+// primary blue
+// background-color: #1b6ec2;
+// border-color: #1861ac;
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: rgb(27, 110, 194);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(27, 110, 194, 0.25);
+}
 .fade {
   // transition: opacity 0.15s linear;
 
@@ -144,11 +153,6 @@ a:hover {
 }
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
   color: #61abff;
-}
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
 }
 
 .nav-pills .nav-link.active,
@@ -2293,13 +2297,6 @@ pre code {
   color: transparent;
   text-shadow: 0 0 0 #495057;
 }
-.form-control:focus {
-  color: #495057;
-  background-color: #fff;
-  border-color: #6bebd1;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(26, 188, 156, 0.25);
-}
 .form-control::-moz-placeholder {
   color: #6c757d;
   opacity: 1;
@@ -2781,13 +2778,13 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #1abc9c;
-  border-color: #1abc9c;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #159a80;
-  border-color: #148f77;
+  background-color: #0c3864;
+  border-color: #072747;
 }
 .btn-primary:focus,
 .btn-primary.focus {
