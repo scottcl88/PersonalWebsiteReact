@@ -53,7 +53,7 @@ span:not(.dropup) > .caret:after{
 .resume{
   margin-top: 8rem;
 }
-.portfolio{
+.portfolio:not(#portfolio-home){
   margin-top: 8rem;
   margin-bottom: 20rem;
 }
