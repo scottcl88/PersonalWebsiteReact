@@ -9,7 +9,6 @@ import bootstrap from 'bootstrap';
 import { Container } from 'react-bootstrap';
 import LightMode from './shared/LightMode';
 import Footer from './shared/Footer';
-import Projects from './portfolio/Portfolio';
 import Portfolio from './portfolio/Portfolio';
 import Resume from './resume/Resume';
 import Contact from './contact/Contact';
