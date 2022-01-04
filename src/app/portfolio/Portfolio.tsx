@@ -7,48 +7,56 @@ import PortfolioModal from '../portfolioModal/PortfolioModal';
 import RecipeLewisModal from '../recipeLewisModal/RecipeLewisModal';
 import SurfNEatModal from '../surfNEatModal/SurfNEatModal';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
-import BootstrapTable, { ColumnDescription } from 'react-bootstrap-table-next';
-// import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
-// import 'react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit.min.css';
-import ReactTable from 'react-table';
+import BootstrapTable from 'react-bootstrap-table-next';
 import axios from 'axios';
-
-// import BootstrapTable from 'react-bootstrap-table-next';
-// import paginationFactory from 'react-bootstrap-table2-paginator';
-// import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
-// const { SearchBar } = Search;
-// const defaultSorted = [{
-//     dataField: 'id',
-//     order: 'desc'
-//   }];
 
 function Portfolio() {
 
+    function experienceFormatter(cell: any, row: any) {
+        var cellNum = Number(cell);
+        if (!isNaN(cellNum)) {
+            if (cell == 0) {
+                return (
+                    <span>None</span>
+                );
+            } else if (cell < 1) {
+                return (
+                    <span>{cell * 12} months</span>
+                );
+            } else if (cell == 1) {
+                return (
+                    <span>{cell} year</span>
+                );
+            }
+        }
+        return (
+            <span>{cell} years</span>
+        );
+    }
 
-    // const skillsList: any[] = [
-    //     { skill: "Net", workType: "Professional", lastUsed: 2021, projects: "Surf-N-Eat" },
-    //     { skill: "Angular", workType: "Hobby", lastUsed: 2021, projects: "Surf-N-Eat" }
-    // ];
-    const defaultSorted = {
-        dataField: 'skill',
-        order: 'desc'
-    };
+
     const columns = [{
         dataField: 'skill',
         text: 'Skill',
-        sort: true
-    }, {
-        dataField: 'workType',
-        text: 'Work',
-        sort: true
+        sort: true,
+        headerClasses: "skillColumnHeader",
     }, {
         dataField: 'lastUsed',
-        text: 'Last Used',
-        sort: true
+        text: 'LastUsed',
+        sort: true,
+        headerClasses: "lastUsedColumnHeader",
     }, {
-        dataField: 'projects',
-        text: 'Projects',
-        sort: true
+        dataField: 'professionalExperience',
+        text: 'Professional Experience',
+        sort: true,
+        headerClasses: "professionalExperienceColumnHeader",
+        formatter: experienceFormatter
+    }, {
+        dataField: 'hobbyExperience',
+        text: 'Hobby Experience',
+        sort: true,
+        headerClasses: "hobbyExperienceColumnHeader",
+        formatter: experienceFormatter
     }];
 
     const [surfNEatShow, setSurfNEatShow] = useState(false);
@@ -92,16 +100,37 @@ function Portfolio() {
         });
     }
     const search = (ev: any) => {
-        // console.log("Search: ", ev.target.value);
         var searchStr = ev?.target?.value?.toLowerCase();
         if (searchStr) {
             var newList: any[] = originalSkillList.filter((val) => {
-                // console.log("Val: ", val, (val as any).skill?.toLowerCase())
                 var foundSkill = (val as any).skill?.toLowerCase().indexOf(searchStr) >= 0;
-                var foundWorkType = (val as any).workType?.toLowerCase().indexOf(searchStr) >= 0;
                 var foundLastUsed = (val as any).lastUsed?.toLowerCase().indexOf(searchStr) >= 0;
-                var foundProjects = (val as any).projects?.toLowerCase().indexOf(searchStr) >= 0;
-                return foundSkill || foundWorkType || foundLastUsed || foundProjects;
+
+                var hobbyExp = (val as any).hobbyExperience;
+                var foundHobbyExperience = false;
+                if (hobbyExp >= 1) {
+                    hobbyExp += " years";
+                } else if (hobbyExp > 0) {
+                    hobbyExp *= 12;
+                    hobbyExp += " months";
+                } else if (hobbyExp <= 0) {
+                    hobbyExp = "None";
+                }
+                foundHobbyExperience = hobbyExp?.toLowerCase().indexOf(searchStr) >= 0;
+
+                var professionalExp = (val as any).professionalExperience;
+                var foundProfessionalExperience = false;
+                if (professionalExp >= 1) {
+                    professionalExp += " years";
+                } else if (professionalExp > 0) {
+                    professionalExp *= 12;
+                    professionalExp += " months";
+                } else if (professionalExp <= 0) {
+                    professionalExp = "None";
+                }
+                foundProfessionalExperience = professionalExp?.toLowerCase().indexOf(searchStr) >= 0;
+
+                return foundSkill || foundLastUsed || foundProfessionalExperience || foundHobbyExperience;
             }
             );
             setSkillsList(newList as any);
