@@ -82,7 +82,7 @@ class Contact extends React.Component {
                                 <label htmlFor="message" className="sr-only">Message</label>
                                 <textarea name="message" id="message" className="form-control" placeholder="MESSAGE" rows={5} required value={this.state?.message} onChange={this.handleInputChange}></textarea>
                             </div>
-                            <button type="submit" className="btn btn-primary form-submit-btn" disabled={this.state.disableButton} >SEND MESSAGE</button>
+                            <button type="submit" className="btn btn-primary form-submit-btn" disabled={this.state.disableButton}><i className="fas fa-paper-plane mr-2"></i>SEND MESSAGE</button>
                         </form>
                     </section>
                     <Toast onClose={() => this.setState({ showErrorToast: false })} bg="danger" show={this.state.showErrorToast} delay={3000} autohide>
