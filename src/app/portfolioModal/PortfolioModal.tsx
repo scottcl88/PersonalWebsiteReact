@@ -8,10 +8,10 @@ function PortfolioModal() {
                 <Modal.Title>Portfolio</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <img className="mb-3" style={{ width: "100%" }} src={require("../../assets/img/portfolio/logo.svg").default} />
+                <img className="mb-3 modal-image" src={require("../../assets/img/portfolio/logo.svg").default} />
                 <Row>
                     <Col>
-                        <h6>Technologies</h6><p>.Net 6, Angular, Ionic Capacitor v3, AWS, Azure</p>
+                        <h6>Technologies</h6><p>React, AWS</p>
                     </Col>
                 </Row>
                 <Row>
@@ -27,8 +27,8 @@ function PortfolioModal() {
                 <Row>
                     <Col><h6>Repository</h6>
                         <Row>
-                            <Col md="4">
-                                <h6>API</h6><p><a href="https://github.com/scottcl88/FoodAPI" target="_blank">github.com/scottcl88/FoodAPI</a></p>
+                            <Col md="6">
+                                <p><a href="https://github.com/scottcl88/PersonalWebsiteReact" target="_blank">github.com/scottcl88/PersonalWebsiteReact</a></p>
                             </Col>
                         </Row>
                     </Col>
@@ -36,7 +36,7 @@ function PortfolioModal() {
                 <Row>
                     <Col><h6>Description</h6>
                         <p>
-                            Surf-N-Eat is a free app that uses your personal history, preferences and ratings to find the best place to eat! It even works with groups, no more hassle trying to coordinate group outings, just Surf n' Eat!
+                            This portfolio site built with React and deployed on AWS Amplify is used to share my projects and skills
                         </p>
                     </Col>
                 </Row>

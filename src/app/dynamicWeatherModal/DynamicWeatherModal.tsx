@@ -9,10 +9,10 @@ function DynamicWeatherModal() {
                 <Modal.Title>MMM-DynamicWeather</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <img className="mb-3" style={{ width: "100%" }} src={require("../../assets/img/portfolio/magicMirrorLogo.png")} />
+                <img className="mb-3 modal-image" src={require("../../assets/img/portfolio/magicMirrorLogo.png")} />
                 <Row>
                     <Col>
-                        <h6>Technologies</h6><p>.Net 6, Angular, Ionic Capacitor v3, AWS, Azure</p>
+                        <h6>Technologies</h6><p>Javascript, Typescript, NPM</p>
                     </Col>
                 </Row>
                 <Row>
@@ -21,21 +21,10 @@ function DynamicWeatherModal() {
                     </Col>
                 </Row>
                 <Row>
-                    <Col>
-                        <h6>Website</h6><p><a href="https://www.surf-n-eat.com" target="_blank">surf-n-eat.com</a></p>
-                    </Col>
-                </Row>
-                <Row>
                     <Col><h6>Repository</h6>
                         <Row>
-                            <Col md="4">
-                                <h6>API</h6><p><a href="https://github.com/scottcl88/FoodAPI" target="_blank">github.com/scottcl88/FoodAPI</a></p>
-                            </Col>
-                            <Col md="4">
-                                <h6>App</h6><p><a href="https://github.com/scottcl88/food-app" target="_blank">github.com/scottcl88/food-app</a></p>
-                            </Col>
-                            <Col md="4">
-                                <h6>Landing Website</h6><p><a href="https://github.com/scottcl88/food-landing" target="_blank">github.com/scottcl88/food-landing</a></p>
+                            <Col md="6">
+                                <p><a href="https://github.com/scottcl88/MMM-DynamicWeather" target="_blank">github.com/scottcl88/MMM-DynamicWeather</a></p>
                             </Col>
                         </Row>
                     </Col>
@@ -43,7 +32,7 @@ function DynamicWeatherModal() {
                 <Row>
                     <Col><h6>Description</h6>
                         <p>
-                            Surf-N-Eat is a free app that uses your personal history, preferences and ratings to find the best place to eat! It even works with groups, no more hassle trying to coordinate group outings, just Surf n' Eat!
+                            MMM-DynamicWeather is a heavily configurable MagicMirror Module to display different animations based on current weather and show customized event effects<a href="https://magicmirror.builders/" target="_blank"></a>
                         </p>
                     </Col>
                 </Row>

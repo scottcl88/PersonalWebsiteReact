@@ -8,41 +8,23 @@ function AsteroidCollectorModal() {
                 <Modal.Title>Asteroid Collector</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <img className="mb-3" style={{ width: "100%" }} src={require("../../assets/img/portfolio/asteroid.png")} />
+                <div style={{ width: "100%", margin: "0 auto" }}>
+                    <img className="mb-3" style={{ width: "150px", height: "150px", marginLeft: "40%" }} src={require("../../assets/img/portfolio/asteroid.png")} />
+                </div>
                 <Row>
                     <Col>
-                        <h6>Technologies</h6><p>.Net 6, Angular, Ionic Capacitor v3, AWS, Azure</p>
+                        <h6>Technologies</h6><p>Java</p>
                     </Col>
                 </Row>
                 <Row>
                     <Col>
-                        <h6>Created</h6><p>2021</p>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <h6>Website</h6><p><a href="https://www.surf-n-eat.com" target="_blank">surf-n-eat.com</a></p>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col><h6>Repository</h6>
-                        <Row>
-                            <Col md="4">
-                                <h6>API</h6><p><a href="https://github.com/scottcl88/FoodAPI" target="_blank">github.com/scottcl88/FoodAPI</a></p>
-                            </Col>
-                            <Col md="4">
-                                <h6>App</h6><p><a href="https://github.com/scottcl88/food-app" target="_blank">github.com/scottcl88/food-app</a></p>
-                            </Col>
-                            <Col md="4">
-                                <h6>Landing Website</h6><p><a href="https://github.com/scottcl88/food-landing" target="_blank">github.com/scottcl88/food-landing</a></p>
-                            </Col>
-                        </Row>
+                        <h6>Created</h6><p>2011</p>
                     </Col>
                 </Row>
                 <Row>
                     <Col><h6>Description</h6>
                         <p>
-                            Surf-N-Eat is a free app that uses your personal history, preferences and ratings to find the best place to eat! It even works with groups, no more hassle trying to coordinate group outings, just Surf n' Eat!
+                            Asteroid Collector is a simple 2D game I made in Java when I was first learning how to program and have since revisited it once with small changes.
                         </p>
                     </Col>
                 </Row>
