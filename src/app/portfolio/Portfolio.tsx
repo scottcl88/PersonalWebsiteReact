@@ -191,44 +191,11 @@ function Portfolio() {
                         <div className="divider-custom-icon"><i className="fas fa-star"></i></div>
                         <div className="divider-custom-line"></div>
                     </div>
-                    {/* <hr className="mt-5"></hr> */}
-                    {/* <ToolkitProvider
-                      keyField="id"
-                      bootstrap4
-                      data={ skillList }
-                      columns={ columns }
-                      search
-                    >
-                      {
-                        props => (
-                          <div>
-                            <div className="d-flex align-items-center">
-                              <p className="mb-2 mr-2">Search in table:</p>
-                              <SearchBar { ...props.searchProps } />
-                            </div>
-                            <BootstrapTable
-                              defaultSorted={ [{
-                                dataField: 'skill',
-                                order: 'desc'
-                              }] }
-                              { ...props.baseProps }
-                              wrapperClasses="table-responsive"
-                            />
-                          </div>
-                        )
-                      }
-                    </ToolkitProvider> */}
                     <div className="mt-2 mb-1">
                         <label htmlFor="search" className="sr-only">Search</label><i className="fas fa-search" style={{ color: "#9b9b9b", margin: "12px", position: "absolute" }}></i>
                         <input type="text" name="search" id="search" className="form-control" placeholder="Search" required style={{ paddingLeft: "30px" }} onChange={search} />
                     </div>
                     <BootstrapTable keyField='skill' data={skillList} columns={columns} id="skillTable" defaultSorted={[{ dataField: "skill", order: "asc" }]} />
-                    {/* <ReactTable
-                        data={skillList}
-                        filterable = {true}
-                        defaultPageSize ={10} 
-                        columns={columns}
-                      />   */}
                 </div>
             </section>
             <Modal show={surfNEatShow} onHide={surfNEatClose} size="lg">

@@ -20,7 +20,7 @@
     "sourceMap": true,
     "declaration": true,
     "noUnusedLocals": false,
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true
   },

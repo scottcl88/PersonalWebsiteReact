@@ -1,13 +1,14 @@
 import axios from 'axios';
 import React from 'react';
+import { Toast } from 'react-bootstrap';
 
 class Contact extends React.Component {
 
-    state: any = { email: "", name: "", subject: "", message: "" };
+    state: any = { showErrorToast: false, showSuccessToast: false, disableButton: false, email: "", name: "", subject: "", message: "" };
     constructor(props: any) {
         super(props);
         this.handleInputChange = this.handleInputChange.bind(this);
-      }
+    }
     handleInputChange(event: any) {
         const target = event.target;
         const value = target.type === "checkbox" ? target.checked : target.value;
@@ -20,14 +21,15 @@ class Contact extends React.Component {
     }
     submitForm = (e: any) => {
         e.preventDefault();
+        e.stopPropagation();
         console.log("Submit Form called: ", e, this.state);
         var form = e.currentTarget;
         if (!form || form.checkValidity() === false) {
-          e.preventDefault();
-          e.stopPropagation();
-          console.log("Form not valid: ", form);
-          return;
+            e.preventDefault();
+            console.log("Form not valid: ", form);
+            return;
         }
+        this.setState({ disableButton: true });
         (window as any).grecaptcha.ready(() => {
             (window as any).grecaptcha.execute("6Lc6buAdAAAAAPHBGxLQUegsMf_ACveCrUaHqC5O", { action: 'submit' }).then((token: any) => {
                 var request = {
@@ -39,8 +41,12 @@ class Contact extends React.Component {
                 };
                 axios.post("https://foodapi20210616194736.azurewebsites.net/api/Contact/SendToPersonal", request).then(res => {
                     console.log("Form submitted: ", res);
+                    this.setState({ showSuccessToast: true });
                 }).catch(err => {
                     console.error("Failed to submit form: ", err);
+                    this.setState({ showErrorToast: true });
+                }).finally(() => {
+                    this.setState({ disableButton: false });
                 });
             });
         });
@@ -66,20 +72,25 @@ class Contact extends React.Component {
                             </div>
                             <div className="form-group form-group-email">
                                 <label htmlFor="email" className="sr-only">Your Email</label>
-                                <input type="email" name="email" id="email" className="form-control" placeholder="YOUR EMAIL" required value={this.state?.fromEmail} onChange={this.handleInputChange}/>
+                                <input type="email" name="email" id="email" className="form-control" placeholder="YOUR EMAIL" required value={this.state?.fromEmail} onChange={this.handleInputChange} />
                             </div>
                             <div className="form-group form-group-subject">
                                 <label htmlFor="subject" className="sr-only">Subject</label>
-                                <input type="text" name="subject" id="subject" className="form-control" placeholder="SUBJECT" required value={this.state?.subject} onChange={this.handleInputChange}/>
+                                <input type="text" name="subject" id="subject" className="form-control" placeholder="SUBJECT" required value={this.state?.subject} onChange={this.handleInputChange} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="message" className="sr-only">Message</label>
                                 <textarea name="message" id="message" className="form-control" placeholder="MESSAGE" rows={5} required value={this.state?.message} onChange={this.handleInputChange}></textarea>
                             </div>
-                            <button type="submit" className="btn btn-primary form-submit-btn">SEND MESSAGE</button>
+                            <button type="submit" className="btn btn-primary form-submit-btn" disabled={this.state.disableButton} >SEND MESSAGE</button>
                         </form>
-
                     </section>
+                    <Toast onClose={() => this.setState({ showErrorToast: false })} bg="danger" show={this.state.showErrorToast} delay={3000} autohide>
+                        <Toast.Body>An error occurred sending your message</Toast.Body>
+                    </Toast>
+                    <Toast onClose={() => this.setState({ showSuccessToast: false })} bg="success" show={this.state.showSuccessToast} delay={3000} autohide>
+                        <Toast.Body>Message sent!</Toast.Body>
+                    </Toast>
                 </div>
             </div>
 

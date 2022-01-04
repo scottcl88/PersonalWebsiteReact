@@ -2,6 +2,13 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 // @charset "UTF-8";
+.d-none{
+  display: none !important;
+}
+.toast.show{
+  z-index: 999999 !important;
+  position: absolute;
+}
 .dropdown > .caret:after {
   content: "\2191";
 }
@@ -2766,7 +2773,7 @@ textarea.form-control.is-invalid {
 }
 .btn.disabled,
 .btn:disabled {
-  opacity: 0.65;
+  opacity: 0.5;
 }
 .btn:not(:disabled):not(.disabled) {
   cursor: pointer;
@@ -2796,8 +2803,8 @@ fieldset:disabled a.btn {
 .btn-primary.disabled,
 .btn-primary:disabled {
   color: #fff;
-  background-color: #1abc9c;
-  border-color: #1abc9c;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
 }
 .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary:not(:disabled):not(.disabled).active,
@@ -10590,6 +10597,17 @@ a.text-dark:focus {
   font-size: 1.25rem;
   justify-content: center;
   align-items: center;
+}
+
+.btn-social-sm {
+  border-radius: 100%;
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-top: .5rem;
 }
 
 .scroll-to-top {

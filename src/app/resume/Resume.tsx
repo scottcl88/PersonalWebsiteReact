@@ -1,9 +1,13 @@
 import axios from 'axios';
 import React from 'react';
-import { Dropdown } from 'react-bootstrap';
+import { Dropdown, Toast } from 'react-bootstrap';
 
 class Resume extends React.Component {
 
+    state: any = { showErrorToast: false };
+    constructor(props: any) {
+        super(props);
+    }
     downloadPdf = (e: any, type: number) => {
         e.preventDefault();
         console.log("downloadPdf called: ", e);
@@ -34,6 +38,7 @@ class Resume extends React.Component {
                     link.click();
                 }).catch((err: any) => {
                     console.error("Failed to download: ", err);
+                    this.setState({ showErrorToast: true });
                 });
             });
         });
@@ -250,6 +255,9 @@ class Resume extends React.Component {
                     </div>
                     <p className="MsoNormal" style={{ marginTop: '3.75pt', marginRight: '0in', marginBottom: '3.75pt', marginLeft: '.5in', textIndent: '-.25in' }}><span style={{ fontSize: '10.0pt', fontFamily: '"Noto Sans Symbols"', color: 'black' }}>●<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </span></span><span style={{ fontSize: '9.0pt', fontFamily: '"Calibri",sans-serif', color: 'black' }}>Dean list</span></p>
+                    <Toast onClose={() => this.setState({ showErrorToast: false })} bg="danger" show={this.state.showErrorToast} delay={3000} autohide>
+                        <Toast.Body>An error occurred sending your message</Toast.Body>
+                    </Toast>
                 </div>
             </div>
 
