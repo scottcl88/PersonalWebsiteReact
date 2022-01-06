@@ -138,6 +138,9 @@ function Portfolio() {
             setSkillsList(originalSkillList);
         }
     }
+    const clickScrumMaster = (e: any) => {
+        window.open("https://www.credly.com/users/scott-lewis.346d5c5f", "_blank");
+    };
     useEffect(() => {
         console.log("useEffect called");
         getSkills();
@@ -207,6 +210,23 @@ function Portfolio() {
                                 <img className="img-fluid" style={{ marginLeft: "33%" }} src={require("../../assets/img/portfolio/asteroid.png")} alt="" />
                             </div>
                             <h5 className="text-center mb-0">Asteroid Collector</h5>
+                        </div>
+                    </div>
+                    <div className="divider-custom">
+                        <div className="divider-custom-line"></div>
+                        <div className="divider-custom-icon"><i className="fas fa-star"></i></div>
+                        <div className="divider-custom-line"></div>
+                    </div>
+                    <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">Certifications</h2>
+                    <div className="divider-custom">
+                        <div className="divider-custom-line"></div>
+                        <div className="divider-custom-icon"><i className="fas fa-star"></i></div>
+                        <div className="divider-custom-line"></div>
+                    </div>
+                    <div className="mt-2 mb-1 text-center">
+                        <div onClick={clickScrumMaster} className="pointer">
+                            <h2>Professional Scrum Master I</h2>
+                            <img src={require("../../assets/img/BADGES_FINAL_PSM-I_600.png")} style={{ height: "150px" }} />
                         </div>
                     </div>
                     <div className="divider-custom">
