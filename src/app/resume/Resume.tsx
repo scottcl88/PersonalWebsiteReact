@@ -64,7 +64,9 @@ class Resume extends React.Component {
                     </Toast>
                 </div>
                 <div className="container">
-                    <object className="pdf-viewer" data={require("../../assets/Public_SCLewis_Resume.pdf")} type="application/pdf"></object >
+                    <object className="pdf-viewer" data={require("../../assets/Public_SCLewis_Resume.pdf")} type="application/pdf"></object>
+                    {/* <object className="pdf-viewer" data={require("../../assets/Public_SCLewis_Resume.pdf").default} type="application/pdf"></object>
+                    <object className="pdf-viewer" data={require("./Public_SCLewis_Resume.pdf")} type="application/pdf"></object> */}
                 </div>
             </div>
 
