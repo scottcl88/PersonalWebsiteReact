@@ -141,6 +141,9 @@ function Portfolio() {
     const clickScrumMaster = (e: any) => {
         window.open("https://www.credly.com/users/scott-lewis.346d5c5f", "_blank");
     };
+    const clickTeamLeadership = (e: any) => {
+        window.open("https://www.goskills.com/Verify?verificationNumber=53958428&fullName=Scott%20Lewis", "_blank");
+    };
     useEffect(() => {
         console.log("useEffect called");
         getSkills();
@@ -212,7 +215,7 @@ function Portfolio() {
                             <h5 className="text-center mb-0">Asteroid Collector</h5>
                         </div>
                     </div>
-                    <div className="divider-custom">
+                    <div className="divider-custom"  id="certifications">
                         <div className="divider-custom-line"></div>
                         <div className="divider-custom-icon"><i className="fas fa-star"></i></div>
                         <div className="divider-custom-line"></div>
@@ -223,10 +226,20 @@ function Portfolio() {
                         <div className="divider-custom-icon"><i className="fas fa-star"></i></div>
                         <div className="divider-custom-line"></div>
                     </div>
-                    <div className="mt-2 mb-1 text-center">
-                        <div onClick={clickScrumMaster} className="pointer">
-                            <h2>Professional Scrum Master I</h2>
-                            <img src={require("../../assets/img/BADGES_FINAL_PSM-I_600.png")} style={{ height: "150px" }} />
+                    <div className="mt-2 mb-1">
+                        <div className="row">
+                            <div className="col-6">
+                                <div onClick={clickScrumMaster} className="pointer text-center">
+                                    <h2>Professional Scrum Master I</h2>
+                                    <img src={require("../../assets/img/BADGES_FINAL_PSM-I_600.png")} style={{ height: "150px" }} />
+                                </div>
+                            </div>
+                            <div className="col-6">
+                                <div onClick={clickTeamLeadership} className="pointer text-center">
+                                    <h2>Team Leadership</h2>
+                                    <img src={require("../../assets/img/GoSkillsBadge.png")} style={{ height: "150px" }} />
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="divider-custom">

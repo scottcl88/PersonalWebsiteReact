@@ -33,7 +33,7 @@ function Home() {
 
     const asteroidCollectorClose = () => setAsteroidCollectorShow(false);
     const asteroidCollectorDoShow = () => setAsteroidCollectorShow(true);
-    
+
 
     return (
         <div className="home">
@@ -112,8 +112,15 @@ function Home() {
                             </div>
                             <h5 className="text-center mb-0">Asteroid Collector</h5>
                         </div>
+                        <div className="text-center mt-5">
+                            <a className="btn btn-xl btn-outline-dark mr-3" href="/portfolio#certifications">
+                                <i className="fas fa-address-card mr-2"></i>
+                                View Skills and Certifications
+                            </a>
+                        </div>
                     </div>
                 </div>
+
             </section>
             <section className="page-section bg-primary text-white mb-0 pb-25" id="about">
                 <div className="container">

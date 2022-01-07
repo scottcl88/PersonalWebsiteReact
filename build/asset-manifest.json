@@ -1,21 +1,22 @@
 {
   "files": {
     "main.css": "./static/css/main.1e547695.css",
-    "main.js": "./static/js/main.d68bdb2b.js",
+    "main.js": "./static/js/main.0360db0f.js",
     "static/js/787.e60b218d.chunk.js": "./static/js/787.e60b218d.chunk.js",
     "static/media/ProfilePic2.png": "./static/media/ProfilePic2.def0b97ee449ed60bb68.png",
-    "static/media/Public_SCLewis_Resume.pdf": "./static/media/Public_SCLewis_Resume.21aabdbdf88e2b3ea9cc.pdf",
+    "static/media/GoSkillsBadge.png": "./static/media/GoSkillsBadge.b899fd5e65dd150673d0.png",
+    "static/media/Public_SCLewis_Resume.pdf": "./static/media/Public_SCLewis_Resume.7dc6e69af0cdf0e500f6.pdf",
     "static/media/surf_n_eat2.png": "./static/media/surf_n_eat2.ca151b48f50599661026.png",
     "static/media/BADGES_FINAL_PSM-I_600.png": "./static/media/BADGES_FINAL_PSM-I_600.e37083142a0a0c77361e.png",
     "static/media/magicMirrorLogo.png": "./static/media/magicMirrorLogo.c42e8c10b3960cf13eb2.png",
     "static/media/logo.svg": "./static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "./index.html",
     "main.1e547695.css.map": "./static/css/main.1e547695.css.map",
-    "main.d68bdb2b.js.map": "./static/js/main.d68bdb2b.js.map",
+    "main.0360db0f.js.map": "./static/js/main.0360db0f.js.map",
     "787.e60b218d.chunk.js.map": "./static/js/787.e60b218d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1e547695.css",
-    "static/js/main.d68bdb2b.js"
+    "static/js/main.0360db0f.js"
   ]
 }
