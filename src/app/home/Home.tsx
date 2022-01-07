@@ -135,19 +135,25 @@ function Home() {
                             I am a senior full stack developer with 6 years of professional experience, including team leadership and a variety of industries from small to large businesses and teams.
                             I have a wide range of front-end and back-end skills including C#, SQL, Angular, React and more. I enjoy taking on challenges and embracing changes, and will deliver quality solutions to any system or product.</p></div>
                     </div>
-                    <div className="text-center mt-4">
-                        <a className="btn btn-xl btn-outline-light mr-3" href="/about">
-                            <i className="fas fa-address-card mr-2"></i>
-                            More About Me
-                        </a>
-                        <a className="btn btn-xl btn-outline-light mr-3" href="/resume">
-                            <i className="fas fa-file-alt mr-2"></i>
-                            View Resume
-                        </a>
-                        <a className="btn btn-xl btn-outline-light" href="/contact">
-                            <i className="fas fa-paper-plane mr-2"></i>
-                            Contact Me
-                        </a>
+                    <div className="row justify-content-center mt-5 text-center">
+                        <div className="col-lg-4">
+                            <a className="btn btn-xl btn-outline-light mr-3" href="/about">
+                                <i className="fas fa-address-card mr-2"></i>
+                                More About Me
+                            </a>
+                        </div>
+                        <div className="col-lg-4 mt-xs-1">
+                            <a className="btn btn-xl btn-outline-light mr-3" href="/resume">
+                                <i className="fas fa-file-alt mr-2"></i>
+                                View Resume
+                            </a>
+                        </div>
+                        <div className="col-lg-4 mt-xs-1">
+                            <a className="btn btn-xl btn-outline-light" href="/contact">
+                                <i className="fas fa-paper-plane mr-2"></i>
+                                Contact Me
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>

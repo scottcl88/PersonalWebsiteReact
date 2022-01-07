@@ -22,7 +22,7 @@ function BenjiWorldModal() {
                 <Row>
                     <Col><h6>Repository</h6>
                         <Row>
-                            <Col md="4">
+                            <Col>
                                 <p><a href="https://github.com/scottcl88/BenjiWorldApp" target="_blank">github.com/scottcl88/BenjiWorldApp</a></p>
                             </Col>
                         </Row>

@@ -27,7 +27,7 @@ function PortfolioModal() {
                 <Row>
                     <Col><h6>Repository</h6>
                         <Row>
-                            <Col md="6">
+                            <Col>
                                 <p><a href="https://github.com/scottcl88/PersonalWebsiteReact" target="_blank">github.com/scottcl88/PersonalWebsiteReact</a></p>
                             </Col>
                         </Row>

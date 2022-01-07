@@ -28,13 +28,13 @@ function SurfNEatModal() {
                 <Row>
                     <Col><h6>Repository</h6>
                         <Row>
-                            <Col md="4">
+                            <Col sm="4">
                                 <h6>API</h6><p><a href="https://github.com/scottcl88/FoodAPI" target="_blank">github.com/scottcl88/FoodAPI</a></p>
                             </Col>
-                            <Col md="4">
+                            <Col sm="4">
                                 <h6>App</h6><p><a href="https://github.com/scottcl88/food-app" target="_blank">github.com/scottcl88/food-app</a></p>
                             </Col>
-                            <Col md="4">
+                            <Col sm="4">
                                 <h6>Landing Website</h6><p><a href="https://github.com/scottcl88/food-landing" target="_blank">github.com/scottcl88/food-landing</a></p>
                             </Col>
                         </Row>

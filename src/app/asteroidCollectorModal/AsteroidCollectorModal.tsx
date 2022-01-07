@@ -22,6 +22,15 @@ function AsteroidCollectorModal() {
                     </Col>
                 </Row>
                 <Row>
+                    <Col><h6>Repository</h6>
+                        <Row>
+                            <Col>
+                                <p><a href="https://github.com/scottcl88/AsteroidCollector" target="_blank">github.com/scottcl88/AsteroidCollector</a></p>
+                            </Col>
+                        </Row>
+                    </Col>
+                </Row>
+                <Row>
                     <Col><h6>Description</h6>
                         <p>
                             Asteroid Collector is a simple 2D game I made in Java when I was first learning how to program and have since revisited it once with small changes.

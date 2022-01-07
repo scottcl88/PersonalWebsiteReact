@@ -23,7 +23,7 @@ function DynamicWeatherModal() {
                 <Row>
                     <Col><h6>Repository</h6>
                         <Row>
-                            <Col md="6">
+                            <Col>
                                 <p><a href="https://github.com/scottcl88/MMM-DynamicWeather" target="_blank">github.com/scottcl88/MMM-DynamicWeather</a></p>
                             </Col>
                         </Row>

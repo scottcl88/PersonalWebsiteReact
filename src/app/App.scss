@@ -2,34 +2,80 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 // @charset "UTF-8";
-.d-none{
+.d-none {
   display: none !important;
 }
-.pointer{
+@media (max-width: 358px) {
+  a.a-xs {
+    display: block !important;
+  }
+  .mt-xs-4 {
+    margin-top: 4rem !important;
+  }
+}
+@media (max-width: 1138px) and (min-width: 991px) {
+  a.a-xs {
+    display: block !important;
+  }
+}
+@media (max-width: 992px) {
+ .about{
+   height: 100vh;
+ }
+}
+@media (max-width: 502px) {
+ .about{
+   height: 115vh;
+ }
+}
+@media (max-width: 410px) {
+ .about{
+   height: 125vh;
+ }
+}
+@media (max-width: 350px) {
+ .about{
+   height: 200vh;
+ }
+}
+@media (max-width: 768px) {
+ th{
+   width: auto !important;
+ }
+}
+@media (max-width: 768px) {
+  a{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    word-break: break-word;
+  }
+}
+.pointer {
   cursor: pointer !important;
 }
-.skillColumnHeader{
+.skillColumnHeader {
   width: 325px;
 }
-.professionalExperienceColumnHeader{
+.professionalExperienceColumnHeader {
   width: 100px;
 }
-.hobbyExperienceColumnHeader{
+.hobbyExperienceColumnHeader {
   width: 100px;
 }
-.lastUsedColumnHeader{
+.lastUsedColumnHeader {
   width: 350px;
 }
-.pdf-viewer{
+.pdf-viewer {
   width: 100%;
   height: 100vh;
   margin-top: 2rem;
 }
-.modal-image{
+.modal-image {
   width: 100%;
   height: 350px;
 }
-.toast.show{
+.toast.show {
   z-index: 999999 !important;
   position: absolute;
 }
@@ -6649,7 +6695,9 @@ a.bg-primary:hover,
 a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
-  background-color: #148f77 !important;
+  background-color: #1b6ec2 !important;
+  // background-color: #1b6ec2;
+  // border-color: #1861ac;
 }
 
 .bg-secondary {
@@ -10632,7 +10680,7 @@ a.text-dark:focus {
   font-size: 12px;
   justify-content: center;
   align-items: center;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .scroll-to-top {

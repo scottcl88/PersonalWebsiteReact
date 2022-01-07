@@ -22,7 +22,7 @@ function RecipeLewisModal() {
                 <Row>
                     <Col><h6>Repository</h6>
                         <Row>
-                            <Col md="6">
+                            <Col>
                                 <p><a href="https://github.com/scottcl88/Recipe-Lewis" target="_blank">github.com/scottcl88/Recipe-Lewis</a></p>
                             </Col>
                         </Row>
