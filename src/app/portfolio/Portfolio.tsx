@@ -147,6 +147,9 @@ function Portfolio() {
     const clickGoogleStoreCertificate = (e: any) => {
         window.open("https://www.credential.net/2c4d0ab3-7243-4ba6-9a52-23ef0df12ce3", "_blank");
     };
+    const clickGoogleProjectManagementCertificate = (e: any) => {
+        window.open("https://www.credly.com/badges/178cfced-8e09-4f47-8a75-2b0f35bc5bff/public_url", "_blank");
+    };
     useEffect(() => {
         console.log("useEffect called");
         getSkills();
@@ -231,21 +234,27 @@ function Portfolio() {
                     </div>
                     <div className="mt-2 mb-1">
                         <div className="row">
-                            <div className="col-4">
+                            <div className="col-6">
                                 <div onClick={clickScrumMaster} className="pointer text-center">
                                     <h2>Professional Scrum Master I</h2>
                                     <img src={require("../../assets/img/BADGES_FINAL_PSM-I_600.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-4">
+                            <div className="col-6">
+                                <div onClick={clickGoogleProjectManagementCertificate} className="pointer text-center">
+                                    <h2>Google Project Management</h2>
+                                    <img src={require("../../assets/img/google-project-management-certificate.png")} style={{ height: "150px" }} />
+                                </div>
+                            </div>
+                            <div className="col-6">
                                 <div onClick={clickTeamLeadership} className="pointer text-center">
                                     <h2>Team Leadership</h2>
                                     <img src={require("../../assets/img/GoSkillsBadge.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-4">
+                            <div className="col-6">
                                 <div onClick={clickGoogleStoreCertificate} className="pointer text-center">
-                                    <h2>Google Play Store Listing Certificate</h2>
+                                    <h2>Google Play Store Listing</h2>
                                     <img src={require("../../assets/img/Google_Play_Store_Listing_Certificate.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
