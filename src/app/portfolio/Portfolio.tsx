@@ -9,6 +9,7 @@ import SurfNEatModal from '../surfNEatModal/SurfNEatModal';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import BootstrapTable from 'react-bootstrap-table-next';
 import axios from 'axios';
+import WordleHinterModal from '../wordleHinterModal/WordleHinterModal';
 
 function Portfolio() {
 
@@ -65,6 +66,7 @@ function Portfolio() {
     const [benjiWorldShow, setBenjiWorldShow] = useState(false);
     const [recipeLewisShow, setRecipeLewisShow] = useState(false);
     const [asteroidCollectorShow, setAsteroidCollectorShow] = useState(false);
+    const [wordleHinterShow, setWordleHinterShow] = useState(false);
     const [skillList, setSkillsList] = useState([]);
     const [originalSkillList, setOriginalSkillsList] = useState([]);
 
@@ -85,6 +87,9 @@ function Portfolio() {
 
     const asteroidCollectorClose = () => setAsteroidCollectorShow(false);
     const asteroidCollectorDoShow = () => setAsteroidCollectorShow(true);
+
+    const wordleHinterClose = () => setWordleHinterShow(false);
+    const wordleHinterDoShow = () => setWordleHinterShow(true);
 
     const getSkills = () => {
         (window as any).grecaptcha.ready(() => {
@@ -220,6 +225,15 @@ function Portfolio() {
                             </div>
                             <h5 className="text-center mb-0">Asteroid Collector</h5>
                         </div>
+                        <div className="col-md-6 col-lg-4 my-4">
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6" onClick={wordleHinterDoShow}>
+                                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
+                                </div>
+                                <img className="img-fluid" style={{ marginLeft: "33%", height: "100px" }} src={require("../../assets/img/portfolio/python_icon.png")} alt="" />
+                            </div>
+                            <h5 className="text-center mb-0">Wordle Hinter</h5>
+                        </div>
                     </div>
                     <div className="divider-custom"  id="certifications">
                         <div className="divider-custom-line"></div>
@@ -295,6 +309,9 @@ function Portfolio() {
             </Modal>
             <Modal show={asteroidCollectorShow} onHide={asteroidCollectorClose} size="lg">
                 <AsteroidCollectorModal></AsteroidCollectorModal>
+            </Modal>
+            <Modal show={wordleHinterShow} onHide={wordleHinterClose} size="lg">
+                <WordleHinterModal></WordleHinterModal>
             </Modal>
         </div>
     );
