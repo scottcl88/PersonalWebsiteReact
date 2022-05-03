@@ -10,6 +10,8 @@ import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import BootstrapTable from 'react-bootstrap-table-next';
 import axios from 'axios';
 import WordleHinterModal from '../wordleHinterModal/WordleHinterModal';
+import EmailSubManagerModal from '../emailSubManagerModal/EmailSubManagerModal';
+import JavaWordSearchModal from '../javaWordSearchModal/JavaWordSearchModal';
 
 function Portfolio() {
 
@@ -67,6 +69,8 @@ function Portfolio() {
     const [recipeLewisShow, setRecipeLewisShow] = useState(false);
     const [asteroidCollectorShow, setAsteroidCollectorShow] = useState(false);
     const [wordleHinterShow, setWordleHinterShow] = useState(false);
+    const [emailSubManagerShow, setEmailSubManagerShow] = useState(false);
+    const [javaWordSearchShow, setJavaWordSearchShow] = useState(false);
     const [skillList, setSkillsList] = useState([]);
     const [originalSkillList, setOriginalSkillsList] = useState([]);
 
@@ -90,6 +94,13 @@ function Portfolio() {
 
     const wordleHinterClose = () => setWordleHinterShow(false);
     const wordleHinterDoShow = () => setWordleHinterShow(true);
+
+    const emailSubManagerClose = () => setEmailSubManagerShow(false);
+    const emailSubManagerDoShow = () => setEmailSubManagerShow(true);
+
+    const javaWordSearchClose = () => setJavaWordSearchShow(false);
+    const javaWordSearchDoShow = () => setJavaWordSearchShow(true);
+    
 
     const getSkills = () => {
         (window as any).grecaptcha.ready(() => {
@@ -143,16 +154,16 @@ function Portfolio() {
             setSkillsList(originalSkillList);
         }
     }
-    const clickScrumMaster = (e: any) => {
+    const clickScrumMaster = () => {
         window.open("https://www.credly.com/users/scott-lewis.346d5c5f", "_blank");
     };
-    const clickTeamLeadership = (e: any) => {
+    const clickTeamLeadership = () => {
         window.open("https://www.goskills.com/Verify?verificationNumber=53958428&fullName=Scott%20Lewis", "_blank");
     };
-    const clickGoogleStoreCertificate = (e: any) => {
+    const clickGoogleStoreCertificate = () => {
         window.open("https://www.credential.net/2c4d0ab3-7243-4ba6-9a52-23ef0df12ce3", "_blank");
     };
-    const clickGoogleProjectManagementCertificate = (e: any) => {
+    const clickGoogleProjectManagementCertificate = () => {
         window.open("https://www.credly.com/badges/178cfced-8e09-4f47-8a75-2b0f35bc5bff/public_url", "_blank");
     };
     useEffect(() => {
@@ -198,7 +209,7 @@ function Portfolio() {
                             </div>
                             <h5 className="text-center mb-0">Portfolio</h5>
                         </div>
-                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div className="col-md-6 col-lg-4 mb-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4" onClick={benjiWorldDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
@@ -207,7 +218,34 @@ function Portfolio() {
                             </div>
                             <h5 className="text-center mb-0">Benji World</h5>
                         </div>
-                        <div className="col-md-6 col-lg-4 mb-5 mb-md-0">
+                        <div className="col-md-6 col-lg-4 mb-5">
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal7" onClick={emailSubManagerDoShow}>
+                                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
+                                </div>
+                                <img className="img-fluid" style={{ marginLeft: "23%", height: "100px" }} src={require("../../assets/img/portfolio/PHP-logo.png")} alt="" />
+                            </div>
+                            <h5 className="text-center mb-0">Email Sub Manager</h5>
+                        </div>
+                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal8" onClick={wordleHinterDoShow}>
+                                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
+                                </div>
+                                <img className="img-fluid" style={{ marginLeft: "33%", height: "100px" }} src={require("../../assets/img/portfolio/python_icon.png")} alt="" />
+                            </div>
+                            <h5 className="text-center mb-0">Wordle Hinter</h5>
+                        </div>
+                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal9" onClick={javaWordSearchDoShow}>
+                                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
+                                </div>
+                                <img className="img-fluid" style={{ marginLeft: "40%", height: "100px" }} src={require("../../assets/img/portfolio/java-logo3.png")} alt="" />
+                            </div>
+                            <h5 className="text-center mb-0">Word Search</h5>
+                        </div>
+                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={recipeLewisDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
@@ -216,7 +254,7 @@ function Portfolio() {
                             </div>
                             <h5 className="text-center mb-0">Recipe Lewis</h5>
                         </div>
-                        <div className="col-md-6 col-lg-4">
+                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6" onClick={asteroidCollectorDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
@@ -224,15 +262,6 @@ function Portfolio() {
                                 <img className="img-fluid" style={{ marginLeft: "33%" }} src={require("../../assets/img/portfolio/asteroid.png")} alt="" />
                             </div>
                             <h5 className="text-center mb-0">Asteroid Collector</h5>
-                        </div>
-                        <div className="col-md-6 col-lg-4 my-4">
-                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6" onClick={wordleHinterDoShow}>
-                                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" style={{ marginLeft: "33%", height: "100px" }} src={require("../../assets/img/portfolio/python_icon.png")} alt="" />
-                            </div>
-                            <h5 className="text-center mb-0">Wordle Hinter</h5>
                         </div>
                     </div>
                     <div className="divider-custom"  id="certifications">
@@ -312,6 +341,12 @@ function Portfolio() {
             </Modal>
             <Modal show={wordleHinterShow} onHide={wordleHinterClose} size="lg">
                 <WordleHinterModal></WordleHinterModal>
+            </Modal>
+            <Modal show={emailSubManagerShow} onHide={emailSubManagerClose} size="lg">
+                <EmailSubManagerModal></EmailSubManagerModal>
+            </Modal>
+            <Modal show={javaWordSearchShow} onHide={javaWordSearchClose} size="lg">
+                <JavaWordSearchModal></JavaWordSearchModal>
             </Modal>
         </div>
     );
