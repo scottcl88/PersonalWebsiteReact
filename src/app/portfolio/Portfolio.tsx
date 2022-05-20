@@ -166,6 +166,9 @@ function Portfolio() {
     const clickGoogleProjectManagementCertificate = () => {
         window.open("https://www.credly.com/badges/178cfced-8e09-4f47-8a75-2b0f35bc5bff/public_url", "_blank");
     };
+    const clickStategicManagementCertificate = () => {
+        window.open("https://coursera.org/verify/specialization/EM3ETRZCCXYM", "_blank");
+    };
     useEffect(() => {
         console.log("useEffect called");
         getSkills();
@@ -277,27 +280,33 @@ function Portfolio() {
                     </div>
                     <div className="mt-2 mb-1">
                         <div className="row">
-                            <div className="col-6">
+                            <div className="col-4">
                                 <div onClick={clickScrumMaster} className="pointer text-center">
-                                    <h2>Professional Scrum Master I</h2>
+                                    <h3>Professional Scrum Master I</h3>
                                     <img src={require("../../assets/img/BADGES_FINAL_PSM-I_600.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6">
+                            <div className="col-4">
                                 <div onClick={clickGoogleProjectManagementCertificate} className="pointer text-center">
-                                    <h2>Google Project Management</h2>
+                                    <h3>Google Project Management</h3>
                                     <img src={require("../../assets/img/google-project-management-certificate.png")} style={{ height: "150px" }} />
+                                </div>
+                            </div>
+                            <div className="col-4">
+                                <div onClick={clickStategicManagementCertificate} className="pointer text-center">
+                                    <h3>Strategic Leadership and Management</h3>
+                                    <img src={require("../../assets/img/Coursera_Specialization_Certificate2.png")} style={{ height: "150px", width: "150px" }} />
                                 </div>
                             </div>
                             <div className="col-6">
                                 <div onClick={clickTeamLeadership} className="pointer text-center">
-                                    <h2>Team Leadership</h2>
+                                    <h3>Team Leadership</h3>
                                     <img src={require("../../assets/img/GoSkillsBadge.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
                             <div className="col-6">
                                 <div onClick={clickGoogleStoreCertificate} className="pointer text-center">
-                                    <h2>Google Play Store Listing</h2>
+                                    <h3>Google Play Store Listing</h3>
                                     <img src={require("../../assets/img/Google_Play_Store_Listing_Certificate.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
