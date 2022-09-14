@@ -8,9 +8,9 @@ class Resume extends React.Component {
     constructor(props: any) {
         super(props);
     }
-    downloadPdf = (e: any, type: number) => {
+    downloadDoc = (e: any, type: number) => {
         e.preventDefault();
-        console.log("downloadPdf called: ", e);
+        console.log("downloadDoc called: ", e);
         (window as any).grecaptcha.ready(() => {
             (window as any).grecaptcha.execute("6Lc6buAdAAAAAPHBGxLQUegsMf_ACveCrUaHqC5O", { action: 'submit' }).then((token: any) => {
                 axios({
@@ -51,11 +51,11 @@ class Resume extends React.Component {
                         <i className="fas fa-download mr-2"></i>Download
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <Dropdown.Item onClick={(e) => this.downloadPdf(e, 3)}><i className="fas fa-file-pdf mr-2"></i>PDF</Dropdown.Item>
-                        <Dropdown.Item onClick={(e) => this.downloadPdf(e, 1)}><i className="fas fa-file-word mr-2"></i>DOCX</Dropdown.Item>
-                        <Dropdown.Item onClick={(e) => this.downloadPdf(e, 4)}><i className="fas fa-file-alt mr-2"></i>RTF</Dropdown.Item>
-                        <Dropdown.Item onClick={(e) => this.downloadPdf(e, 5)}><i className="fas fa-file-alt mr-2"></i>TXT</Dropdown.Item>
-                        <Dropdown.Item onClick={(e) => this.downloadPdf(e, 2)}><i className="fas fa-file-code mr-2"></i>HTML</Dropdown.Item>
+                        <Dropdown.Item onClick={(e) => this.downloadDoc(e, 3)}><i className="fas fa-file-pdf mr-2"></i>PDF</Dropdown.Item>
+                        <Dropdown.Item onClick={(e) => this.downloadDoc(e, 1)}><i className="fas fa-file-word mr-2"></i>DOCX</Dropdown.Item>
+                        <Dropdown.Item onClick={(e) => this.downloadDoc(e, 4)}><i className="fas fa-file-alt mr-2"></i>RTF</Dropdown.Item>
+                        <Dropdown.Item onClick={(e) => this.downloadDoc(e, 5)}><i className="fas fa-file-alt mr-2"></i>TXT</Dropdown.Item>
+                        <Dropdown.Item onClick={(e) => this.downloadDoc(e, 2)}><i className="fas fa-file-code mr-2"></i>HTML</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
                 <div style={{ marginLeft: "46%", width: "100%" }}>
