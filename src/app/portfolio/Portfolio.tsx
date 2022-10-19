@@ -12,11 +12,12 @@ import axios from 'axios';
 import WordleHinterModal from '../wordleHinterModal/WordleHinterModal';
 import EmailSubManagerModal from '../emailSubManagerModal/EmailSubManagerModal';
 import JavaWordSearchModal from '../javaWordSearchModal/JavaWordSearchModal';
+import OpswatAcademyModal from '../opswatAcademyModal/OpswatAcademyModal';
 
 function Portfolio() {
 
     function experienceFormatter(cell: any, row: any) {
-        var cellNum = Number(cell);
+        let cellNum = Number(cell);
         if (!isNaN(cellNum)) {
             if (cell == 0) {
                 return (
@@ -45,7 +46,7 @@ function Portfolio() {
         headerClasses: "skillColumnHeader",
     }, {
         dataField: 'lastUsed',
-        text: 'LastUsed',
+        text: 'Last Used',
         sort: true,
         headerClasses: "lastUsedColumnHeader",
     }, {
@@ -71,6 +72,7 @@ function Portfolio() {
     const [wordleHinterShow, setWordleHinterShow] = useState(false);
     const [emailSubManagerShow, setEmailSubManagerShow] = useState(false);
     const [javaWordSearchShow, setJavaWordSearchShow] = useState(false);
+    const [opswatAcademyShow, setOpswatAcademyShow] = useState(false);
     const [skillList, setSkillsList] = useState([]);
     const [originalSkillList, setOriginalSkillsList] = useState([]);
 
@@ -100,7 +102,9 @@ function Portfolio() {
 
     const javaWordSearchClose = () => setJavaWordSearchShow(false);
     const javaWordSearchDoShow = () => setJavaWordSearchShow(true);
-    
+
+    const opswatAcademyClose = () => setOpswatAcademyShow(false);
+    const opswatAcademyDoShow = () => setOpswatAcademyShow(true);
 
     const getSkills = () => {
         (window as any).grecaptcha.ready(() => {
@@ -116,14 +120,14 @@ function Portfolio() {
         });
     }
     const search = (ev: any) => {
-        var searchStr = ev?.target?.value?.toLowerCase();
+        let searchStr = ev?.target?.value?.toLowerCase();
         if (searchStr) {
-            var newList: any[] = originalSkillList.filter((val) => {
-                var foundSkill = (val as any).skill?.toLowerCase().indexOf(searchStr) >= 0;
-                var foundLastUsed = (val as any).lastUsed?.toLowerCase().indexOf(searchStr) >= 0;
+            let newList: any[] = originalSkillList.filter((val) => {
+                let foundSkill = (val as any).skill?.toLowerCase().indexOf(searchStr) >= 0;
+                let foundLastUsed = (val as any).lastUsed?.toLowerCase().indexOf(searchStr) >= 0;
 
-                var hobbyExp = (val as any).hobbyExperience;
-                var foundHobbyExperience = false;
+                let hobbyExp = (val as any).hobbyExperience;
+                let foundHobbyExperience = false;
                 if (hobbyExp >= 1) {
                     hobbyExp += " years";
                 } else if (hobbyExp > 0) {
@@ -134,8 +138,8 @@ function Portfolio() {
                 }
                 foundHobbyExperience = hobbyExp?.toLowerCase().indexOf(searchStr) >= 0;
 
-                var professionalExp = (val as any).professionalExperience;
-                var foundProfessionalExperience = false;
+                let professionalExp = (val as any).professionalExperience;
+                let foundProfessionalExperience = false;
                 if (professionalExp >= 1) {
                     professionalExp += " years";
                 } else if (professionalExp > 0) {
@@ -160,14 +164,26 @@ function Portfolio() {
     const clickTeamLeadership = () => {
         window.open("https://www.goskills.com/Verify?verificationNumber=53958428&fullName=Scott%20Lewis", "_blank");
     };
+    const clickCorporateStrategy = () => {
+        window.open("https://www.coursera.org/account/accomplishments/certificate/X8VFNFEB7W67", "_blank");
+    };
     const clickGoogleStoreCertificate = () => {
         window.open("https://www.credential.net/2c4d0ab3-7243-4ba6-9a52-23ef0df12ce3", "_blank");
     };
     const clickGoogleProjectManagementCertificate = () => {
         window.open("https://www.credly.com/badges/178cfced-8e09-4f47-8a75-2b0f35bc5bff/public_url", "_blank");
     };
-    const clickStategicManagementCertificate = () => {
+    const clickStrategicManagementCertificate = () => {
         window.open("https://coursera.org/verify/specialization/EM3ETRZCCXYM", "_blank");
+    };
+    const clickSoftwareDevelopmentLifecycle = () => {
+        window.open("https://www.coursera.org/account/accomplishments/specialization/JXJBFXDFKVWM", "_blank");
+    };
+    const clickCybersecurityForEveryone = () => {
+        window.open("https://www.coursera.org/account/accomplishments/verify/6Q4JMSH3B5TR", "_blank");
+    };
+    const clickCybersecurityITFundamentalsSpecialization = () => {
+        window.open("https://www.credly.com/badges/a355d374-aa24-4ee8-8313-8f9805520381", "_blank");
     };
     useEffect(() => {
         console.log("useEffect called");
@@ -267,7 +283,7 @@ function Portfolio() {
                             <h5 className="text-center mb-0">Asteroid Collector</h5>
                         </div>
                     </div>
-                    <div className="divider-custom"  id="certifications">
+                    <div className="divider-custom" id="certifications">
                         <div className="divider-custom-line"></div>
                         <div className="divider-custom-icon"><i className="fas fa-star"></i></div>
                         <div className="divider-custom-line"></div>
@@ -280,28 +296,58 @@ function Portfolio() {
                     </div>
                     <div className="mt-2 mb-1">
                         <div className="row">
-                            <div className="col-4">
+                            <div className="col-6">
                                 <div onClick={clickScrumMaster} className="pointer text-center">
                                     <h3>Professional Scrum Master I</h3>
                                     <img src={require("../../assets/img/BADGES_FINAL_PSM-I_600.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-4">
+                            <div className="col-6">
                                 <div onClick={clickGoogleProjectManagementCertificate} className="pointer text-center">
                                     <h3>Google Project Management</h3>
                                     <img src={require("../../assets/img/google-project-management-certificate.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-4">
-                                <div onClick={clickStategicManagementCertificate} className="pointer text-center">
-                                    <h3>Strategic Leadership and Management</h3>
-                                    <img src={require("../../assets/img/Coursera_Specialization_Certificate2.png")} style={{ height: "150px", width: "150px" }} />
+                            <div className="col-6">
+                                <div onClick={clickStrategicManagementCertificate} className="pointer text-center">
+                                    <h4>Strategic Leadership and Management</h4>
+                                    <img src={require("../../assets/img/Illinois_blue-background2.png")} style={{ height: "150px" }} />
+                                </div>
+                            </div>
+                            <div className="col-6">
+                                <div onClick={clickCorporateStrategy} className="pointer text-center">
+                                    <h3>Corporate Strategy</h3>
+                                    <img src={require("../../assets/img/Illinois_blue-background2.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
                             <div className="col-6">
                                 <div onClick={clickTeamLeadership} className="pointer text-center">
                                     <h3>Team Leadership</h3>
                                     <img src={require("../../assets/img/GoSkillsBadge.png")} style={{ height: "150px" }} />
+                                </div>
+                            </div>
+                            <div className="col-6">
+                                <div onClick={opswatAcademyDoShow} data-toggle="modal" data-target="#portfolioModal7" className="pointer text-center">
+                                    <h3>OPSWAT Academy (8)</h3>
+                                    <img src={require("../../assets/img/owpa.png")} style={{ height: "150px" }} />
+                                </div>
+                            </div>
+                            <div className="col-6">
+                                <div onClick={clickSoftwareDevelopmentLifecycle} className="pointer text-center">
+                                    <h3>Software Development Lifecycle</h3>
+                                    <img src={require("../../assets/img/FB-GoldM-maroon.png")} style={{ height: "150px" }} />
+                                </div>
+                            </div>
+                            <div className="col-6">
+                                <div onClick={clickCybersecurityForEveryone} className="pointer text-center">
+                                    <h3>Cybersecurity for Everyone</h3>
+                                    <img src={require("../../assets/img/umd_square.png")} style={{ height: "150px" }} />
+                                </div>
+                            </div>
+                            <div className="col-6">
+                                <div onClick={clickCybersecurityITFundamentalsSpecialization} className="pointer text-center">
+                                    <h3>Cybersecurity IT Fundamentals Specialization</h3>
+                                    <img src={require("../../assets/img/IT_Fund_for_Cyber_Specialist.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
                             <div className="col-6">
@@ -356,6 +402,9 @@ function Portfolio() {
             </Modal>
             <Modal show={javaWordSearchShow} onHide={javaWordSearchClose} size="lg">
                 <JavaWordSearchModal></JavaWordSearchModal>
+            </Modal>
+            <Modal show={opswatAcademyShow} onHide={opswatAcademyClose} size="lg">
+                <OpswatAcademyModal></OpswatAcademyModal>
             </Modal>
         </div>
     );
