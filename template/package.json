@@ -12,9 +12,9 @@
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^2.6.5",
-    "node-sass": "^7.0.0"
+    "node-sass": "^7.0.3"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
