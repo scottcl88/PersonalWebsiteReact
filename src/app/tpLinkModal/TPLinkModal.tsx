@@ -1,19 +1,17 @@
 import { Button, Col, Modal, Row } from 'react-bootstrap';
 import '../../site';
 
-function JavaWordSearchModal() {
+function TpLinkModal() {
     return (
-        <div className="javaWordSearchModal">
+        <div className="tpLinkModal">
             <Modal.Header closeButton>
-                <Modal.Title>Word Search</Modal.Title>
+                <Modal.Title>TP Link Control</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <div style={{ width: "100%", margin: "0 auto" }}>
-                    <img className="mb-3" style={{ width: "100px", height: "180px", marginLeft: "40%" }} src={require("../../assets/img/portfolio/java-logo3.png")} />
-                </div>
+                 <img className="mb-3 modal-image image-fluid" style={{ marginLeft: "35%", height: "150px", width: "250px" }} src={require("../../assets/img/portfolio/nodejs.png")} />              
                 <Row>
                     <Col>
-                        <h6>Technologies</h6><p>Java v17.0.2</p>
+                        <h6>Technologies</h6><p>Node JS, NPM, Puppeteer, Nexe</p>
                     </Col>
                 </Row>
                 <Row>
@@ -25,7 +23,7 @@ function JavaWordSearchModal() {
                     <Col><h6>Repository</h6>
                         <Row>
                             <Col>
-                                <p><a href="https://github.com/scottcl88/WordSearch" target="_blank">github.com/scottcl88/WordSearch</a></p>
+                                <p><a href="https://github.com/scottcl88/TPLink-Control" target="_blank">github.com/scottcl88/TPLink-Control</a></p>
                             </Col>
                         </Row>
                     </Col>
@@ -33,7 +31,7 @@ function JavaWordSearchModal() {
                 <Row>
                     <Col><h6>Description</h6>
                         <p>
-                        A simple Java application with a window to play a small word search game.
+                        A simple Node JS program to change lights and play music when a football team scores. Specifically for Kasa TP-Link Smart devices.
                         </p>
                     </Col>
                 </Row>
@@ -42,4 +40,4 @@ function JavaWordSearchModal() {
     );
 }
 
-export default JavaWordSearchModal;
+export default TpLinkModal;

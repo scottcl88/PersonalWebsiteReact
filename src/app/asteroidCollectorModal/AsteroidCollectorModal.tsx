@@ -5,11 +5,11 @@ function AsteroidCollectorModal() {
     return (
         <div className="asteroidCollectorModal">
             <Modal.Header closeButton>
-                <Modal.Title>Asteroid Collector</Modal.Title>
+                <Modal.Title>2D Java Game</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <div style={{ width: "100%", margin: "0 auto" }}>
-                    <img className="mb-3" style={{ width: "150px", height: "150px", marginLeft: "40%" }} src={require("../../assets/img/portfolio/asteroid.png")} />
+                    <img className="mb-3" style={{ width: "100px", height: "180px", marginLeft: "40%" }} src={require("../../assets/img/portfolio/java-logo3.png")} />
                 </div>
                 <Row>
                     <Col>
@@ -33,7 +33,7 @@ function AsteroidCollectorModal() {
                 <Row>
                     <Col><h6>Description</h6>
                         <p>
-                            Asteroid Collector is a simple 2D game I made in Java when I was first learning how to program and have since revisited it once with small changes.
+                            This is a simple 2D game written in Java (named Asteroid Collector) when I was first learning how to program and have since revisited it once with small changes.
                         </p>
                     </Col>
                 </Row>

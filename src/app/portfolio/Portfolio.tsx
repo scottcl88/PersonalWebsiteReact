@@ -13,6 +13,10 @@ import WordleHinterModal from '../wordleHinterModal/WordleHinterModal';
 import EmailSubManagerModal from '../emailSubManagerModal/EmailSubManagerModal';
 import JavaWordSearchModal from '../javaWordSearchModal/JavaWordSearchModal';
 import OpswatAcademyModal from '../opswatAcademyModal/OpswatAcademyModal';
+import FileIndexerServiceModal from '../fileIndexerServiceModal/FileIndexerServiceModal';
+import FileSearcherModal from '../fileSearcherModal/FileSearcherModal';
+import SecureLewisModal from '../secureLewisModal/SecureLewisModal';
+import TpLinkModal from '../tpLinkModal/TPLinkModal';
 
 function Portfolio() {
 
@@ -73,6 +77,10 @@ function Portfolio() {
     const [emailSubManagerShow, setEmailSubManagerShow] = useState(false);
     const [javaWordSearchShow, setJavaWordSearchShow] = useState(false);
     const [opswatAcademyShow, setOpswatAcademyShow] = useState(false);
+    const [fileIndexerServiceShow, setFileIndexerServiceShow] = useState(false);
+    const [fileSearcherShow, setFileSearcherShow] = useState(false);
+    const [secureLewisShow, setSecureLewisShow] = useState(false);
+    const [tpLinkControlShow, setTpLinkControlShow] = useState(false);
     const [skillList, setSkillsList] = useState([]);
     const [originalSkillList, setOriginalSkillsList] = useState([]);
 
@@ -105,6 +113,18 @@ function Portfolio() {
 
     const opswatAcademyClose = () => setOpswatAcademyShow(false);
     const opswatAcademyDoShow = () => setOpswatAcademyShow(true);
+
+    const fileIndexerServiceClose = () => setFileIndexerServiceShow(false);
+    const fileIndexerServiceDoShow = () => setFileIndexerServiceShow(true);
+
+    const fileSearcherClose = () => setFileSearcherShow(false);
+    const fileSearcherDoShow = () => setFileSearcherShow(true);
+
+    const secureLewisClose = () => setSecureLewisShow(false);
+    const secureLewisDoShow = () => setSecureLewisShow(true);
+    
+    const tpLinkControlClose = () => setTpLinkControlShow(false);
+    const tpLinkControlDoShow = () => setTpLinkControlShow(true);
 
     const getSkills = () => {
         (window as any).grecaptcha.ready(() => {
@@ -233,11 +253,56 @@ function Portfolio() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <i className="fas fa-paw" style={{ fontSize: "100px", marginLeft: "35%" }}></i>
+                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/blazor_wasm.png")} alt="" />
                             </div>
                             <h5 className="text-center mb-0">Benji World</h5>
                         </div>
-                        <div className="col-md-6 col-lg-4 mb-5">
+                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={recipeLewisDoShow}>
+                                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
+                                </div>
+                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/blazor_wasm.png")} alt="" />
+                            </div>
+                            <h5 className="text-center mb-0">Recipe Lewis</h5>
+                        </div>
+                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={fileIndexerServiceDoShow}>
+                                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
+                                </div>
+                                <img className="img-fluid" style={{ marginLeft: "30%", height: "100px" }} src={require("../../assets/img/portfolio/net_6.png")} alt="" />
+                            </div>
+                            <h5 className="text-center mb-0">File Indexer Service</h5>
+                        </div>
+                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={fileSearcherDoShow}>
+                                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
+                                </div>
+                                <img className="img-fluid" style={{ marginLeft: "27%", height: "100px" }} src={require("../../assets/img/portfolio/asp_net_mvc.png")} alt="" />
+                            </div>
+                            <h5 className="text-center mb-0">File Searcher</h5>
+                        </div>
+                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={secureLewisDoShow}>
+                                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
+                                </div>
+                                <img className="img-fluid" style={{ marginLeft: "32%", height: "100px" }} src={require("../../assets/img/portfolio/vue.png")} alt="" />
+                            </div>
+                            <h5 className="text-center mb-0">Secure Lewis</h5>
+                        </div>
+                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={tpLinkControlDoShow}>
+                                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
+                                </div>
+                                <img className="img-fluid" style={{ marginLeft: "26%", height: "100px" }} src={require("../../assets/img/portfolio/nodejs.png")} alt="" />
+                            </div>
+                            <h5 className="text-center mb-0">TP Link Control</h5>
+                        </div>
+                        <div className="col-md-6 col-lg-4 mb-5 mt-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal7" onClick={emailSubManagerDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
@@ -246,7 +311,7 @@ function Portfolio() {
                             </div>
                             <h5 className="text-center mb-0">Email Sub Manager</h5>
                         </div>
-                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0 mt-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal8" onClick={wordleHinterDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
@@ -255,7 +320,7 @@ function Portfolio() {
                             </div>
                             <h5 className="text-center mb-0">Wordle Hinter</h5>
                         </div>
-                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0 mt-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal9" onClick={javaWordSearchDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
@@ -265,22 +330,13 @@ function Portfolio() {
                             <h5 className="text-center mb-0">Word Search</h5>
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={recipeLewisDoShow}>
-                                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
-                                </div>
-                                <i className="fas fa-book" style={{ fontSize: "100px", marginLeft: "35%" }}></i>
-                            </div>
-                            <h5 className="text-center mb-0">Recipe Lewis</h5>
-                        </div>
-                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6" onClick={asteroidCollectorDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "33%" }} src={require("../../assets/img/portfolio/asteroid.png")} alt="" />
+                                <img className="img-fluid" style={{ marginLeft: "40%", height: "100px" }} src={require("../../assets/img/portfolio/java-logo3.png")} alt="" />
                             </div>
-                            <h5 className="text-center mb-0">Asteroid Collector</h5>
+                            <h5 className="text-center mb-0">2D Game</h5>
                         </div>
                     </div>
                     <div className="divider-custom" id="certifications">
@@ -308,49 +364,49 @@ function Portfolio() {
                                     <img src={require("../../assets/img/google-project-management-certificate.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6">
+                            <div className="col-6 mt-4">
                                 <div onClick={clickStrategicManagementCertificate} className="pointer text-center">
                                     <h4>Strategic Leadership and Management</h4>
                                     <img src={require("../../assets/img/Illinois_blue-background2.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6">
+                            <div className="col-6 mt-4">
                                 <div onClick={clickCorporateStrategy} className="pointer text-center">
                                     <h3>Corporate Strategy</h3>
                                     <img src={require("../../assets/img/Illinois_blue-background2.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6">
+                            <div className="col-6 mt-4">
                                 <div onClick={clickTeamLeadership} className="pointer text-center">
                                     <h3>Team Leadership</h3>
                                     <img src={require("../../assets/img/GoSkillsBadge.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6">
+                            <div className="col-6 mt-4">
                                 <div onClick={opswatAcademyDoShow} data-toggle="modal" data-target="#portfolioModal7" className="pointer text-center">
                                     <h3>OPSWAT Academy (8)</h3>
                                     <img src={require("../../assets/img/owpa.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6">
+                            <div className="col-6 mt-4">
                                 <div onClick={clickSoftwareDevelopmentLifecycle} className="pointer text-center">
                                     <h3>Software Development Lifecycle</h3>
                                     <img src={require("../../assets/img/FB-GoldM-maroon.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6">
+                            <div className="col-6 mt-4">
                                 <div onClick={clickCybersecurityForEveryone} className="pointer text-center">
                                     <h3>Cybersecurity for Everyone</h3>
                                     <img src={require("../../assets/img/umd_square.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6">
+                            <div className="col-6 mt-4">
                                 <div onClick={clickCybersecurityITFundamentalsSpecialization} className="pointer text-center">
-                                    <h3>Cybersecurity IT Fundamentals Specialization</h3>
+                                    <h3>IT Fundamentals for Cybersecurity</h3>
                                     <img src={require("../../assets/img/IT_Fund_for_Cyber_Specialist.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6">
+                            <div className="col-6 mt-4">
                                 <div onClick={clickGoogleStoreCertificate} className="pointer text-center">
                                     <h3>Google Play Store Listing</h3>
                                     <img src={require("../../assets/img/Google_Play_Store_Listing_Certificate.png")} style={{ height: "150px" }} />
@@ -405,6 +461,18 @@ function Portfolio() {
             </Modal>
             <Modal show={opswatAcademyShow} onHide={opswatAcademyClose} size="lg">
                 <OpswatAcademyModal></OpswatAcademyModal>
+            </Modal>
+            <Modal show={fileIndexerServiceShow} onHide={fileIndexerServiceClose} size="lg">
+                <FileIndexerServiceModal></FileIndexerServiceModal>
+            </Modal>
+            <Modal show={fileSearcherShow} onHide={fileSearcherClose} size="lg">
+                <FileSearcherModal></FileSearcherModal>
+            </Modal>
+            <Modal show={secureLewisShow} onHide={secureLewisClose} size="lg">
+                <SecureLewisModal></SecureLewisModal>
+            </Modal>
+            <Modal show={tpLinkControlShow} onHide={tpLinkControlClose} size="lg">
+                <TpLinkModal></TpLinkModal>
             </Modal>
         </div>
     );

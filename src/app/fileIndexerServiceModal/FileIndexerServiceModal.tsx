@@ -1,19 +1,17 @@
 import { Button, Col, Modal, Row } from 'react-bootstrap';
 import '../../site';
 
-function JavaWordSearchModal() {
+function FileIndexerServiceModal() {
     return (
-        <div className="javaWordSearchModal">
+        <div className="fileIndexerServiceModal">
             <Modal.Header closeButton>
-                <Modal.Title>Word Search</Modal.Title>
+                <Modal.Title>File Indexer Service</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <div style={{ width: "100%", margin: "0 auto" }}>
-                    <img className="mb-3" style={{ width: "100px", height: "180px", marginLeft: "40%" }} src={require("../../assets/img/portfolio/java-logo3.png")} />
-                </div>
+                <img className="mb-3 modal-image image-fluid" style={{ marginLeft: "30%", height: "200px", width: "300px" }} src={require("../../assets/img/portfolio/net_6.png")} />
                 <Row>
                     <Col>
-                        <h6>Technologies</h6><p>Java v17.0.2</p>
+                        <h6>Technologies</h6><p>.Net 6, Worker Service, MongoDB, Serilog</p>
                     </Col>
                 </Row>
                 <Row>
@@ -25,7 +23,7 @@ function JavaWordSearchModal() {
                     <Col><h6>Repository</h6>
                         <Row>
                             <Col>
-                                <p><a href="https://github.com/scottcl88/WordSearch" target="_blank">github.com/scottcl88/WordSearch</a></p>
+                                <p><a href="https://github.com/scottcl88/FileIndexerService" target="_blank">github.com/scottcl88/FileIndexerService</a></p>
                             </Col>
                         </Row>
                     </Col>
@@ -33,7 +31,7 @@ function JavaWordSearchModal() {
                 <Row>
                     <Col><h6>Description</h6>
                         <p>
-                        A simple Java application with a window to play a small word search game.
+                            This is a simple long-running .NET 6 Worker Service that will gather details of files in a directory and index them into MongoDB to be used with the FileSearcher project.
                         </p>
                     </Col>
                 </Row>
@@ -42,4 +40,4 @@ function JavaWordSearchModal() {
     );
 }
 
-export default JavaWordSearchModal;
+export default FileIndexerServiceModal;
