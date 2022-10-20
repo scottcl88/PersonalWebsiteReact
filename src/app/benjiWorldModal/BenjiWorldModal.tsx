@@ -20,10 +20,15 @@ function BenjiWorldModal() {
                     </Col>
                 </Row>
                 <Row>
-                    <Col><h6>Repository</h6>
+                    <Col><h6>Repositories</h6>
                         <Row>
                             <Col>
                                 <p><a href="https://github.com/scottcl88/BenjiWorldApp" target="_blank">github.com/scottcl88/BenjiWorldApp</a></p>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <p><a href="https://github.com/scottcl88/BenjiAPI" target="_blank">github.com/scottcl88/BenjiAPI</a></p>
                             </Col>
                         </Row>
                     </Col>

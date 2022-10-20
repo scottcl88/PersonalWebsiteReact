@@ -25,10 +25,15 @@ function RecipeLewisModal() {
                     </Col>
                 </Row>
                 <Row>
-                    <Col><h6>Repository</h6>
+                    <Col><h6>Repositories</h6>
                         <Row>
                             <Col>
-                                <p><a href="https://github.com/scottcl88/Recipe-Lewis" target="_blank">github.com/scottcl88/Recipe-Lewis</a></p>
+                                <p><a href="https://github.com/scottcl88/RecipeLewis-Web" target="_blank">github.com/scottcl88/RecipeLewis-Web</a></p>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <p><a href="https://github.com/scottcl88/RecipeLewis-API" target="_blank">github.com/scottcl88/RecipeLewis-API</a></p>
                             </Col>
                         </Row>
                     </Col>

@@ -36,13 +36,13 @@ function OpswatAcademyModal() {
             <Modal.Body>
                 <Row>
                     <Col>
-                        <div onClick={clickDataTransfer} className="pointer text-center">
+                        <div onClick={clickDataTransfer} className="pointer text-center hover-context">
                             <h3>Data-Transfer Security</h3>
                             <img src={require("../../assets/img/odsa.png")} style={{ height: "150px" }} />
                         </div>
                     </Col>
                     <Col>
-                        <div onClick={clickEmail} className="pointer text-center">
+                        <div onClick={clickEmail} className="pointer text-center hover-context">
                             <h3>Email Security</h3>
                             <img src={require("../../assets/img/oesa.png")} style={{ height: "150px" }} />
                         </div>
@@ -50,13 +50,13 @@ function OpswatAcademyModal() {
                 </Row>
                 <Row>
                     <Col>
-                        <div onClick={clickEndpoint} className="pointer text-center">
+                        <div onClick={clickEndpoint} className="pointer text-center hover-context">
                             <h3>Endpoint Compliance</h3>
                             <img src={require("../../assets/img/oeca.png")} style={{ height: "150px" }} />
                         </div>
                     </Col>
                     <Col>
-                        <div onClick={clickFile} className="pointer text-center">
+                        <div onClick={clickFile} className="pointer text-center hover-context">
                             <h3>File Security</h3>
                             <img src={require("../../assets/img/ofsa.png")} style={{ height: "150px" }} />
                         </div>
@@ -64,13 +64,13 @@ function OpswatAcademyModal() {
                 </Row>
                 <Row>
                     <Col>
-                        <div onClick={clickLegacySystem} className="pointer text-center">
+                        <div onClick={clickLegacySystem} className="pointer text-center hover-context">
                             <h3>Legacy-System Security</h3>
                             <img src={require("../../assets/img/olsa.png")} style={{ height: "150px" }} />
                         </div>
                     </Col>
                     <Col>
-                        <div onClick={clickNetwork} className="pointer text-center">
+                        <div onClick={clickNetwork} className="pointer text-center hover-context">
                             <h3>Network Security</h3>
                             <img src={require("../../assets/img/onsa.png")} style={{ height: "150px" }} />
                         </div>
@@ -78,13 +78,13 @@ function OpswatAcademyModal() {
                 </Row>
                 <Row>
                     <Col>
-                        <div onClick={clickSecureStorage} className="pointer text-center">
+                        <div onClick={clickSecureStorage} className="pointer text-center hover-context">
                             <h3>Secure Storage</h3>
                             <img src={require("../../assets/img/ossa.png")} style={{ height: "150px" }} />
                         </div>
                     </Col>
                     <Col>
-                        <div onClick={clickWebTraffic} className="pointer text-center">
+                        <div onClick={clickWebTraffic} className="pointer text-center hover-context">
                             <h3>Web-Traffic Protection</h3>
                             <img src={require("../../assets/img/owpa.png")} style={{ height: "150px" }} />
                         </div>

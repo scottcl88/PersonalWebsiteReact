@@ -53,6 +53,10 @@ for details on configuring this project to bundle and minify static web assets. 
 }
 .pointer {
   cursor: pointer !important;
+  &.hover-context:hover{
+    background: rgba(146, 228, 255, 0.162) !important;
+    
+  }
 }
 .skillColumnHeader {
   width: 325px;
