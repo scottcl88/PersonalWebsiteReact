@@ -248,15 +248,6 @@ function Portfolio() {
                             </div>
                             <h5 className="text-center mb-0">Portfolio</h5>
                         </div>
-                        <div className="col-md-6 col-lg-4 mb-5">
-                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4" onClick={benjiWorldDoShow}>
-                                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
-                                </div>
-                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/blazor_wasm.png")} alt="" />
-                            </div>
-                            <h5 className="text-center mb-0">Benji World</h5>
-                        </div>
                         <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={recipeLewisDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
@@ -265,6 +256,15 @@ function Portfolio() {
                                 <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/blazor_wasm.png")} alt="" />
                             </div>
                             <h5 className="text-center mb-0">Recipe Lewis</h5>
+                        </div>
+                        <div className="col-md-6 col-lg-4 mb-5">
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4" onClick={benjiWorldDoShow}>
+                                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
+                                </div>
+                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/blazor_wasm.png")} alt="" />
+                            </div>
+                            <h5 className="text-center mb-0">Benji World</h5>
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={fileIndexerServiceDoShow}>

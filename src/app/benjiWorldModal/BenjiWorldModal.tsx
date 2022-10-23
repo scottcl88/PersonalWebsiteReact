@@ -11,7 +11,7 @@ function BenjiWorldModal() {
                 <img className="mb-3 modal-image image-fluid" style={{ marginLeft: "35%", height: "200px", width: "200px" }} src={require("../../assets/img/portfolio/blazor_wasm.png")} />
                 <Row>
                     <Col>
-                        <h6>Technologies</h6><p>.Net 6, Blazor Web Assembly</p>
+                        <h6>Technologies</h6><p>.Net Standard 2.1, Blazor Web Assembly. NHibernate, Radzen UI</p>
                     </Col>
                 </Row>
                 <Row>
