@@ -17,6 +17,8 @@ import FileIndexerServiceModal from '../fileIndexerServiceModal/FileIndexerServi
 import FileSearcherModal from '../fileSearcherModal/FileSearcherModal';
 import SecureLewisModal from '../secureLewisModal/SecureLewisModal';
 import TpLinkModal from '../tpLinkModal/TPLinkModal';
+import PlateManiaModal from '../plateManiaModal/PlateManiaModal';
+import CapacitorPluginModal from '../capacitorPluginModal/CapacitorPluginModal';
 
 function Portfolio() {
 
@@ -72,6 +74,8 @@ function Portfolio() {
     const [portfolioShow, setPortfolioShow] = useState(false);
     const [benjiWorldShow, setBenjiWorldShow] = useState(false);
     const [recipeLewisShow, setRecipeLewisShow] = useState(false);
+    const [plateManiaShow, setPlateManiaShow] = useState(false);
+    const [capacitorPluginShow, setCapacitorPluginShow] = useState(false);
     const [asteroidCollectorShow, setAsteroidCollectorShow] = useState(false);
     const [wordleHinterShow, setWordleHinterShow] = useState(false);
     const [emailSubManagerShow, setEmailSubManagerShow] = useState(false);
@@ -98,6 +102,12 @@ function Portfolio() {
 
     const recipeLewisClose = () => setRecipeLewisShow(false);
     const recipeLewisDoShow = () => setRecipeLewisShow(true);
+    
+    const plateManiaClose = () => setPlateManiaShow(false);
+    const plateManiaDoShow = () => setPlateManiaShow(true);
+
+    const capacitorPluginClose = () => setCapacitorPluginShow(false);
+    const capacitorPluginDoShow = () => setCapacitorPluginShow(true);
 
     const asteroidCollectorClose = () => setAsteroidCollectorShow(false);
     const asteroidCollectorDoShow = () => setAsteroidCollectorShow(true);
@@ -254,7 +264,7 @@ function Portfolio() {
                             </div>
                             <h5 className="text-center mb-0">Portfolio</h5>
                         </div>
-                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div className="col-md-6 col-lg-4 mb-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={recipeLewisDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
@@ -262,6 +272,24 @@ function Portfolio() {
                                 <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/blazor_wasm.png")} alt="" />
                             </div>
                             <h5 className="text-center mb-0">Recipe Lewis</h5>
+                        </div>
+                        <div className="col-md-6 col-lg-4 mb-5">
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={plateManiaDoShow}>
+                                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
+                                </div>
+                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/angular.png")} alt="" />
+                            </div>
+                            <h5 className="text-center mb-0">License Plate Mania</h5>
+                        </div>
+                        <div className="col-md-6 col-lg-4 mb-5">
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={capacitorPluginDoShow}>
+                                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
+                                </div>
+                                <img className="img-fluid" style={{ marginLeft: "40%", height: "100px" }} src={require("../../assets/img/portfolio/java-logo3.png")} alt="" />
+                            </div>
+                            <h5 className="text-center mb-0">Capacitor Plugin</h5>
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4" onClick={benjiWorldDoShow}>
@@ -272,7 +300,7 @@ function Portfolio() {
                             </div>
                             <h5 className="text-center mb-0">Benji World</h5>
                         </div>
-                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div className="col-md-6 col-lg-4 mb-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={fileIndexerServiceDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
@@ -281,7 +309,7 @@ function Portfolio() {
                             </div>
                             <h5 className="text-center mb-0">File Indexer Service</h5>
                         </div>
-                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div className="col-md-6 col-lg-4 mb-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={fileSearcherDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
@@ -290,7 +318,7 @@ function Portfolio() {
                             </div>
                             <h5 className="text-center mb-0">File Searcher</h5>
                         </div>
-                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div className="col-md-6 col-lg-4 mb-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={secureLewisDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
@@ -299,7 +327,7 @@ function Portfolio() {
                             </div>
                             <h5 className="text-center mb-0">Secure Lewis</h5>
                         </div>
-                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div className="col-md-6 col-lg-4 mb-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={tpLinkControlDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
@@ -308,7 +336,7 @@ function Portfolio() {
                             </div>
                             <h5 className="text-center mb-0">TP Link Control</h5>
                         </div>
-                        <div className="col-md-6 col-lg-4 mb-5 mt-5">
+                        <div className="col-md-6 col-lg-4 mb-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal7" onClick={emailSubManagerDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
@@ -317,7 +345,7 @@ function Portfolio() {
                             </div>
                             <h5 className="text-center mb-0">Email Sub Manager</h5>
                         </div>
-                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0 mt-5">
+                        <div className="col-md-6 col-lg-4 mb-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal8" onClick={wordleHinterDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
@@ -326,7 +354,7 @@ function Portfolio() {
                             </div>
                             <h5 className="text-center mb-0">Wordle Hinter</h5>
                         </div>
-                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0 mt-5">
+                        <div className="col-md-6 col-lg-4 mb-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal9" onClick={javaWordSearchDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
@@ -335,7 +363,7 @@ function Portfolio() {
                             </div>
                             <h5 className="text-center mb-0">Word Search</h5>
                         </div>
-                        <div className="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div className="col-md-6 col-lg-4 mb-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6" onClick={asteroidCollectorDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
@@ -491,6 +519,12 @@ function Portfolio() {
             </Modal>
             <Modal show={tpLinkControlShow} onHide={tpLinkControlClose} size="lg">
                 <TpLinkModal></TpLinkModal>
+            </Modal>
+            <Modal show={plateManiaShow} onHide={plateManiaClose} size="lg">
+                <PlateManiaModal></PlateManiaModal>
+            </Modal>
+            <Modal show={capacitorPluginShow} onHide={capacitorPluginClose} size="lg">
+                <CapacitorPluginModal></CapacitorPluginModal>
             </Modal>
         </div>
     );
