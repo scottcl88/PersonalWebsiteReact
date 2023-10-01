@@ -51,11 +51,9 @@ class Resume extends React.Component {
                         <i className="fas fa-download mr-2"></i>Download
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <Dropdown.Item onClick={(e) => this.downloadDoc(e, 3)}><i className="fas fa-file-pdf mr-2"></i>PDF</Dropdown.Item>
+                        <Dropdown.Item onClick={(e) => this.downloadDoc(e, 2)}><i className="fas fa-file-pdf mr-2"></i>PDF</Dropdown.Item>
                         <Dropdown.Item onClick={(e) => this.downloadDoc(e, 1)}><i className="fas fa-file-word mr-2"></i>DOCX</Dropdown.Item>
-                        <Dropdown.Item onClick={(e) => this.downloadDoc(e, 4)}><i className="fas fa-file-alt mr-2"></i>RTF</Dropdown.Item>
-                        <Dropdown.Item onClick={(e) => this.downloadDoc(e, 5)}><i className="fas fa-file-alt mr-2"></i>TXT</Dropdown.Item>
-                        <Dropdown.Item onClick={(e) => this.downloadDoc(e, 2)}><i className="fas fa-file-code mr-2"></i>HTML</Dropdown.Item>
+                        <Dropdown.Item onClick={(e) => this.downloadDoc(e, 3)}><i className="fas fa-file-alt mr-2"></i>TXT</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
                 <div style={{ marginLeft: "46%", width: "100%" }}>
