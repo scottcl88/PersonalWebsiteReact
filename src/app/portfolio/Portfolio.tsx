@@ -139,7 +139,7 @@ function Portfolio() {
     const getSkills = () => {
         (window as any).grecaptcha.ready(() => {
             (window as any).grecaptcha.execute("6Lc6buAdAAAAAPHBGxLQUegsMf_ACveCrUaHqC5O", { action: 'submit' }).then((token: any) => {
-                axios.get("https://foodapi20210616194736.azurewebsites.net/api/Document/GetSkills", { headers: { RecaptchaToken: token } }).then((res) => {
+                axios.get("https://foodlewisapi.azurewebsites.net/api/Document/GetSkills", { headers: { RecaptchaToken: token } }).then((res) => {
                     console.log("Retrieved skills: ", res);
                     setSkillsList(res.data);
                     setOriginalSkillsList(res.data);

@@ -14,7 +14,7 @@ class Resume extends React.Component {
         (window as any).grecaptcha.ready(() => {
             (window as any).grecaptcha.execute("6Lc6buAdAAAAAPHBGxLQUegsMf_ACveCrUaHqC5O", { action: 'submit' }).then((token: any) => {
                 axios({
-                    url: `https://foodapi20210616194736.azurewebsites.net/api/Document/DownloadResume?resumeType=${type}`,
+                    url: `https://foodlewisapi.azurewebsites.net/api/Document/DownloadResume?resumeType=${type}`,
                     method: 'GET',
                     responseType: 'blob',
                     headers: { RecaptchaToken: token }
@@ -62,7 +62,7 @@ class Resume extends React.Component {
                     </Toast>
                 </div>
                 <div className="container">
-                    <object className="pdf-viewer" data="https://foodapi20210616194736.azurewebsites.net/api/Document/SCLewisResume" type="application/pdf"></object>
+                    <object className="pdf-viewer" data="https://foodlewisapi.azurewebsites.net/api/Document/SCLewisResume" type="application/pdf" aria-label="PDF Resume"></object>
                 </div>
             </div>
 

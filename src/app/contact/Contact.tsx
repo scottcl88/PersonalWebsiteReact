@@ -39,7 +39,7 @@ class Contact extends React.Component {
                     Message: this.state?.message,
                     RecaptchaToken: token
                 };
-                axios.post("https://foodapi20210616194736.azurewebsites.net/api/Contact/SendToPersonal", request).then(res => {
+                axios.post("https://foodlewisapi.azurewebsites.net/api/Contact/SendToPersonal", request).then(res => {
                     console.log("Form submitted: ", res);
                     this.setState({ showSuccessToast: true });
                 }).catch(err => {
