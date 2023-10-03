@@ -9,6 +9,20 @@ class Contact extends React.Component {
         super(props);
         this.handleInputChange = this.handleInputChange.bind(this);
     }
+    componentDidMount() {
+        // Get a reference to the anchor element by its ID or another selector
+        const linkElement = document.getElementById('calendly-link');
+
+        // Check if the element exists before attaching the click event
+        if (linkElement) {
+            linkElement.onclick = () => {
+                // Your Calendly initialization code
+                (window as any).Calendly.initPopupWidget({ url: 'https://calendly.com/scottlewis' });
+                return false;
+            };
+        }
+    }
+
     handleInputChange(event: any) {
         const target = event.target;
         const value = target.type === "checkbox" ? target.checked : target.value;
@@ -57,8 +71,9 @@ class Contact extends React.Component {
                 <div className="container">
                     <section className="contact-section">
                         <h2 className="section-title">Contact</h2>
-                        <p className="mb-4">If you’d like to reach me, please send an email or use the form below. I will try to get back to you as soon as possible.</p>
-
+                        <p className="mb-4">If you'd like to reach me, please send an email or use the form below. I will try to get back to you as soon as possible.
+                            <br></br><a href="" id="calendly-link">You may also schedule time with me.</a>
+                        </p>
                         <div className="contact-cards-wrapper">
                             <div className="contact-card">
                                 <h6 className="contact-card-title">Email</h6>
@@ -91,6 +106,9 @@ class Contact extends React.Component {
                     <Toast onClose={() => this.setState({ showSuccessToast: false })} bg="success" show={this.state.showSuccessToast} delay={3000} autohide>
                         <Toast.Body>Message sent!</Toast.Body>
                     </Toast>
+
+                    {/* <div className="calendly-inline-widget" data-url="https://calendly.com/scottlewis" ></div>
+                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> */}
                 </div>
             </div>
 
