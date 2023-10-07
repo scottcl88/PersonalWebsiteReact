@@ -197,6 +197,9 @@ function Portfolio() {
     const clickPSD1 = () => {
         window.open("https://www.credly.com/badges/cce45617-0798-45e0-b36c-0bf97ad29a7f/public_url", "_blank");
     };
+    const clickPSK1 = () => {
+        window.open("https://www.credly.com/badges/a1b1259f-3b66-4fe4-baba-02090924c482/public_url", "_blank");
+    };
     const clickTeamLeadership = () => {
         window.open("https://www.goskills.com/Verify?verificationNumber=53958428&fullName=Scott%20Lewis", "_blank");
     };
@@ -402,6 +405,12 @@ function Portfolio() {
                                 <div onClick={clickPSD1} className="pointer text-center hover-context">
                                     <h3>Professional Scrum Developer I</h3>
                                     <img src={require("../../assets/img/professional-scrum-developer-i-psd-i.png")} style={{ height: "150px" }} />
+                                </div>
+                            </div>
+                            <div className="col-6">
+                                <div onClick={clickPSK1} className="pointer text-center hover-context">
+                                    <h3>Professional Scrum with Kanban I</h3>
+                                    <img src={require("../../assets/img/professional-scrum-kanban-i-psk-i.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
                             <div className="col-6">
