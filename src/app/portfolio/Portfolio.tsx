@@ -281,7 +281,7 @@ function Portfolio() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/angular.png")} alt="" />
+                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/LicensePlateMania_180px.png")} alt="" />
                             </div>
                             <h5 className="text-center mb-0">License Plate Mania</h5>
                         </div>

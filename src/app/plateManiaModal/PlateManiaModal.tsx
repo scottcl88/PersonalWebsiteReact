@@ -3,15 +3,15 @@ import '../../site';
 
 function PlateManiaModal() {
     return (
-        <div className="recipeLewisModal">
+        <div className="plateManiaModal">
             <Modal.Header closeButton>
                 <Modal.Title>License Plate Mania</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <img className="mb-3 modal-image image-fluid" style={{ marginLeft: "35%", height: "200px", width: "200px" }} src={require("../../assets/img/portfolio/angular.png")} />
+                <img className="mb-3 modal-image image-fluid" style={{ marginLeft: "35%", height: "200px", width: "200px" }} src={require("../../assets/img/portfolio/LicensePlateMania_180px.png")} />
                 <Row>
                     <Col>
-                        <h6>Technologies</h6><p>Angular v15, Ionic v6, Capacitor v4</p>
+                        <h6>Technologies</h6><p>Angular v16, Ionic v6, Capacitor v4</p>
                     </Col>
                 </Row>
                 <Row>
@@ -26,17 +26,18 @@ function PlateManiaModal() {
                 </Row>
                 <Row>
                     <Col><h6>Repositories</h6>
-                        <Row>
+                        <p>The repository is currently unavailable due to it being an officially published application</p>
+                        {/* <Row>
                             <Col>
                                 <p><a href="https://github.com/scottcl88/license-plate-app-02gcat" target="_blank">github.com/scottcl88/license-plate-app-02gcat</a></p>
                             </Col>
-                        </Row>
+                        </Row> */}
                     </Col>
                 </Row>
                 <Row>
                     <Col><h6>Description</h6>
                         <p>
-                            License Plate Mania is a capacitor ionic angular app. It's the simple license plate game where you try to find all 50 states. It can also connect to Google Play Game services to store your data in the cloud.
+                            License Plate Mania is a capacitor ionic angular app. It's a simple 'license plate game' to find license plates while you travel. Features include using a svg map, recording location, and saving to Google Firebase.
                         </p>
                     </Col>
                 </Row>
