@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Modal } from 'react-bootstrap';
+import { Modal, Table } from 'react-bootstrap';
 import AsteroidCollectorModal from '../asteroidCollectorModal/AsteroidCollectorModal';
 import BenjiWorldModal from '../benjiWorldModal/BenjiWorldModal';
 import DynamicWeatherModal from '../dynamicWeatherModal/DynamicWeatherModal';
 import PortfolioModal from '../portfolioModal/PortfolioModal';
 import RecipeLewisModal from '../recipeLewisModal/RecipeLewisModal';
 import SurfNEatModal from '../surfNEatModal/SurfNEatModal';
-import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
-import BootstrapTable from 'react-bootstrap-table-next';
 import axios from 'axios';
 import WordleHinterModal from '../wordleHinterModal/WordleHinterModal';
 import EmailSubManagerModal from '../emailSubManagerModal/EmailSubManagerModal';
@@ -22,7 +20,7 @@ import CapacitorPluginModal from '../capacitorPluginModal/CapacitorPluginModal';
 
 function Portfolio() {
 
-    function experienceFormatter(cell: any, row: any) {
+    function experienceFormatter(cell: any) {
         let cellNum = Number(cell);
         if (!isNaN(cellNum)) {
             if (cell == 0) {
@@ -102,7 +100,7 @@ function Portfolio() {
 
     const recipeLewisClose = () => setRecipeLewisShow(false);
     const recipeLewisDoShow = () => setRecipeLewisShow(true);
-    
+
     const plateManiaClose = () => setPlateManiaShow(false);
     const plateManiaDoShow = () => setPlateManiaShow(true);
 
@@ -132,7 +130,7 @@ function Portfolio() {
 
     const secureLewisClose = () => setSecureLewisShow(false);
     const secureLewisDoShow = () => setSecureLewisShow(true);
-    
+
     const tpLinkControlClose = () => setTpLinkControlShow(false);
     const tpLinkControlDoShow = () => setTpLinkControlShow(true);
 
@@ -484,7 +482,26 @@ function Portfolio() {
                         <label htmlFor="search" className="sr-only">Search</label><i className="fas fa-search" style={{ color: "#9b9b9b", margin: "12px", position: "absolute" }}></i>
                         <input type="text" name="search" id="search" className="form-control" placeholder="Search" required style={{ paddingLeft: "30px" }} onChange={search} />
                     </div>
-                    <BootstrapTable keyField='skill' data={skillList} columns={columns} id="skillTable" defaultSorted={[{ dataField: "skill", order: "asc" }]} />
+                    <Table responsive striped>
+                        <thead>
+                            <tr>
+                                {Array.from(columns).map((_, index) => (
+                                    <th key={index}>{_.text}</th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {Array.from(skillList).map((_, index) => (
+                                <tr key={index}>
+                                    <td>{_["skill"]}</td>
+                                    <td>{_["lastUsed"]}</td>
+                                    <td>{experienceFormatter(_["professionalExperience"])}</td>
+                                    <td>{experienceFormatter(_["hobbyExperience"])}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </Table>
+                    {/* <BootstrapTable keyField='skill' data={skillList} columns={columns} id="skillTable" defaultSorted={[{ dataField: "skill", order: "asc" }]} /> */}
                 </div>
             </section>
             <Modal show={surfNEatShow} onHide={surfNEatClose} size="lg">
