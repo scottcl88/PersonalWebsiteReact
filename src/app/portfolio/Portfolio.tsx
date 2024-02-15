@@ -186,6 +186,9 @@ function Portfolio() {
             setSkillsList(originalSkillList);
         }
     }
+    const clickAzureFundamentals = () => {
+        window.open("https://learn.microsoft.com/api/credentials/share/en-us/ScottLewis-7553/F460AE7F7DEEE3E?sharingId=C35526628A17196", "_blank");
+    };
     const clickScrumMaster = () => {
         window.open("https://www.credly.com/badges/8b74256a-8be0-4940-bd79-9b61c2ad1671/public_url", "_blank");
     };
@@ -387,6 +390,12 @@ function Portfolio() {
                     </div>
                     <div className="mt-2 mb-1">
                         <div className="row">
+                            <div className="col-6">
+                                <div onClick={clickAzureFundamentals} className="pointer text-center hover-context">
+                                    <h3>Microsoft Azure Fundamentals</h3>
+                                    <img src={require("../../assets/img/microsoft-certified-fundamentals-badge.png")} style={{ height: "150px" }} />
+                                </div>
+                            </div>
                             <div className="col-6">
                                 <div onClick={clickScrumMaster} className="pointer text-center hover-context">
                                     <h3>Professional Scrum Master I</h3>
