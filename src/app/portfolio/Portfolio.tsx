@@ -16,6 +16,7 @@ import FileSearcherModal from '../fileSearcherModal/FileSearcherModal';
 import SecureLewisModal from '../secureLewisModal/SecureLewisModal';
 import TpLinkModal from '../tpLinkModal/TPLinkModal';
 import PlateManiaModal from '../plateManiaModal/PlateManiaModal';
+import SharkToothTrackerModal from '../sharkToothTrackerModal/SharkToothTrackerModal';
 import CapacitorPluginModal from '../capacitorPluginModal/CapacitorPluginModal';
 
 function Portfolio() {
@@ -73,6 +74,7 @@ function Portfolio() {
     const [benjiWorldShow, setBenjiWorldShow] = useState(false);
     const [recipeLewisShow, setRecipeLewisShow] = useState(false);
     const [plateManiaShow, setPlateManiaShow] = useState(false);
+    const [sharkToothTrackerShow, setSharkToothTrackerShow] = useState(false);
     const [capacitorPluginShow, setCapacitorPluginShow] = useState(false);
     const [asteroidCollectorShow, setAsteroidCollectorShow] = useState(false);
     const [wordleHinterShow, setWordleHinterShow] = useState(false);
@@ -103,6 +105,9 @@ function Portfolio() {
 
     const plateManiaClose = () => setPlateManiaShow(false);
     const plateManiaDoShow = () => setPlateManiaShow(true);
+
+    const sharkToothTrackerClose = () => setSharkToothTrackerShow(false);
+    const sharkToothTrackerDoShow = () => setSharkToothTrackerShow(true);
 
     const capacitorPluginClose = () => setCapacitorPluginShow(false);
     const capacitorPluginDoShow = () => setCapacitorPluginShow(true);
@@ -285,6 +290,15 @@ function Portfolio() {
                                 <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/LicensePlateMania_180px.png")} alt="" />
                             </div>
                             <h5 className="text-center mb-0">License Plate Mania</h5>
+                        </div>
+                        <div className="col-md-6 col-lg-4 mb-5">
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={sharkToothTrackerDoShow}>
+                                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                    <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
+                                </div>
+                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/sharkToothTracker.png")} alt="" />
+                            </div>
+                            <h5 className="text-center mb-0">Shark Tooth Tracker</h5>
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={capacitorPluginDoShow}>
@@ -557,6 +571,9 @@ function Portfolio() {
             </Modal>
             <Modal show={plateManiaShow} onHide={plateManiaClose} size="lg">
                 <PlateManiaModal></PlateManiaModal>
+            </Modal>
+            <Modal show={sharkToothTrackerShow} onHide={sharkToothTrackerClose} size="lg">
+                <SharkToothTrackerModal></SharkToothTrackerModal>
             </Modal>
             <Modal show={capacitorPluginShow} onHide={capacitorPluginClose} size="lg">
                 <CapacitorPluginModal></CapacitorPluginModal>
