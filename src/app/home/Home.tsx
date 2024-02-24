@@ -7,6 +7,7 @@ import DynamicWeatherModal from '../dynamicWeatherModal/DynamicWeatherModal';
 import PortfolioModal from '../portfolioModal/PortfolioModal';
 import RecipeLewisModal from '../recipeLewisModal/RecipeLewisModal';
 import SurfNEatModal from '../surfNEatModal/SurfNEatModal';
+import './Home.css';
 
 function Home() {
     const [surfNEatShow, setSurfNEatShow] = useState(false);
@@ -37,18 +38,25 @@ function Home() {
 
     return (
         <div className="home">
-            <header className="masthead bg-primary text-white text-center" id="page-top">
+            <header className="masthead text-center" id="page-top">
                 <div className="container d-flex align-items-center flex-column">
+                    <h1 className="mb-1">Senior Full Stack Developer & Agile Advocate</h1>
+                    <p className="subtitle mb-5">Crafting end-to-end solutions, fostering agility, and leading with expertise.</p>
                     <img className="masthead-avatar mb-5" src={require("../../assets/img/ProfilePic2.png")} alt="" />
-                    <h1 className="masthead-heading text-uppercase mb-0">Scott Lewis</h1>
+                    <h3 className="text-uppercase mb-0">Scott Lewis</h3>
                     <div className="divider-custom divider-light">
                         <div className="divider-custom-line"></div>
                         <div className="divider-custom-icon"><i className="fas fa-star"></i></div>
                         <div className="divider-custom-line"></div>
                     </div>
-                    <p className="masthead-subheading font-weight-light mb-0">Senior Full Stack Developer</p>
                 </div>
             </header>
+            <section className="page-section bg-primary text-white mb-0 pb-25" id="introduction">
+                <div className="container">
+                    <p>  I am a senior full stack developer with 6 years of professional experience, including team leadership and a variety of industries from small to large businesses and teams.
+                            I have a wide range of front-end and back-end skills including C#, SQL, Angular, React and more. I enjoy taking on challenges and embracing changes, and will deliver quality solutions to any system or product.</p>
+                </div>
+            </section>
             <section className="page-section portfolio" id="portfolio-home">
                 <div className="container">
                     <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
@@ -99,7 +107,6 @@ function Home() {
                         </div>
                     </div>
                 </div>
-
             </section>
             <section className="page-section bg-primary text-white mb-0 pb-25" id="about">
                 <div className="container">
