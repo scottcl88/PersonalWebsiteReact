@@ -36,11 +36,18 @@ function Home() {
     const asteroidCollectorDoShow = () => setAsteroidCollectorShow(true);
 
 
+    const calculateYears = (): number => {
+        const startYear = 2016;
+        const currentYear = new Date().getFullYear();
+        return currentYear - startYear - 1;
+    };
+    const [years, setYears] = useState<number>(calculateYears());
+
     return (
         <div className="home">
             <header className="masthead text-center" id="page-top">
                 <div className="container d-flex align-items-center flex-column">
-                    <h1 className="mb-1">Senior Full Stack Developer & Agile Advocate</h1>
+                    <h1 className="mb-1">Senior Full Stack Developer</h1>
                     <p className="subtitle mb-5">Crafting end-to-end solutions, fostering agility, and leading with expertise.</p>
                     <img className="masthead-avatar mb-5" src={require("../../assets/img/ProfilePic2.png")} alt="" />
                     <h3 className="text-uppercase mb-0">Scott Lewis</h3>
@@ -53,8 +60,59 @@ function Home() {
             </header>
             <section className="page-section bg-primary text-white mb-0 pb-25" id="introduction">
                 <div className="container">
-                    <p>  I am a senior full stack developer with 6 years of professional experience, including team leadership and a variety of industries from small to large businesses and teams.
-                            I have a wide range of front-end and back-end skills including C#, SQL, Angular, React and more. I enjoy taking on challenges and embracing changes, and will deliver quality solutions to any system or product.</p>
+                    <p className="introduction-text">Hi, I'm Scott!<br></br><br></br>I am a senior full stack developer with {years} years of professional experience, including team leadership and a variety of industries from small to large businesses and teams.
+                        I enjoy taking on challenges and embracing changes, and will deliver quality solutions to any system or product.</p>
+                </div>
+            </section>
+            <section className="page-section text-white mb-0 pb-25" id="roles">
+                <div className="container bg-white">
+                    <div className='row'>
+                        <div className='col-md-4'>
+                            <i className="fas fa-database mr-2 area-icon"></i>
+                            <h4>Backend</h4>
+                            <p>Architecting robust solutions, building the backbone of complex applications.</p>
+                            <p className='area-header'>Experiences</p>
+                            <ul>
+                                <li>Building tables</li>
+                                <li>Developing on multiple platforms</li>
+                            </ul>
+                            <p className='area-header'>Skills</p>
+                            <ul>
+                                <li>C#</li>
+                                <li>SQL</li>
+                            </ul>
+                        </div>
+                        <div className='col-md-4'>
+                            <i className="fas fa-code mr-2 area-icon"></i>
+                            <h4>Frontend</h4>
+                            <p>Translating UX/UI blueprints into dynamic code, architecting responsiveness, and building the best user experience."</p>
+                            <p className='area-header'>Experiences</p>
+                            <ul>
+                                <li>Building UI</li>
+                                <li>Developing on multiple platforms</li>
+                            </ul>
+                            <p className='area-header'>Skills</p>
+                            <ul>
+                                <li>C#</li>
+                                <li>CSS</li>
+                            </ul>
+                        </div>
+                        <div className='col-md-4'>
+                            <i className="fas fa-address-card mr-2 area-icon"></i>
+                            <h4>Mentor</h4>
+                            <p>Championing agile principles, guiding teams to greatness, and fostering innovation.</p>
+                            <p className='area-header'>Experiences</p>
+                            <ul>
+                                <li>Team Lead</li>
+                                <li>Developing Juniors</li>
+                            </ul>
+                            <p className='area-header'>Skills</p>
+                            <ul>
+                                <li>C#</li>
+                                <li>CSS</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section className="page-section portfolio" id="portfolio-home">

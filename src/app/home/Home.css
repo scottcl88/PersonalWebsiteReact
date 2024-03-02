@@ -1,3 +1,49 @@
-.subtitle{
+.subtitle {
     font-size: 22px;
+}
+
+#roles>.container {
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 10px 10px black;
+    margin-top: -400px;
+    text-align: center;
+}
+
+#introduction>p {
+    font-family: "europa", sans-serif;
+    font-weight: 400 !important;
+    font-size: 1.25rem;
+}
+
+ul{
+    padding: 0;    
+}
+
+li{
+    text-align: center;
+    list-style-type: none;
+}
+
+#introduction {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.area-header{
+    color: #259bd1 !important;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.area-icon{
+    font-size: 40px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.introduction-text{
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
 }

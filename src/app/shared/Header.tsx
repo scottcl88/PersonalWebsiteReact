@@ -10,10 +10,11 @@ class Header extends React.Component {
         return (
             <nav className="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
                 <div className="container">
-                    
-                    <img className="navbar-brand js-scroll-trigger headerLogo" src={require("../../assets/img/ScottLewisLogobyDesigner.png")} alt="" />
+                    <a className="navbar-brand js-scroll-trigger" href="/#page-top">
+                        <img className="navbar-brand js-scroll-trigger headerLogo" src={require("../../assets/img/ScottLewisLogobyDesigner.png")} alt="" />
+                    </a>
                     {/* <a className="navbar-brand js-scroll-trigger" href="/#page-top">SL</a> */}
-                    <button className="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">                       
+                    <button className="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         <i className="fas fa-bars"></i>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarResponsive">
