@@ -47,3 +47,8 @@ li{
     font-size: 23px;
     font-weight: bold;
 }
+
+.a-white{
+    color: white !important;
+    font-weight: bold;
+}

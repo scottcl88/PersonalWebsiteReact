@@ -9,3 +9,8 @@ a{
 .headerLogo{
     width: 75px;
 }
+
+.circle{
+    border: 1px solid black;
+    border-radius: 50px;
+}

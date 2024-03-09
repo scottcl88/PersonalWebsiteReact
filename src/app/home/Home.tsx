@@ -79,13 +79,16 @@ function Home() {
                             <p className='area-header'>Skills</p>
                             <ul>
                                 <li>C#</li>
+                                <li>.NET</li>
+                                <li>ASP.NET</li>
                                 <li>SQL</li>
+                                <li>Entity Framework</li>
                             </ul>
                         </div>
                         <div className='col-md-4'>
                             <i className="fas fa-code mr-2 area-icon"></i>
                             <h4>Frontend</h4>
-                            <p>Translating UX/UI blueprints into dynamic code, architecting responsiveness, and building the best user experience."</p>
+                            <p>Translating user requirements, building the best user experience.</p>
                             <p className='area-header'>Experiences</p>
                             <ul>
                                 <li>Building UI</li>
@@ -93,8 +96,11 @@ function Home() {
                             </ul>
                             <p className='area-header'>Skills</p>
                             <ul>
-                                <li>C#</li>
-                                <li>CSS</li>
+                                <li>Angular</li>
+                                <li>Typescript / JavaScript</li>
+                                <li>CSS / SCSS</li>
+                                <li>HTML</li>
+                                <li>C# MVC & Blazor</li>
                             </ul>
                         </div>
                         <div className='col-md-4'>
@@ -108,8 +114,7 @@ function Home() {
                             </ul>
                             <p className='area-header'>Skills</p>
                             <ul>
-                                <li>C#</li>
-                                <li>CSS</li>
+                                <li>Agile Scrum</li>
                             </ul>
                         </div>
                     </div>
@@ -174,26 +179,21 @@ function Home() {
                         <div className="divider-custom-icon"><i className="fas fa-star"></i></div>
                         <div className="divider-custom-line"></div>
                     </div>
-                    <div className="row justify-content-center text-white">
-                        <div className="col-auto"><p className="lead">Hello, I am Scott Lewis.
-                            I am a senior full stack developer with 6 years of professional experience, including team leadership and a variety of industries from small to large businesses and teams.
-                            I have a wide range of front-end and back-end skills including C#, SQL, Angular, React and more. I enjoy taking on challenges and embracing changes, and will deliver quality solutions to any system or product.</p></div>
-                    </div>
                     <div className="row justify-content-center mt-5 text-center">
                         <div className="col-lg-4">
-                            <a className="btn btn-xl btn-outline-light mr-3" href="/about">
+                            <a className="btn btn-xl btn-outline-light mr-3 a-white" href="/about">
                                 <i className="fas fa-address-card mr-2"></i>
                                 More About Me
                             </a>
                         </div>
                         <div className="col-lg-4 mt-xs-1">
-                            <a className="btn btn-xl btn-outline-light mr-3" href="/resume">
+                            <a className="btn btn-xl btn-outline-light mr-3 a-white" href="/resume">
                                 <i className="fas fa-file-alt mr-2"></i>
                                 View Resume
                             </a>
                         </div>
                         <div className="col-lg-4 mt-xs-1">
-                            <a className="btn btn-xl btn-outline-light" href="/contact">
+                            <a className="btn btn-xl btn-outline-light a-white" href="/contact">
                                 <i className="fas fa-paper-plane mr-2"></i>
                                 Contact Me
                             </a>
