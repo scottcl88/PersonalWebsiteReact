@@ -191,6 +191,9 @@ function Portfolio() {
             setSkillsList(originalSkillList);
         }
     }
+    const clickAzureDeveloperAssociate = () => {
+        window.open("https://learn.microsoft.com/api/credentials/share/en-us/ScottLewis-7553/247849C431B9FFF8?sharingId=C35526628A17196", "_blank");
+    };
     const clickAzureFundamentals = () => {
         window.open("https://learn.microsoft.com/api/credentials/share/en-us/ScottLewis-7553/F460AE7F7DEEE3E?sharingId=C35526628A17196", "_blank");
     };
@@ -404,6 +407,12 @@ function Portfolio() {
                     </div>
                     <div className="mt-2 mb-1">
                         <div className="row">
+                            <div className="col-6">
+                                <div onClick={clickAzureDeveloperAssociate} className="pointer text-center hover-context">
+                                    <h3>Microsoft Azure Developer Associate</h3>
+                                    <img src={require("../../assets/img/microsoft-certified-associate-badge.png")} style={{ height: "150px" }} />
+                                </div>
+                            </div>
                             <div className="col-6">
                                 <div onClick={clickAzureFundamentals} className="pointer text-center hover-context">
                                     <h3>Microsoft Azure Fundamentals</h3>
