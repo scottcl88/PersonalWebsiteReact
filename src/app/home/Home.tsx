@@ -7,6 +7,8 @@ import DynamicWeatherModal from '../dynamicWeatherModal/DynamicWeatherModal';
 import PortfolioModal from '../portfolioModal/PortfolioModal';
 import RecipeLewisModal from '../recipeLewisModal/RecipeLewisModal';
 import SurfNEatModal from '../surfNEatModal/SurfNEatModal';
+import PlateManiaModal from '../plateManiaModal/PlateManiaModal';
+import SharkToothTrackerModal from '../sharkToothTrackerModal/SharkToothTrackerModal';
 
 function Home() {
     const [surfNEatShow, setSurfNEatShow] = useState(false);
@@ -15,6 +17,8 @@ function Home() {
     const [benjiWorldShow, setBenjiWorldShow] = useState(false);
     const [recipeLewisShow, setRecipeLewisShow] = useState(false);
     const [asteroidCollectorShow, setAsteroidCollectorShow] = useState(false);
+    const [plateManiaShow, setPlateManiaShow] = useState(false);    
+    const [sharkToothTrackerShow, setSharkToothTrackerShow] = useState(false);
 
     const surfNEatClose = () => setSurfNEatShow(false);
     const surfNEatDoShow = () => setSurfNEatShow(true);
@@ -34,7 +38,15 @@ function Home() {
     const asteroidCollectorClose = () => setAsteroidCollectorShow(false);
     const asteroidCollectorDoShow = () => setAsteroidCollectorShow(true);
 
+    const plateManiaClose = () => setPlateManiaShow(false);
+    const plateManiaDoShow = () => setPlateManiaShow(true);
 
+    const sharkToothTrackerClose = () => setSharkToothTrackerShow(false);
+    const sharkToothTrackerDoShow = () => setSharkToothTrackerShow(true);
+
+    function startProfessionalYear() {
+        return new Date().getFullYear() - 2017;
+    }
     return (
         <div className="home">
             <header className="masthead bg-primary text-white text-center" id="page-top">
@@ -63,18 +75,18 @@ function Home() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "20%" }} src={require("../../assets/img/portfolio/surf_n_eat.png")} alt="" />
+                                <img className="img-fluid sharkTooth-img" style={{ marginLeft: "20%" }} src={require("../../assets/img/portfolio/sharkToothTracker.png")} alt="" />
                             </div>
-                            <h5 className="text-center mb-0">Surf-N-Eat</h5>
+                            <h5 className="text-center mb-0">Shark Tooth Tracker</h5>
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5">
-                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2" onClick={dynamicWeatherDoShow}>
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2" onClick={plateManiaDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" src={require("../../assets/img/portfolio/magicMirrorLogo.png")} alt="" />
+                                <img className="img-fluid plateMania-img" src={require("../../assets/img/portfolio/LicensePlateMania_180px.png")} alt="" />
                             </div>
-                            <h5 className="text-center mb-0">MMM-DynamicWeather</h5>
+                            <h5 className="text-center mb-0">License Plate Mania</h5>
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3" onClick={portfolioDoShow}>
@@ -110,9 +122,13 @@ function Home() {
                         <div className="divider-custom-line"></div>
                     </div>
                     <div className="row justify-content-center text-white">
-                        <div className="col-auto"><p className="lead">Hello, I am Scott Lewis.
-                            I am a senior full stack developer with 6 years of professional experience, including team leadership and a variety of industries from small to large businesses and teams.
-                            I have a wide range of front-end and back-end skills including C#, SQL, Angular, React and more. I enjoy taking on challenges and embracing changes, and will deliver quality solutions to any system or product.</p></div>
+                        <div className="col-auto">
+                            <p className="lead">
+                                Hello! I'm Scott Lewis, a senior full-stack developer with a passion for leading teams and mentoring emerging talent. With over {startProfessionalYear()} years of professional experience, I've navigated diverse industries, from startups to large corporations, honing my skills in architectural design and full-stack development.
+<br></br><br></br>
+                                My journey in software engineering is driven by a deep commitment to excellence and continuous growth. As a natural leader, I thrive on fostering collaborative environments where every team member's voice is heard and valued. Whether it's architecting scalable solutions or guiding developers towards their full potential, I'm dedicated to cultivating a culture of innovation and mentorship within dynamic teams.
+                            </p>
+                        </div>
                     </div>
                     <div className="row justify-content-center mt-5 text-center">
                         <div className="col-lg-4">
@@ -153,6 +169,12 @@ function Home() {
             </Modal>
             <Modal show={asteroidCollectorShow} onHide={asteroidCollectorClose} size="lg">
                 <AsteroidCollectorModal></AsteroidCollectorModal>
+            </Modal>
+            <Modal show={plateManiaShow} onHide={plateManiaClose} size="lg">
+                <PlateManiaModal></PlateManiaModal>
+            </Modal>
+            <Modal show={sharkToothTrackerShow} onHide={sharkToothTrackerClose} size="lg">
+                <SharkToothTrackerModal></SharkToothTrackerModal>
             </Modal>
         </div>
 

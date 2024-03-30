@@ -250,22 +250,22 @@ function Portfolio() {
                     </div>
                     <div className="row justify-content-center">
                         <div className="col-md-6 col-lg-4 mb-5">
-                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1" onClick={surfNEatDoShow}>
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={sharkToothTrackerDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "20%" }} src={require("../../assets/img/portfolio/surf_n_eat.png")} alt="" />
+                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/sharkToothTracker.png")} alt="" />
                             </div>
-                            <h5 className="text-center mb-0">Surf-N-Eat</h5>
+                            <h5 className="text-center mb-0">Shark Tooth Tracker</h5>
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5">
-                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2" onClick={dynamicWeatherDoShow}>
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={plateManiaDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" src={require("../../assets/img/portfolio/magicMirrorLogo.png")} alt="" />
+                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/LicensePlateMania_180px.png")} alt="" />
                             </div>
-                            <h5 className="text-center mb-0">MMM-DynamicWeather</h5>
+                            <h5 className="text-center mb-0">License Plate Mania</h5>
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3" onClick={portfolioDoShow}>
@@ -286,22 +286,22 @@ function Portfolio() {
                             <h5 className="text-center mb-0">Recipe Lewis</h5>
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5">
-                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={plateManiaDoShow}>
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2" onClick={dynamicWeatherDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/LicensePlateMania_180px.png")} alt="" />
+                                <img className="img-fluid" src={require("../../assets/img/portfolio/magicMirrorLogo.png")} alt="" />
                             </div>
-                            <h5 className="text-center mb-0">License Plate Mania</h5>
+                            <h5 className="text-center mb-0">MMM-DynamicWeather</h5>
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5">
-                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={sharkToothTrackerDoShow}>
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1" onClick={surfNEatDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/sharkToothTracker.png")} alt="" />
+                                <img className="img-fluid" style={{ marginLeft: "20%" }} src={require("../../assets/img/portfolio/surf_n_eat.png")} alt="" />
                             </div>
-                            <h5 className="text-center mb-0">Shark Tooth Tracker</h5>
+                            <h5 className="text-center mb-0">Surf-N-Eat</h5>
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" onClick={capacitorPluginDoShow}>

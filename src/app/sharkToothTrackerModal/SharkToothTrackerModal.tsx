@@ -25,13 +25,12 @@ function SharkToothTrackerModal() {
                     </Col>
                 </Row>
                 <Row>
-                    <Col><h6>Repositories</h6>
-                        <p>The repository is currently unavailable due to it being an officially published application</p>
-                        {/* <Row>
+                    <Col><h6>Repository</h6>
+                        <Row>
                             <Col>
-                                <p><a href="https://github.com/scottcl88/license-plate-app-02gcat" target="_blank">github.com/scottcl88/license-plate-app-02gcat</a></p>
+                                <p><a href="https://github.com/scottcl88/shark-tooth-tracker-app" target="_blank">github.com/scottcl88/shark-tooth-tracker-app</a></p>
                             </Col>
-                        </Row> */}
+                        </Row>
                     </Col>
                 </Row>
                 <Row>

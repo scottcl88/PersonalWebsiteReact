@@ -13,7 +13,7 @@ class Footer extends React.Component {
                                 <a className="btn btn-outline-light btn-social mx-1" href="https://github.com/scottcl88" target="_blank"><i className="fab fa-fw fa-github"></i></a>
                             </div>
                             <div className="col-lg-4">
-                            <p className="lead text-center">&copy; 2022 - Scott C Lewis</p>
+                            <p className="lead text-center">&copy; {new Date().getFullYear()} - Scott C Lewis</p>
                             </div>
                             <div className="col-lg-4">
                                 <p className="mb-0">
