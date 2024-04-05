@@ -166,10 +166,10 @@ span:not(.dropup) > .caret:after {
 }
 header {
   // background-color: #1abc9c !important;
-  background-color: #1a89bc !important;
+  background-color: #2789b6 !important;
 }
 .bg-primary {
-  background-color: #259bd1 !important;
+  background-color: #2789b6 !important;
 }
 .portfolio .portfolio-item .portfolio-item-caption {
   background-color: #259bd13d;
@@ -10948,12 +10948,41 @@ form .row:first-child .floating-label-form-group {
 }
 
 .footer {
-  padding-top: 5rem;
   padding-bottom: 5rem;
   background-color: #2c3e50;
   color: #fff;
+  padding-top: 5rem;
 }
-
+.bold{
+  font-weight: bolder;
+}
+#about{
+  padding-bottom: 20rem;
+  @media (max-width: 1138px) {
+    padding-bottom: 22rem;
+  }
+  @media (max-width: 991px) {
+    padding-bottom: 30rem;
+  }
+  @media (max-width: 768px) {
+    padding-bottom: 35rem;
+  }
+}
+.btn-sm-3{
+  @media (max-width: 991px) {
+    padding: 15px;
+  }
+}
+// .mt-sm-2{
+//   @media (min-width: 768px) {
+//     margin-top: 4rem;
+//   }
+// }
+.custom-mt{
+  @media (width <= 767px) {
+    margin-top: 2rem;
+  }
+}
 .copyright {
   background-color: #1a252f;
 }
@@ -10980,4 +11009,14 @@ form .row:first-child .floating-label-form-group {
 .sharkTooth-img{  
   height: 100px;
   margin-left: 35%;
+}
+
+.d-contents{
+  display: contents;
+}
+
+.footer-info{
+  display: flex !important;
+  align-content: center !important;
+  justify-content: center !important;
 }

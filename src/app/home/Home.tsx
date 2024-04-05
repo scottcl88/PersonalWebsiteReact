@@ -113,7 +113,7 @@ function Home() {
                 </div>
 
             </section>
-            <section className="page-section bg-primary text-white mb-0 pb-25" id="about">
+            <section className="page-section bg-primary text-white mb-0" id="about">
                 <div className="container">
                     <h2 className="page-section-heading text-center text-uppercase text-white">About</h2>
                     <div className="divider-custom divider-light">
@@ -131,20 +131,20 @@ function Home() {
                         </div>
                     </div>
                     <div className="row justify-content-center mt-5 text-center">
-                        <div className="col-lg-4">
-                            <a className="btn btn-xl btn-outline-light mr-3" href="/about">
+                        <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <a className="btn btn-xl btn-outline-light mr-3 bold btn-sm-3" href="/about">
                                 <i className="fas fa-address-card mr-2"></i>
                                 More About Me
                             </a>
                         </div>
-                        <div className="col-lg-4 mt-xs-1">
-                            <a className="btn btn-xl btn-outline-light mr-3" href="/resume">
+                        <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 custom-mt">
+                            <a className="btn btn-xl btn-outline-light mr-3 bold btn-sm-3" href="/resume">
                                 <i className="fas fa-file-alt mr-2"></i>
                                 View Resume
                             </a>
                         </div>
-                        <div className="col-lg-4 mt-xs-1">
-                            <a className="btn btn-xl btn-outline-light" href="/contact">
+                        <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 custom-mt">
+                            <a className="btn btn-xl btn-outline-light bold btn-sm-3" href="/contact">
                                 <i className="fas fa-paper-plane mr-2"></i>
                                 Contact Me
                             </a>
