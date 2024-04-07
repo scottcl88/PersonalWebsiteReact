@@ -407,91 +407,91 @@ function Portfolio() {
                     </div>
                     <div className="mt-2 mb-1">
                         <div className="row">
-                            <div className="col-6">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickAzureDeveloperAssociate} className="pointer text-center hover-context">
                                     <h3>Microsoft Azure Developer Associate</h3>
                                     <img src={require("../../assets/img/microsoft-certified-associate-badge.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickAzureFundamentals} className="pointer text-center hover-context">
                                     <h3>Microsoft Azure Fundamentals</h3>
                                     <img src={require("../../assets/img/microsoft-certified-fundamentals-badge.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickScrumMaster} className="pointer text-center hover-context">
                                     <h3>Professional Scrum Master I</h3>
                                     <img src={require("../../assets/img/BADGES_FINAL_PSM-I_600.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickScrumMaster2} className="pointer text-center hover-context">
                                     <h3>Professional Scrum Master II</h3>
                                     <img src={require("../../assets/img/professional-scrum-master-ii-psm-ii.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickPSD1} className="pointer text-center hover-context">
                                     <h3>Professional Scrum Developer I</h3>
                                     <img src={require("../../assets/img/professional-scrum-developer-i-psd-i.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickPSK1} className="pointer text-center hover-context">
                                     <h3>Professional Scrum with Kanban I</h3>
                                     <img src={require("../../assets/img/professional-scrum-kanban-i-psk-i.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickGoogleProjectManagementCertificate} className="pointer text-center hover-context">
                                     <h3>Google Project Management</h3>
                                     <img src={require("../../assets/img/google-project-management-certificate.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6 mt-4">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickStrategicManagementCertificate} className="pointer text-center hover-context">
                                     <h4>Strategic Leadership and Management</h4>
                                     <img src={require("../../assets/img/Illinois_blue-background2.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6 mt-4">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickCorporateStrategy} className="pointer text-center hover-context">
                                     <h3>Corporate Strategy</h3>
                                     <img src={require("../../assets/img/Illinois_blue-background2.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6 mt-4">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickTeamLeadership} className="pointer text-center hover-context">
                                     <h3>Team Leadership</h3>
                                     <img src={require("../../assets/img/GoSkillsBadge.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6 mt-4">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={opswatAcademyDoShow} data-toggle="modal" data-target="#portfolioModal7" className="pointer text-center hover-context">
                                     <h3>OPSWAT Academy (8)</h3>
                                     <img src={require("../../assets/img/owpa.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6 mt-4">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickSoftwareDevelopmentLifecycle} className="pointer text-center hover-context">
                                     <h3>Software Development Lifecycle</h3>
                                     <img src={require("../../assets/img/FB-GoldM-maroon.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6 mt-4">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickCybersecurityForEveryone} className="pointer text-center hover-context">
                                     <h3>Cybersecurity for Everyone</h3>
                                     <img src={require("../../assets/img/umd_square_transparent.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6 mt-4">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickCybersecurityITFundamentalsSpecialization} className="pointer text-center hover-context">
                                     <h3>IT Fundamentals for Cybersecurity</h3>
                                     <img src={require("../../assets/img/IT_Fund_for_Cyber_Specialist.png")} style={{ height: "150px" }} />
                                 </div>
                             </div>
-                            <div className="col-6 mt-4">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickGoogleStoreCertificate} className="pointer text-center hover-context">
                                     <h3>Google Play Store Listing</h3>
                                     <img src={require("../../assets/img/Google_Play_Store_Listing_Certificate.png")} style={{ height: "150px" }} />
