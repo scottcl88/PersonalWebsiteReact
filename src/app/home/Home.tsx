@@ -70,16 +70,16 @@ function Home() {
                         <div className="divider-custom-line"></div>
                     </div>
                     <div className="row justify-content-center">
-                        <div className="col-md-6 col-lg-4 mb-5">
-                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1" onClick={surfNEatDoShow}>
+                        <div className="col-md-4 col-sm-4 col-lg-4 mb-5">
+                            <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1" onClick={sharkToothTrackerDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid sharkTooth-img" style={{ marginLeft: "20%" }} src={require("../../assets/img/portfolio/sharkToothTracker.png")} alt="" />
+                                <img className="img-fluid sharkTooth-img" style={{ marginLeft: "" }} src={require("../../assets/img/portfolio/sharkToothTracker.png")} alt="" />
                             </div>
                             <h5 className="text-center mb-0">Shark Tooth Tracker</h5>
                         </div>
-                        <div className="col-md-6 col-lg-4 mb-5">
+                        <div className="col-md-4 col-sm-4 col-lg-4 mb-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2" onClick={plateManiaDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
@@ -88,26 +88,28 @@ function Home() {
                             </div>
                             <h5 className="text-center mb-0">License Plate Mania</h5>
                         </div>
-                        <div className="col-md-6 col-lg-4 mb-5">
+                        <div className="col-md-4 col-sm-4 col-lg-4 mb-5">
                             <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3" onClick={portfolioDoShow}>
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ height: "100px", marginLeft: "28%" }} src={require("../../assets/img/portfolio/logo.svg").default} alt="" />
+                                <img className="img-fluid portfolio-img" style={{ height: "100px", marginLeft: "" }} src={require("../../assets/img/portfolio/logo.svg").default} alt="" />
                             </div>
                             <h5 className="text-center mb-0">Portfolio</h5>
                         </div>
-                        <div className="text-center mt-5">
-                            <a className="btn btn-xl btn-outline-dark mr-3" href="/portfolio#portfolio">
-                                <i className="fas fa-address-card mr-2"></i>
-                                More Portfolio
-                            </a>
-                        </div>
-                        <div className="text-center mt-5">
-                            <a className="btn btn-xl btn-outline-dark mr-3" href="/portfolio#certifications">
-                                <i className="fas fa-address-card mr-2"></i>
+                        <div className="text-center mt-5 col-lg-5 offset-lg-1 col-md-12 col-sm-12">
+                            <a className="btn btn-xl btn-outline-dark bold" href="/portfolio#certifications">
+                                <i className="fas fa-star mr-2"></i>
                                 Skills and Certifications
                             </a>
+                        </div>
+                        <div className="text-center mt-5 col-lg-5 col-md-12 col-sm-12">
+                            <a className="btn btn-xl btn-outline-dark bold" href="/portfolio#portfolio">
+                                <i className="fas fa-address-card mr-2"></i>
+                                More Work
+                            </a>
+                        </div>
+                        <div className="offset-lg-1">
                         </div>
                     </div>
                 </div>

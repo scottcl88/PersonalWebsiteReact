@@ -16,8 +16,8 @@ class Footer extends React.Component {
                             <p className="lead text-center">&copy; {new Date().getFullYear()} - Scott C Lewis</p>
                             </div>
                             <div className="col-lg-4">
-                                <p className="mb-0 footer-info">
-                                    Freelancer Bootstrap theme created by&nbsp;
+                                <p className="footer-info">
+                                    Template by&nbsp;
                                     <a href="https://startbootstrap.com" target="_blank" className="d-contents">Start Bootstrap</a>
                                 </p>
                             </div>
