@@ -146,8 +146,10 @@ function Portfolio() {
                     console.log("Retrieved skills: ", res);
                     setSkillsList(res.data);
                     setOriginalSkillsList(res.data);
+                    setIsLoading(false);
                 }).catch((err: any) => {
                     console.error("Failed to get skills", err);
+                    setIsLoading(false);
                 });
             });
         });
@@ -233,8 +235,10 @@ function Portfolio() {
     const clickCybersecurityITFundamentalsSpecialization = () => {
         window.open("https://www.credly.com/badges/a355d374-aa24-4ee8-8313-8f9805520381/public_url", "_blank");
     };
+    const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
         console.log("useEffect called");
+        setIsLoading(true);
         getSkills();
     }, []);
 
@@ -523,6 +527,7 @@ function Portfolio() {
                             </tr>
                         </thead>
                         <tbody>
+                            {isLoading ? <tr><td colSpan={4} className="text-center">Loading...</td></tr> : null}
                             {Array.from(skillList).map((_, index) => (
                                 <tr key={index}>
                                     <td>{_["skill"]}</td>
