@@ -13,10 +13,18 @@ import Portfolio from './portfolio/Portfolio';
 import Resume from './resume/Resume';
 import Contact from './contact/Contact';
 
-class App extends React.Component {
+class App extends React.Component {  
   render() {
+    const clickScheduleTime = () => {
+      window.open("https://tidycal.com/scottcl", "_blank");
+    };
     return (
       <div className="App">
+
+        <div className="fab-schedule" onClick={clickScheduleTime}>
+          <div className="fab-schedule-child">
+            <i className="fas fa-calendar mr-2"></i>Schedule time with me!</div>
+        </div>
         <Header />
         <main role="main">
           <div style={{ marginTop: "50px" }}>

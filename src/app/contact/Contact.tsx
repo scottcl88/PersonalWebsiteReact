@@ -9,20 +9,7 @@ class Contact extends React.Component {
         super(props);
         this.handleInputChange = this.handleInputChange.bind(this);
     }
-    componentDidMount() {
-        // Get a reference to the anchor element by its ID or another selector
-        const linkElement = document.getElementById('calendly-link');
-
-        // Check if the element exists before attaching the click event
-        if (linkElement) {
-            linkElement.onclick = () => {
-                // Your Calendly initialization code
-                (window as any).Calendly.initPopupWidget({ url: 'https://calendly.com/scottlewis' });
-                return false;
-            };
-        }
-    }
-
+    
     handleInputChange(event: any) {
         const target = event.target;
         const value = target.type === "checkbox" ? target.checked : target.value;
@@ -72,7 +59,7 @@ class Contact extends React.Component {
                     <section className="contact-section">
                         <h2 className="section-title">Contact</h2>
                         <p className="mb-4">If you'd like to reach me, please send an email or use the form below. I will try to get back to you as soon as possible.
-                            <br></br><a href="" id="calendly-link">You may also schedule time with me.</a>
+                            <br></br><a href="https://tidycal.com/scottcl" id="tidycal-link" target='_blank'>You may also schedule time with me.</a>
                         </p>
                         <div className="contact-cards-wrapper">
                             <div className="contact-card">

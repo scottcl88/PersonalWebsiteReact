@@ -186,7 +186,7 @@ span:not(.dropup) > .caret:after {
 }
 .about {
   margin-top: 8rem;
-   @media (min-width: 767px) {
+  @media (min-width: 767px) {
     margin-bottom: 18rem;
   }
   @media (max-width: 768px) {
@@ -11087,4 +11087,38 @@ form .row:first-child .floating-label-form-group {
 .footer-info {
   word-break: normal;
   white-space: normal;
+}
+
+.fab-schedule {
+  left: 20px;
+  right: 0 !important;
+  position: fixed;
+  //right: 20px;
+  bottom: 15px;
+  z-index: 9998;
+  font-size: 16px;
+  line-height: 1.2em;
+
+  div {
+    display: table-cell;
+    width: auto;
+    height: 45px;
+    padding: 0 30px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, .5) 0 3px 6px;
+    font-family: sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    background: #0878c9;
+    color: white;
+  }
+
+  // .fab-schedule-child {
+  //   background: rgb(0, 105, 255);
+  //   color: rgb(255, 255, 255);
+  // }
 }
