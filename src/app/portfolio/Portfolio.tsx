@@ -18,6 +18,7 @@ import TpLinkModal from '../tpLinkModal/TPLinkModal';
 import PlateManiaModal from '../plateManiaModal/PlateManiaModal';
 import SharkToothTrackerModal from '../sharkToothTrackerModal/SharkToothTrackerModal';
 import CapacitorPluginModal from '../capacitorPluginModal/CapacitorPluginModal';
+import Papa from 'papaparse';
 
 function Portfolio() {
 
@@ -140,18 +141,30 @@ function Portfolio() {
     const tpLinkControlDoShow = () => setTpLinkControlShow(true);
 
     const getSkills = () => {
-        (window as any).grecaptcha.ready(() => {
-            (window as any).grecaptcha.execute("6Lc6buAdAAAAAPHBGxLQUegsMf_ACveCrUaHqC5O", { action: 'submit' }).then((token: any) => {
-                axios.get("https://foodlewisapi.azurewebsites.net/api/Document/GetSkills", { headers: { RecaptchaToken: token } }).then((res) => {
-                    console.log("Retrieved skills: ", res);
-                    setSkillsList(res.data);
-                    setOriginalSkillsList(res.data);
+        axios.get("https://scottclpersonalwebsite.blob.core.windows.net/publicfiles/Skills.csv", { headers: {} }).then((res) => {
+            // Parse CSV data
+            Papa.parse(res.data, {
+                complete: (result: any) => {
+                    const rows = result.data;
+                    //remove the first row with headers
+                    rows.shift();
+                    // Map the rows to JSON objects
+                    const jsonArray = rows.map((row: any) => ({
+                        skill: row[0],
+                        professionalExperience: row[1],
+                        hobbyExperience: row[2],
+                        lastUsed: row[3]
+                    }));
+                    setSkillsList(jsonArray);
+                    setOriginalSkillsList(jsonArray);
                     setIsLoading(false);
-                }).catch((err: any) => {
-                    console.error("Failed to get skills", err);
-                    setIsLoading(false);
-                });
+                },
+                header: false,
+                skipEmptyLines: true
             });
+        }).catch((err: any) => {
+            console.error("Failed to get skills", err);
+            setIsLoading(false);
         });
     }
     const search = (ev: any) => {
