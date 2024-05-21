@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React from 'react';
 import { Dropdown, Toast } from 'react-bootstrap';
 
@@ -8,40 +7,46 @@ class Resume extends React.Component {
     constructor(props: any) {
         super(props);
     }
-    downloadDoc = (e: any, type: number) => {
+    downloadDoc = async (e: any, type: number) => {
         e.preventDefault();
         console.log("downloadDoc called: ", e);
-        (window as any).grecaptcha.ready(() => {
-            (window as any).grecaptcha.execute("6Lc6buAdAAAAAPHBGxLQUegsMf_ACveCrUaHqC5O", { action: 'submit' }).then((token: any) => {
-                axios({
-                    url: `https://foodlewisapi.azurewebsites.net/api/Document/DownloadResume?resumeType=${type}`,
-                    method: 'GET',
-                    responseType: 'blob',
-                    headers: { RecaptchaToken: token }
-                }).then((response) => {
-                    let filename = "";
-                    const contentDisposition = response.headers['content-disposition'];
-                    console.log("ContentDisposition", contentDisposition);
-                    if (contentDisposition && contentDisposition.indexOf('attachment') !== -1) {
-                        var filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
-                        var matches = filenameRegex.exec(contentDisposition);
-                        if (matches != null && matches[1]) {
-                            filename = matches[1].replace(/['"]/g, '');
-                        }
-                    }
-                    console.log("filename", filename);
-                    const contentType = response.headers['content-type'];
-                    const blob = new Blob([response.data], { type: contentType });
-                    const link = document.createElement('a');
-                    link.href = window.URL.createObjectURL(blob);
-                    link.download = filename;
-                    link.click();
-                }).catch((err: any) => {
-                    console.error("Failed to download: ", err);
-                    this.setState({ showErrorToast: true });
-                });
-            });
-        });
+        let fileName = "Public_SCLewis_Resume.docx";
+        if (type === 2) {
+            fileName = "Public_SCLewis_Resume.pdf";
+        }
+        if (type === 3) {
+            fileName = "Public_SCLewis_Resume.txt";
+        }
+        const fileUrl = 'https://scottclpersonalwebsite.blob.core.windows.net/publicfiles/' + fileName;
+
+        try {
+            // Fetch the file
+            const response = await fetch(fileUrl);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const blob = await response.blob();
+
+            // Create a Blob URL
+            const url = window.URL.createObjectURL(blob);
+
+            // Create a link element and trigger download
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = fileName;
+
+            // Add the Content-Disposition header
+            a.setAttribute('download', fileName);
+            a.setAttribute('target', '_blank');
+            document.body.appendChild(a);
+            a.click();
+
+            // Clean up
+            a.remove();
+            window.URL.revokeObjectURL(url);
+        } catch (error) {
+            console.error('There was an error downloading the file:', error);
+        }
     }
     render() {
         return (
@@ -62,7 +67,7 @@ class Resume extends React.Component {
                     </Toast>
                 </div>
                 <div className="container">
-                    <object className="pdf-viewer" data="https://foodlewisapi.azurewebsites.net/api/Document/SCLewisResume" type="application/pdf" aria-label="PDF Resume"></object>
+                    <object className="pdf-viewer" data="https://scottclpersonalwebsite.blob.core.windows.net/publicfiles/Public_SCLewis_Resume.pdf" type="application/pdf" aria-label="PDF Resume"></object>
                 </div>
             </div>
 
