@@ -9,7 +9,7 @@ class Contact extends React.Component {
         super(props);
         this.handleInputChange = this.handleInputChange.bind(this);
     }
-    
+
     handleInputChange(event: any) {
         const target = event.target;
         const value = target.type === "checkbox" ? target.checked : target.value;
@@ -31,25 +31,21 @@ class Contact extends React.Component {
             return;
         }
         this.setState({ disableButton: true });
-        (window as any).grecaptcha.ready(() => {
-            (window as any).grecaptcha.execute("6Lc6buAdAAAAAPHBGxLQUegsMf_ACveCrUaHqC5O", { action: 'submit' }).then((token: any) => {
-                var request = {
-                    FromEmail: this.state?.email,
-                    Name: this.state?.name,
-                    Subject: this.state?.subject,
-                    Message: this.state?.message,
-                    RecaptchaToken: token
-                };
-                axios.post("https://foodlewisapi.azurewebsites.net/api/Contact/SendToPersonal", request).then(res => {
-                    console.log("Form submitted: ", res);
-                    this.setState({ showSuccessToast: true });
-                }).catch(err => {
-                    console.error("Failed to submit form: ", err);
-                    this.setState({ showErrorToast: true });
-                }).finally(() => {
-                    this.setState({ disableButton: false });
-                });
-            });
+        var request = {
+            FromEmail: this.state?.email,
+            Name: this.state?.name,
+            Subject: this.state?.subject,
+            Message: this.state?.message
+        };
+        let headers = { 'Content-Type': 'application/json', 'x-functions-key': 'Vv4ApfIJJbMiVsUKRJMVD-A8OUuHlvzkuiWB-56iO-LUAzFum52-Hg==' };
+        axios.post("https://scottcl-emailfunction.azurewebsites.net/api/SendEmail", request, { headers: headers }).then(res => {
+            console.log("Form submitted: ", res);
+            this.setState({ showSuccessToast: true });
+        }).catch(err => {
+            console.error("Failed to submit form: ", err);
+            this.setState({ showErrorToast: true });
+        }).finally(() => {
+            this.setState({ disableButton: false });
         });
     }
     render() {
