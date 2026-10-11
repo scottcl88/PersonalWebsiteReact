@@ -92,7 +92,7 @@ export function usePageMetadata(pathname: string) {
     const fullTitle = meta.title ? `${meta.title} | Scott Lewis` : DEFAULT_TITLE;
     const description = meta.description || DEFAULT_DESCRIPTION;
     const canonicalUrl = new URL(pathname === '/' ? '' : pathname, SITE_URL).toString();
-    const imageUrl = new URL(meta.image || '/android-chrome-512x512.png', SITE_URL).toString();
+    const imageUrl = new URL(meta.image || '/og-image.png', SITE_URL).toString();
 
     document.title = fullTitle;
     document.documentElement.lang = 'en';
@@ -163,6 +163,7 @@ export function usePageMetadata(pathname: string) {
           description,
           about: personSchema,
           mainEntity: personSchema,
+          image: `${SITE_URL}/og-image.png`,
         }
       : pathname === '/resume'
         ? {
@@ -173,6 +174,7 @@ export function usePageMetadata(pathname: string) {
             description,
             about: personSchema,
             mainEntity: personSchema,
+            image: `${SITE_URL}/og-image.png`,
           }
         : {
             '@context': 'https://schema.org',
@@ -182,6 +184,7 @@ export function usePageMetadata(pathname: string) {
             description,
             inLanguage: 'en-US',
             author: personSchema,
+            image: `${SITE_URL}/og-image.png`,
             potentialAction: {
               '@type': 'SearchAction',
               target: `${SITE_URL}/portfolio?q={search_term_string}`,
