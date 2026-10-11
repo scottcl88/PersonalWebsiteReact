@@ -1,4 +1,4 @@
-import { Button, Col, Modal, Row } from 'react-bootstrap';
+import { Col, Modal, Row } from 'react-bootstrap';
 import '../../site';
 
 function PlateManiaModal() {
@@ -8,7 +8,7 @@ function PlateManiaModal() {
                 <Modal.Title>License Plate Mania</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <img className="mb-3 modal-image image-fluid" style={{ marginLeft: "35%", height: "200px", width: "200px" }} src={require("../../assets/img/portfolio/LicensePlateMania_180px.png")} />
+                <img className="mb-3 modal-image image-fluid" style={{ marginLeft: "35%", height: "200px", width: "200px" }} src={require("../../assets/img/portfolio/LicensePlateMania_180px.png")} alt="" />
                 <Row>
                     <Col>
                         <h6>Technologies</h6><p>Angular v16, Ionic v6, Capacitor v4</p>
@@ -21,7 +21,7 @@ function PlateManiaModal() {
                 </Row>
                 <Row>
                     <Col>
-                        <h6>Website</h6><p><a href="https://www.platemania.net" target="_blank">platemania.net</a></p>
+                        <h6>Website</h6><p><a href="https://www.platemania.net" target="_blank" rel="noreferrer">platemania.net</a></p>
                     </Col>
                 </Row>
                 <Row>

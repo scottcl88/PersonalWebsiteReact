@@ -1,4 +1,4 @@
-import { Button, Col, Modal, Row } from 'react-bootstrap';
+import { Col, Modal, Row } from 'react-bootstrap';
 import '../../site';
 
 function SharkToothTrackerModal() {
@@ -8,7 +8,7 @@ function SharkToothTrackerModal() {
                 <Modal.Title>Shark Tooth Tracker</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <img className="mb-3 modal-image image-fluid" style={{ marginLeft: "35%", height: "200px", width: "200px" }} src={require("../../assets/img/portfolio/sharkToothTracker.png")} />
+                <img className="mb-3 modal-image image-fluid" style={{ marginLeft: "35%", height: "200px", width: "200px" }} src={require("../../assets/img/portfolio/sharkToothTracker.png")} alt="" />
                 <Row>
                     <Col>
                         <h6>Technologies</h6><p>Angular v17, Ionic v7, Capacitor v5</p>
@@ -21,14 +21,14 @@ function SharkToothTrackerModal() {
                 </Row>
                 <Row>
                     <Col>
-                        <h6>Website</h6><p><a href="https://www.sharktoothtracker.com" target="_blank">sharktoothtracker.com</a></p>
+                        <h6>Website</h6><p><a href="https://www.sharktoothtracker.com" target="_blank" rel="noreferrer">sharktoothtracker.com</a></p>
                     </Col>
                 </Row>
                 <Row>
                     <Col><h6>Repository</h6>
                         <Row>
                             <Col>
-                                <p><a href="https://github.com/scottcl88/shark-tooth-tracker-app" target="_blank">github.com/scottcl88/shark-tooth-tracker-app</a></p>
+                                <p><a href="https://github.com/scottcl88/shark-tooth-tracker-app" target="_blank" rel="noreferrer">github.com/scottcl88/shark-tooth-tracker-app</a></p>
                             </Col>
                         </Row>
                     </Col>

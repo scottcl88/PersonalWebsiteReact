@@ -14,20 +14,16 @@ class Contact extends React.Component {
         const target = event.target;
         const value = target.type === "checkbox" ? target.checked : target.value;
         const name = target.name;
-        console.log("Setting state to: ", name, value);
         this.setState({
             [name]: value,
         });
-        console.log("Result: ", this.state);
     }
     submitForm = (e: any) => {
         e.preventDefault();
         e.stopPropagation();
-        console.log("Submit Form called: ", e, this.state);
         var form = e.currentTarget;
         if (!form || form.checkValidity() === false) {
             e.preventDefault();
-            console.log("Form not valid: ", form);
             return;
         }
         this.setState({ disableButton: true });
@@ -39,10 +35,8 @@ class Contact extends React.Component {
         };
         let headers = { 'Content-Type': 'application/json', 'x-functions-key': 'Vv4ApfIJJbMiVsUKRJMVD-A8OUuHlvzkuiWB-56iO-LUAzFum52-Hg==' };
         axios.post("https://scottcl-emailfunction.azurewebsites.net/api/SendEmail", request, { headers: headers }).then(res => {
-            console.log("Form submitted: ", res);
             this.setState({ showSuccessToast: true });
-        }).catch(err => {
-            console.error("Failed to submit form: ", err);
+        }).catch(() => {
             this.setState({ showErrorToast: true });
         }).finally(() => {
             this.setState({ disableButton: false });
@@ -55,12 +49,12 @@ class Contact extends React.Component {
                     <section className="contact-section">
                         <h2 className="section-title">Contact</h2>
                         <p className="mb-4">If you'd like to reach me, please send an email or use the form below. I will try to get back to you as soon as possible.
-                            <br></br><a href="https://tidycal.com/scottcl" id="tidycal-link" target='_blank'>You may also schedule time with me.</a>
+                            <br></br><a href="https://tidycal.com/scottcl" id="tidycal-link" target='_blank' rel="noreferrer">You may also schedule time with me.</a>
                         </p>
                         <div className="contact-cards-wrapper">
                             <div className="contact-card">
                                 <h6 className="contact-card-title">Email</h6>
-                                <p className="contact-card-content"><a href="mailto:scottcl@outlook.com" target="_blank">scottcl@outlook.com</a></p>
+                                <p className="contact-card-content"><a href="mailto:scottcl@outlook.com">scottcl@outlook.com</a></p>
                             </div>
                         </div>
                         <form onSubmit={this.submitForm} className="contact-form">
@@ -70,7 +64,7 @@ class Contact extends React.Component {
                             </div>
                             <div className="form-group form-group-email">
                                 <label htmlFor="email" className="sr-only">Your Email</label>
-                                <input type="email" name="email" id="email" className="form-control" placeholder="YOUR EMAIL" required value={this.state?.fromEmail} onChange={this.handleInputChange} />
+                                <input type="email" name="email" id="email" className="form-control" placeholder="YOUR EMAIL" required value={this.state?.email} onChange={this.handleInputChange} />
                             </div>
                             <div className="form-group form-group-subject">
                                 <label htmlFor="subject" className="sr-only">Subject</label>

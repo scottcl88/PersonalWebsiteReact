@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Button, Col, Modal, Row } from 'react-bootstrap';
+import React from 'react';
+import { Col, Modal, Row } from 'react-bootstrap';
 import '../../site';
 
 function SurfNEatModal() {
@@ -9,7 +9,7 @@ function SurfNEatModal() {
                 <Modal.Title>Surf-N-Eat</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <img className="mb-3 modal-image" src={require("../../assets/img/portfolio/surf_n_eat2.png")} />
+                <img className="mb-3 modal-image" src={require("../../assets/img/portfolio/surf_n_eat2.png")} alt="" />
                 <Row>
                     <Col>
                         <h6>Technologies</h6><p>.Net 6, Angular, Ionic, CapacitorJS, AWS, Azure</p>
@@ -22,7 +22,7 @@ function SurfNEatModal() {
                 </Row>
                 <Row>
                     <Col>
-                        <h6>Website</h6><p><a href="https://www.surf-n-eat.com" target="_blank">surf-n-eat.com</a></p>
+                        <h6>Website</h6><p><a href="https://www.surf-n-eat.com" target="_blank" rel="noreferrer">surf-n-eat.com</a></p>
                     </Col>
                 </Row>
                 <Row>
@@ -30,13 +30,13 @@ function SurfNEatModal() {
                         <p>The repository is currently unavailable due to it being an officially published application</p>
                         {/* <Row>
                             <Col sm="4">
-                                <h6>API</h6><p><a href="https://github.com/scottcl88/FoodAPI" target="_blank">github.com/scottcl88/FoodAPI</a></p>
+                                <h6>API</h6><p><a href="https://github.com/scottcl88/FoodAPI" target="_blank" rel="noreferrer">github.com/scottcl88/FoodAPI</a></p>
                             </Col>
                             <Col sm="4">
-                                <h6>App</h6><p><a href="https://github.com/scottcl88/food-app" target="_blank">github.com/scottcl88/food-app</a></p>
+                                <h6>App</h6><p><a href="https://github.com/scottcl88/food-app" target="_blank" rel="noreferrer">github.com/scottcl88/food-app</a></p>
                             </Col>
                             <Col sm="4">
-                                <h6>Landing Website</h6><p><a href="https://github.com/scottcl88/food-landing" target="_blank">github.com/scottcl88/food-landing</a></p>
+                                <h6>Landing Website</h6><p><a href="https://github.com/scottcl88/food-landing" target="_blank" rel="noreferrer">github.com/scottcl88/food-landing</a></p>
                             </Col>
                         </Row> */}
                     </Col>

@@ -1,4 +1,4 @@
-import { Button, Col, Modal, Row } from 'react-bootstrap';
+import { Col, Modal, Row } from 'react-bootstrap';
 import '../../site';
 
 function RecipeLewisModal() {
@@ -8,7 +8,7 @@ function RecipeLewisModal() {
                 <Modal.Title>Recipe Lewis</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <img className="mb-3 modal-image image-fluid" style={{ marginLeft: "35%", height: "200px", width: "200px" }} src={require("../../assets/img/portfolio/blazor_wasm.png")} />
+                <img className="mb-3 modal-image image-fluid" style={{ marginLeft: "35%", height: "200px", width: "200px" }} src={require("../../assets/img/portfolio/blazor_wasm.png")} alt="" />
                 <Row>
                     <Col>
                         <h6>Technologies</h6><p>.Net 6, Blazor Web Assembly</p>
@@ -21,19 +21,19 @@ function RecipeLewisModal() {
                 </Row>
                 <Row>
                     <Col>
-                        <h6>Website</h6><p><a href="https://www.recipelewis.com" target="_blank">recipelewis.com</a></p>
+                        <h6>Website</h6><p><a href="https://www.recipelewis.com" target="_blank" rel="noreferrer">recipelewis.com</a></p>
                     </Col>
                 </Row>
                 <Row>
                     <Col><h6>Repositories</h6>
                         <Row>
                             <Col>
-                                <p><a href="https://github.com/scottcl88/RecipeLewis-Web" target="_blank">github.com/scottcl88/RecipeLewis-Web</a></p>
+                                <p><a href="https://github.com/scottcl88/RecipeLewis-Web" target="_blank" rel="noreferrer">github.com/scottcl88/RecipeLewis-Web</a></p>
                             </Col>
                         </Row>
                         <Row>
                             <Col>
-                                <p><a href="https://github.com/scottcl88/RecipeLewis-API" target="_blank">github.com/scottcl88/RecipeLewis-API</a></p>
+                                <p><a href="https://github.com/scottcl88/RecipeLewis-API" target="_blank" rel="noreferrer">github.com/scottcl88/RecipeLewis-API</a></p>
                             </Col>
                         </Row>
                     </Col>

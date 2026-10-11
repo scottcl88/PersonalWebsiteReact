@@ -1,4 +1,4 @@
-import { Button, Col, Modal, Row } from 'react-bootstrap';
+import { Col, Modal, Row } from 'react-bootstrap';
 import '../../site';
 
 function TpLinkModal() {
@@ -8,7 +8,7 @@ function TpLinkModal() {
                 <Modal.Title>TP Link Control</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                 <img className="mb-3 modal-image image-fluid" style={{ marginLeft: "35%", height: "150px", width: "250px" }} src={require("../../assets/img/portfolio/nodejs.png")} />              
+                 <img className="mb-3 modal-image image-fluid" style={{ marginLeft: "35%", height: "150px", width: "250px" }} src={require("../../assets/img/portfolio/nodejs.png")} alt="" />              
                 <Row>
                     <Col>
                         <h6>Technologies</h6><p>Node JS, NPM, Puppeteer, Nexe</p>
@@ -23,7 +23,7 @@ function TpLinkModal() {
                     <Col><h6>Repository</h6>
                         <Row>
                             <Col>
-                                <p><a href="https://github.com/scottcl88/TPLink-Control" target="_blank">github.com/scottcl88/TPLink-Control</a></p>
+                                <p><a href="https://github.com/scottcl88/TPLink-Control" target="_blank" rel="noreferrer">github.com/scottcl88/TPLink-Control</a></p>
                             </Col>
                         </Row>
                     </Col>

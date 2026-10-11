@@ -1,4 +1,4 @@
-import { Button, Col, Modal, Row } from 'react-bootstrap';
+import { Col, Modal, Row } from 'react-bootstrap';
 import '../../site';
 
 function EmailSubManagerModal() {
@@ -9,7 +9,7 @@ function EmailSubManagerModal() {
             </Modal.Header>
             <Modal.Body>
                 <div style={{ width: "100%", margin: "0 auto" }}>
-                    <img className="mb-3" style={{ width: "256px", height: "130px", marginLeft: "35%" }} src={require("../../assets/img/portfolio/PHP-logo.png")} />
+                    <img className="mb-3" style={{ width: "256px", height: "130px", marginLeft: "35%" }} src={require("../../assets/img/portfolio/PHP-logo.png")} alt="" />
                 </div>
                 <Row>
                     <Col>
@@ -25,7 +25,7 @@ function EmailSubManagerModal() {
                     <Col><h6>Repository</h6>
                         <Row>
                             <Col>
-                                <p><a href="https://github.com/scottcl88/EmailSubscriptionManagement" target="_blank">github.com/scottcl88/EmailSubscriptionManagement</a></p>
+                                <p><a href="https://github.com/scottcl88/EmailSubscriptionManagement" target="_blank" rel="noreferrer">github.com/scottcl88/EmailSubscriptionManagement</a></p>
                             </Col>
                         </Row>
                     </Col>

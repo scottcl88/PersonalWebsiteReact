@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Button, Col, Modal, Row } from 'react-bootstrap';
+import React from 'react';
+import { Col, Modal, Row } from 'react-bootstrap';
 import '../../site';
 
 function CapacitorPluginModal() {
@@ -9,7 +9,7 @@ function CapacitorPluginModal() {
                 <Modal.Title>Google Play Game Services</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <img className="mb-4 mt-0 modal-image image-fluid" style={{ marginLeft: "40%", height: "200px", width: "150px" }} src={require("../../assets/img/portfolio/java-logo3.png")} />
+                <img className="mb-4 mt-0 modal-image image-fluid" style={{ marginLeft: "40%", height: "200px", width: "150px" }} src={require("../../assets/img/portfolio/java-logo3.png")} alt="" />
                 <Row>
                     <Col>
                         <h6>Technologies</h6><p>Java, Capacitor v6, Android Studio, Google Play Game Services SDK v2:17.0.0</p>
@@ -24,7 +24,7 @@ function CapacitorPluginModal() {
                     <Col><h6>Repository</h6>
                         <Row>
                             <Col>
-                                <p><a href="https://github.com/scottcl88/capacitor-google-game-services" target="_blank">github.com/scottcl88/capacitor-google-game-services</a></p>
+                                <p><a href="https://github.com/scottcl88/capacitor-google-game-services" target="_blank" rel="noreferrer">github.com/scottcl88/capacitor-google-game-services</a></p>
                             </Col>
                         </Row>
                     </Col>

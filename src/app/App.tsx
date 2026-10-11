@@ -1,30 +1,42 @@
 import './App.scss';
-import React from 'react';
-import { Route, Routes, Link } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from './home/Home';
 import About from './about/About';
 import Header from './shared/Header';
-import bootstrap from 'bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from 'react-bootstrap';
-import LightMode from './shared/LightMode';
 import Footer from './shared/Footer';
 import Portfolio from './portfolio/Portfolio';
 import Resume from './resume/Resume';
 import Contact from './contact/Contact';
 
+function RouteScrollHandler() {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    const target = hash
+      ? document.getElementById(decodeURIComponent(hash.slice(1)))
+      : null;
+
+    if (target) {
+      window.scrollTo(0, Math.max(0, target.getBoundingClientRect().top + window.scrollY - 71));
+    } else if (!hash) {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
+
+  return null;
+}
+
 class App extends React.Component {  
   render() {
-    const clickScheduleTime = () => {
-      window.open("https://tidycal.com/scottcl", "_blank");
-    };
     return (
       <div className="App">
+        <RouteScrollHandler />
 
-        <div className="fab-schedule" onClick={clickScheduleTime}>
+        <a className="fab-schedule" href="https://tidycal.com/scottcl" target="_blank" rel="noreferrer">
           <div className="fab-schedule-child">
             <i className="fas fa-calendar mr-2"></i>Schedule time with me!</div>
-        </div>
+        </a>
         <Header />
         <main role="main">
           <div style={{ marginTop: "50px" }}>

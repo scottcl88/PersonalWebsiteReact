@@ -4,12 +4,8 @@ import { Dropdown, Toast } from 'react-bootstrap';
 class Resume extends React.Component {
 
     state: any = { showErrorToast: false };
-    constructor(props: any) {
-        super(props);
-    }
     downloadDoc = async (e: any, type: number) => {
         e.preventDefault();
-        console.log("downloadDoc called: ", e);
         let fileName = "Public_SCLewis_Resume.docx";
         if (type === 2) {
             fileName = "Public_SCLewis_Resume.pdf";
@@ -43,9 +39,10 @@ class Resume extends React.Component {
 
             // Clean up
             a.remove();
-            window.URL.revokeObjectURL(url);
+            window.setTimeout(() => window.URL.revokeObjectURL(url), 0);
         } catch (error) {
             console.error('There was an error downloading the file:', error);
+            this.setState({ showErrorToast: true });
         }
     }
     render() {

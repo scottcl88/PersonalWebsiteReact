@@ -1,42 +1,18 @@
 import React, { useState } from 'react';
-import { Button, Col, Modal, Row } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import '../../site';
-import AsteroidCollectorModal from '../asteroidCollectorModal/AsteroidCollectorModal';
-import BenjiWorldModal from '../benjiWorldModal/BenjiWorldModal';
-import DynamicWeatherModal from '../dynamicWeatherModal/DynamicWeatherModal';
 import PortfolioModal from '../portfolioModal/PortfolioModal';
-import RecipeLewisModal from '../recipeLewisModal/RecipeLewisModal';
-import SurfNEatModal from '../surfNEatModal/SurfNEatModal';
 import PlateManiaModal from '../plateManiaModal/PlateManiaModal';
 import SharkToothTrackerModal from '../sharkToothTrackerModal/SharkToothTrackerModal';
 
 function Home() {
-    const [surfNEatShow, setSurfNEatShow] = useState(false);
-    const [dynamicWeatherShow, setDynamicWeatherShow] = useState(false);
     const [portfolioShow, setPortfolioShow] = useState(false);
-    const [benjiWorldShow, setBenjiWorldShow] = useState(false);
-    const [recipeLewisShow, setRecipeLewisShow] = useState(false);
-    const [asteroidCollectorShow, setAsteroidCollectorShow] = useState(false);
     const [plateManiaShow, setPlateManiaShow] = useState(false);    
     const [sharkToothTrackerShow, setSharkToothTrackerShow] = useState(false);
 
-    const surfNEatClose = () => setSurfNEatShow(false);
-    const surfNEatDoShow = () => setSurfNEatShow(true);
-
-    const dynamicWeatherClose = () => setDynamicWeatherShow(false);
-    const dynamicWeatherDoShow = () => setDynamicWeatherShow(true);
-
     const portfolioClose = () => setPortfolioShow(false);
     const portfolioDoShow = () => setPortfolioShow(true);
-
-    const benjiWorldClose = () => setBenjiWorldShow(false);
-    const benjiWorldDoShow = () => setBenjiWorldShow(true);
-
-    const recipeLewisClose = () => setRecipeLewisShow(false);
-    const recipeLewisDoShow = () => setRecipeLewisShow(true);
-
-    const asteroidCollectorClose = () => setAsteroidCollectorShow(false);
-    const asteroidCollectorDoShow = () => setAsteroidCollectorShow(true);
 
     const plateManiaClose = () => setPlateManiaShow(false);
     const plateManiaDoShow = () => setPlateManiaShow(true);
@@ -51,7 +27,7 @@ function Home() {
         <div className="home">
             <header className="masthead bg-primary text-white text-center" id="page-top">
                 <div className="container d-flex align-items-center flex-column">
-                    <img className="masthead-avatar mb-5" src={require("../../assets/img/ProfilePic2.png")} alt="" />
+                    <img className="masthead-avatar mb-5" src={require("../../assets/img/ProfilePic2.png")} alt="Scott Lewis" />
                     <h1 className="masthead-heading text-uppercase mb-0">Scott Lewis</h1>
                     <div className="divider-custom divider-light">
                         <div className="divider-custom-line"></div>
@@ -75,7 +51,7 @@ function Home() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid sharkTooth-img" style={{ marginLeft: "" }} src={require("../../assets/img/portfolio/sharkToothTracker.png")} alt="" />
+                                <img className="img-fluid sharkTooth-img" style={{ marginLeft: "" }} src={require("../../assets/img/portfolio/sharkToothTracker.png")} alt="Shark Tooth Tracker" />
                             </div>
                             <h5 className="text-center mb-0">Shark Tooth Tracker</h5>
                         </div>
@@ -84,7 +60,7 @@ function Home() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid plateMania-img" src={require("../../assets/img/portfolio/LicensePlateMania_180px.png")} alt="" />
+                                <img className="img-fluid plateMania-img" src={require("../../assets/img/portfolio/LicensePlateMania_180px.png")} alt="License Plate Mania" />
                             </div>
                             <h5 className="text-center mb-0">License Plate Mania</h5>
                         </div>
@@ -93,21 +69,21 @@ function Home() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid portfolio-img" style={{ height: "100px", marginLeft: "" }} src={require("../../assets/img/portfolio/logo.svg").default} alt="" />
+                                <img className="img-fluid portfolio-img" style={{ height: "100px", marginLeft: "" }} src={require("../../assets/img/portfolio/logo.svg").default} alt="Personal Website" />
                             </div>
                             <h5 className="text-center mb-0">Portfolio</h5>
                         </div>
                         <div className="text-center mt-5 col-lg-5 offset-lg-1 col-md-12 col-sm-12">
-                            <a className="btn btn-xl btn-outline-dark bold" href="/portfolio#certifications">
+                            <Link className="btn btn-xl btn-outline-dark bold" to="/portfolio#certifications">
                                 <i className="fas fa-star mr-2"></i>
                                 Skills and Certifications
-                            </a>
+                            </Link>
                         </div>
                         <div className="text-center mt-5 col-lg-5 col-md-12 col-sm-12">
-                            <a className="btn btn-xl btn-outline-dark bold" href="/portfolio#portfolio">
+                            <Link className="btn btn-xl btn-outline-dark bold" to="/portfolio#portfolio">
                                 <i className="fas fa-address-card mr-2"></i>
                                 More Work
-                            </a>
+                            </Link>
                         </div>
                         <div className="offset-lg-1">
                         </div>
@@ -134,43 +110,28 @@ function Home() {
                     </div>
                     <div className="row justify-content-center mt-5 text-center">
                         <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                            <a className="btn btn-xl btn-outline-light mr-3 bold btn-sm-3" href="/about">
+                            <Link className="btn btn-xl btn-outline-light mr-3 bold btn-sm-3" to="/about">
                                 <i className="fas fa-address-card mr-2"></i>
                                 More About Me
-                            </a>
+                            </Link>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 custom-mt">
-                            <a className="btn btn-xl btn-outline-light mr-3 bold btn-sm-3" href="/resume">
+                            <Link className="btn btn-xl btn-outline-light mr-3 bold btn-sm-3" to="/resume">
                                 <i className="fas fa-file-alt mr-2"></i>
                                 View Resume
-                            </a>
+                            </Link>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 custom-mt">
-                            <a className="btn btn-xl btn-outline-light bold btn-sm-3" href="/contact">
+                            <Link className="btn btn-xl btn-outline-light bold btn-sm-3" to="/contact">
                                 <i className="fas fa-paper-plane mr-2"></i>
                                 Contact Me
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
             </section>
-            <Modal show={surfNEatShow} onHide={surfNEatClose} size="lg">
-                <SurfNEatModal></SurfNEatModal>
-            </Modal>
-            <Modal show={dynamicWeatherShow} onHide={dynamicWeatherClose} size="lg">
-                <DynamicWeatherModal></DynamicWeatherModal>
-            </Modal>
             <Modal show={portfolioShow} onHide={portfolioClose} size="lg">
                 <PortfolioModal></PortfolioModal>
-            </Modal>
-            <Modal show={benjiWorldShow} onHide={benjiWorldClose} size="lg">
-                <BenjiWorldModal></BenjiWorldModal>
-            </Modal>
-            <Modal show={recipeLewisShow} onHide={recipeLewisClose} size="lg">
-                <RecipeLewisModal></RecipeLewisModal>
-            </Modal>
-            <Modal show={asteroidCollectorShow} onHide={asteroidCollectorClose} size="lg">
-                <AsteroidCollectorModal></AsteroidCollectorModal>
             </Modal>
             <Modal show={plateManiaShow} onHide={plateManiaClose} size="lg">
                 <PlateManiaModal></PlateManiaModal>

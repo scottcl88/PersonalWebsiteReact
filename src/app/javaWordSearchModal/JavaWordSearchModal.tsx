@@ -1,4 +1,4 @@
-import { Button, Col, Modal, Row } from 'react-bootstrap';
+import { Col, Modal, Row } from 'react-bootstrap';
 import '../../site';
 
 function JavaWordSearchModal() {
@@ -9,7 +9,7 @@ function JavaWordSearchModal() {
             </Modal.Header>
             <Modal.Body>
                 <div style={{ width: "100%", margin: "0 auto" }}>
-                    <img className="mb-3" style={{ width: "100px", height: "180px", marginLeft: "40%" }} src={require("../../assets/img/portfolio/java-logo3.png")} />
+                    <img className="mb-3" style={{ width: "100px", height: "180px", marginLeft: "40%" }} src={require("../../assets/img/portfolio/java-logo3.png")} alt="" />
                 </div>
                 <Row>
                     <Col>
@@ -25,7 +25,7 @@ function JavaWordSearchModal() {
                     <Col><h6>Repository</h6>
                         <Row>
                             <Col>
-                                <p><a href="https://github.com/scottcl88/WordSearch" target="_blank">github.com/scottcl88/WordSearch</a></p>
+                                <p><a href="https://github.com/scottcl88/WordSearch" target="_blank" rel="noreferrer">github.com/scottcl88/WordSearch</a></p>
                             </Col>
                         </Row>
                     </Col>
