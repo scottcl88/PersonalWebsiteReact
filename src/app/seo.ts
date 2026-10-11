@@ -45,7 +45,8 @@ function setJsonLd(schema: Record<string, unknown>) {
 }
 
 export function getPageMetadata(pathname: string): PageMetadata {
-  switch (pathname) {
+  const normalizedPath = pathname.replace(/\/+$/, '') || '/';
+  switch (normalizedPath) {
     case '/portfolio':
       return {
         title: 'Portfolio & Projects',
@@ -89,9 +90,12 @@ export function getPageMetadata(pathname: string): PageMetadata {
 export function usePageMetadata(pathname: string) {
   useEffect(() => {
     const meta = getPageMetadata(pathname);
-    const fullTitle = meta.title ? `${meta.title} | Scott Lewis` : DEFAULT_TITLE;
+    const fullTitle = !meta.title || meta.title === DEFAULT_TITLE
+      ? DEFAULT_TITLE
+      : `${meta.title} | Scott Lewis`;
     const description = meta.description || DEFAULT_DESCRIPTION;
-    const canonicalUrl = new URL(pathname === '/' ? '' : pathname, SITE_URL).toString();
+    const normalizedPath = pathname.replace(/\/+$/, '');
+    const canonicalUrl = new URL(normalizedPath, SITE_URL).toString();
     const imageUrl = new URL(meta.image || '/og-image.png', SITE_URL).toString();
 
     document.title = fullTitle;
@@ -154,7 +158,7 @@ export function usePageMetadata(pathname: string) {
       ],
     };
 
-    const pageSchema = pathname === '/contact'
+    const pageSchema = normalizedPath === '/contact'
       ? {
           '@context': 'https://schema.org',
           '@type': 'ContactPage',
@@ -165,7 +169,7 @@ export function usePageMetadata(pathname: string) {
           mainEntity: personSchema,
           image: `${SITE_URL}/og-image.png`,
         }
-      : pathname === '/resume'
+      : normalizedPath === '/resume'
         ? {
             '@context': 'https://schema.org',
             '@type': 'ProfilePage',
@@ -185,11 +189,6 @@ export function usePageMetadata(pathname: string) {
             inLanguage: 'en-US',
             author: personSchema,
             image: `${SITE_URL}/og-image.png`,
-            potentialAction: {
-              '@type': 'SearchAction',
-              target: `${SITE_URL}/portfolio?q={search_term_string}`,
-              'query-input': 'required name=search_term_string',
-            },
           };
 
     setJsonLd(pageSchema);
