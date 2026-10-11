@@ -1,42 +1,17 @@
 import React, { useState } from 'react';
-import { Button, Col, Modal, Row } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import '../../site';
-import AsteroidCollectorModal from '../asteroidCollectorModal/AsteroidCollectorModal';
-import BenjiWorldModal from '../benjiWorldModal/BenjiWorldModal';
-import DynamicWeatherModal from '../dynamicWeatherModal/DynamicWeatherModal';
 import PortfolioModal from '../portfolioModal/PortfolioModal';
-import RecipeLewisModal from '../recipeLewisModal/RecipeLewisModal';
-import SurfNEatModal from '../surfNEatModal/SurfNEatModal';
 import PlateManiaModal from '../plateManiaModal/PlateManiaModal';
 import SharkToothTrackerModal from '../sharkToothTrackerModal/SharkToothTrackerModal';
 
 function Home() {
-    const [surfNEatShow, setSurfNEatShow] = useState(false);
-    const [dynamicWeatherShow, setDynamicWeatherShow] = useState(false);
     const [portfolioShow, setPortfolioShow] = useState(false);
-    const [benjiWorldShow, setBenjiWorldShow] = useState(false);
-    const [recipeLewisShow, setRecipeLewisShow] = useState(false);
-    const [asteroidCollectorShow, setAsteroidCollectorShow] = useState(false);
     const [plateManiaShow, setPlateManiaShow] = useState(false);    
     const [sharkToothTrackerShow, setSharkToothTrackerShow] = useState(false);
 
-    const surfNEatClose = () => setSurfNEatShow(false);
-    const surfNEatDoShow = () => setSurfNEatShow(true);
-
-    const dynamicWeatherClose = () => setDynamicWeatherShow(false);
-    const dynamicWeatherDoShow = () => setDynamicWeatherShow(true);
-
     const portfolioClose = () => setPortfolioShow(false);
     const portfolioDoShow = () => setPortfolioShow(true);
-
-    const benjiWorldClose = () => setBenjiWorldShow(false);
-    const benjiWorldDoShow = () => setBenjiWorldShow(true);
-
-    const recipeLewisClose = () => setRecipeLewisShow(false);
-    const recipeLewisDoShow = () => setRecipeLewisShow(true);
-
-    const asteroidCollectorClose = () => setAsteroidCollectorShow(false);
-    const asteroidCollectorDoShow = () => setAsteroidCollectorShow(true);
 
     const plateManiaClose = () => setPlateManiaShow(false);
     const plateManiaDoShow = () => setPlateManiaShow(true);
@@ -154,23 +129,8 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <Modal show={surfNEatShow} onHide={surfNEatClose} size="lg">
-                <SurfNEatModal></SurfNEatModal>
-            </Modal>
-            <Modal show={dynamicWeatherShow} onHide={dynamicWeatherClose} size="lg">
-                <DynamicWeatherModal></DynamicWeatherModal>
-            </Modal>
             <Modal show={portfolioShow} onHide={portfolioClose} size="lg">
                 <PortfolioModal></PortfolioModal>
-            </Modal>
-            <Modal show={benjiWorldShow} onHide={benjiWorldClose} size="lg">
-                <BenjiWorldModal></BenjiWorldModal>
-            </Modal>
-            <Modal show={recipeLewisShow} onHide={recipeLewisClose} size="lg">
-                <RecipeLewisModal></RecipeLewisModal>
-            </Modal>
-            <Modal show={asteroidCollectorShow} onHide={asteroidCollectorClose} size="lg">
-                <AsteroidCollectorModal></AsteroidCollectorModal>
             </Modal>
             <Modal show={plateManiaShow} onHide={plateManiaClose} size="lg">
                 <PlateManiaModal></PlateManiaModal>

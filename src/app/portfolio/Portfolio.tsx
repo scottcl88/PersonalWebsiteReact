@@ -25,7 +25,7 @@ function Portfolio() {
     function experienceFormatter(cell: any) {
         let cellNum = Number(cell);
         if (!isNaN(cellNum)) {
-            if (cell == 0) {
+            if (cellNum === 0) {
                 return (
                     <span>None</span>
                 );
@@ -33,7 +33,7 @@ function Portfolio() {
                 return (
                     <span>{cell * 12} months</span>
                 );
-            } else if (cell == 1) {
+            } else if (cellNum === 1) {
                 return (
                     <span>{cell} year</span>
                 );

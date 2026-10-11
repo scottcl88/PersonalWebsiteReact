@@ -1,6 +1,4 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-
 class Header extends React.Component {
 
     isPathActive(path: any) {
@@ -21,8 +19,8 @@ class Header extends React.Component {
                             <li className="nav-item mx-0 mx-lg-1"><a className={this.isPathActive("/about") ? "nav-link active py-3 px-0 px-lg-3" : "nav-link py-3 px-0 px-lg-3"} href="/about">About</a></li>
                             <li className="nav-item mx-0 mx-lg-1"><a className={this.isPathActive("/contact") ? "nav-link active py-3 px-0 px-lg-3" : "nav-link py-3 px-0 px-lg-3"} href="/contact">Contact</a></li>
                         </ul>
-                        <a className="btn btn-outline-light btn-social-sm mx-1" href="https://www.linkedin.com/in/sclewis1" target="_blank"><i className="fab fa-fw fa-linkedin-in"></i></a>
-                        <a className="btn btn-outline-light btn-social-sm mx-1" href="https://github.com/scottcl88" target="_blank"><i className="fab fa-fw fa-github"></i></a>
+                        <a className="btn btn-outline-light btn-social-sm mx-1" href="https://www.linkedin.com/in/sclewis1" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i className="fab fa-fw fa-linkedin-in"></i></a>
+                        <a className="btn btn-outline-light btn-social-sm mx-1" href="https://github.com/scottcl88" target="_blank" rel="noreferrer" aria-label="GitHub"><i className="fab fa-fw fa-github"></i></a>
                     </div>
                 </div>
             </nav>
