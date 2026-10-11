@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Button, Col, Modal, Row } from 'react-bootstrap';
+import { Col, Modal, Row } from 'react-bootstrap';
 import '../../site';
 
 function DynamicWeatherModal() {
@@ -9,7 +8,7 @@ function DynamicWeatherModal() {
                 <Modal.Title>MMM-DynamicWeather</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <img className="mb-3 modal-image" src={require("../../assets/img/portfolio/magicMirrorLogo.png")} />
+                <img className="mb-3 modal-image" src={require("../../assets/img/portfolio/magicMirrorLogo.png")} alt="" />
                 <Row>
                     <Col>
                         <h6>Technologies</h6><p>Javascript, Typescript, NPM</p>
@@ -24,7 +23,7 @@ function DynamicWeatherModal() {
                     <Col><h6>Repository</h6>
                         <Row>
                             <Col>
-                                <p><a href="https://github.com/scottcl88/MMM-DynamicWeather" target="_blank">github.com/scottcl88/MMM-DynamicWeather</a></p>
+                                <p><a href="https://github.com/scottcl88/MMM-DynamicWeather" target="_blank" rel="noreferrer">github.com/scottcl88/MMM-DynamicWeather</a></p>
                             </Col>
                         </Row>
                     </Col>
@@ -32,7 +31,7 @@ function DynamicWeatherModal() {
                 <Row>
                     <Col><h6>Description</h6>
                         <p>
-                            MMM-DynamicWeather is a heavily configurable MagicMirror Module to display different animations based on current weather and show customized event effects<a href="https://magicmirror.builders/" target="_blank"></a>
+                            MMM-DynamicWeather is a heavily configurable <a href="https://magicmirror.builders/" target="_blank" rel="noreferrer">MagicMirror module</a> to display different animations based on current weather and show customized event effects.
                         </p>
                     </Col>
                 </Row>

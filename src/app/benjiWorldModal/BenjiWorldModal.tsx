@@ -1,4 +1,4 @@
-import { Button, Col, Modal, Row } from 'react-bootstrap';
+import { Col, Modal, Row } from 'react-bootstrap';
 import '../../site';
 
 function BenjiWorldModal() {
@@ -8,7 +8,7 @@ function BenjiWorldModal() {
                 <Modal.Title>Benji World</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <img className="mb-3 modal-image image-fluid" style={{ marginLeft: "35%", height: "200px", width: "200px" }} src={require("../../assets/img/portfolio/blazor_wasm.png")} />
+                <img className="mb-3 modal-image image-fluid" style={{ marginLeft: "35%", height: "200px", width: "200px" }} src={require("../../assets/img/portfolio/blazor_wasm.png")} alt="" />
                 <Row>
                     <Col>
                         <h6>Technologies</h6><p>.Net Standard 2.1, Blazor Web Assembly. NHibernate, Radzen UI</p>
@@ -23,12 +23,12 @@ function BenjiWorldModal() {
                     <Col><h6>Repositories</h6>
                         <Row>
                             <Col>
-                                <p><a href="https://github.com/scottcl88/BenjiWorldApp" target="_blank">github.com/scottcl88/BenjiWorldApp</a></p>
+                                <p><a href="https://github.com/scottcl88/BenjiWorldApp" target="_blank" rel="noreferrer">github.com/scottcl88/BenjiWorldApp</a></p>
                             </Col>
                         </Row>
                         <Row>
                             <Col>
-                                <p><a href="https://github.com/scottcl88/BenjiAPI" target="_blank">github.com/scottcl88/BenjiAPI</a></p>
+                                <p><a href="https://github.com/scottcl88/BenjiAPI" target="_blank" rel="noreferrer">github.com/scottcl88/BenjiAPI</a></p>
                             </Col>
                         </Row>
                     </Col>

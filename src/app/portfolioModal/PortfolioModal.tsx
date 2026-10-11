@@ -1,4 +1,4 @@
-import { Button, Col, Modal, Row } from 'react-bootstrap';
+import { Col, Modal, Row } from 'react-bootstrap';
 import '../../site';
 
 function PortfolioModal() {
@@ -8,7 +8,7 @@ function PortfolioModal() {
                 <Modal.Title>Portfolio</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <img className="mb-3 modal-image  image-fluid" style={{ marginLeft: "35%", height: "200px", width: "200px" }} src={require("../../assets/img/portfolio/logo.svg").default} />
+                <img className="mb-3 modal-image  image-fluid" style={{ marginLeft: "35%", height: "200px", width: "200px" }} src={require("../../assets/img/portfolio/logo.svg").default} alt="" />
                 <Row>
                     <Col>
                         <h6>Technologies</h6><p>React, AWS</p>
@@ -21,14 +21,14 @@ function PortfolioModal() {
                 </Row>
                 <Row>
                     <Col>
-                        <h6>Website</h6><p><a href="https://www.scottcl.com" target="_blank">scottcl.com</a></p>
+                        <h6>Website</h6><p><a href="https://www.scottcl.com" target="_blank" rel="noreferrer">scottcl.com</a></p>
                     </Col>
                 </Row>
                 <Row>
                     <Col><h6>Repository</h6>
                         <Row>
                             <Col>
-                                <p><a href="https://github.com/scottcl88/PersonalWebsiteReact" target="_blank">github.com/scottcl88/PersonalWebsiteReact</a></p>
+                                <p><a href="https://github.com/scottcl88/PersonalWebsiteReact" target="_blank" rel="noreferrer">github.com/scottcl88/PersonalWebsiteReact</a></p>
                             </Col>
                         </Row>
                     </Col>

@@ -1,4 +1,4 @@
-import { Button, Col, Modal, Row } from 'react-bootstrap';
+import { Col, Modal, Row } from 'react-bootstrap';
 import '../../site';
 
 function SecureLewisModal() {
@@ -8,7 +8,7 @@ function SecureLewisModal() {
                 <Modal.Title>Secure Lewis</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <img className="mb-3 modal-image image-fluid" style={{ marginLeft: "30%", height: "200px", width: "300px" }} src={require("../../assets/img/portfolio/vue.png")} />
+                <img className="mb-3 modal-image image-fluid" style={{ marginLeft: "30%", height: "200px", width: "300px" }} src={require("../../assets/img/portfolio/vue.png")} alt="" />
                 <Row>
                     <Col>
                         <h6>Technologies</h6><p>VueJS</p>
@@ -21,14 +21,14 @@ function SecureLewisModal() {
                 </Row>
                 <Row>
                     <Col>
-                        <h6>Website</h6><p><a href="https://www.securelewis.com" target="_blank">securelewis.com</a></p>
+                        <h6>Website</h6><p><a href="https://www.securelewis.com" target="_blank" rel="noreferrer">securelewis.com</a></p>
                     </Col>
                 </Row>
                 <Row>
                     <Col><h6>Repository</h6>
                         <Row>
                             <Col>
-                                <p><a href="https://github.com/scottcl88/SecureLewisVue" target="_blank">github.com/scottcl88/SecureLewisVue</a></p>
+                                <p><a href="https://github.com/scottcl88/SecureLewisVue" target="_blank" rel="noreferrer">github.com/scottcl88/SecureLewisVue</a></p>
                             </Col>
                         </Row>
                     </Col>

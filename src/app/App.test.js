@@ -10,5 +10,5 @@ test('renders the home page inside its router', () => {
   );
 
   expect(screen.getByRole('heading', { name: 'Scott Lewis' })).toBeInTheDocument();
-  expect(screen.getByRole('heading', { name: 'Portfolio' })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: 'Portfolio', level: 2 })).toBeInTheDocument();
 });

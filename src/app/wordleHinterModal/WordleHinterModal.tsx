@@ -1,4 +1,4 @@
-import { Button, Col, Modal, Row } from 'react-bootstrap';
+import { Col, Modal, Row } from 'react-bootstrap';
 import '../../site';
 
 function WordleHinterModal() {
@@ -9,7 +9,7 @@ function WordleHinterModal() {
             </Modal.Header>
             <Modal.Body>
                 <div style={{ width: "100%", margin: "0 auto" }}>
-                    <img className="mb-3" style={{ width: "150px", height: "150px", marginLeft: "40%" }} src={require("../../assets/img/portfolio/python_icon.png")} />
+                    <img className="mb-3" style={{ width: "150px", height: "150px", marginLeft: "40%" }} src={require("../../assets/img/portfolio/python_icon.png")} alt="" />
                 </div>
                 <Row>
                     <Col>
@@ -25,7 +25,7 @@ function WordleHinterModal() {
                     <Col><h6>Repository</h6>
                         <Row>
                             <Col>
-                                <p><a href="https://github.com/scottcl88/WordleHinter" target="_blank">github.com/scottcl88/WordleHinter</a></p>
+                                <p><a href="https://github.com/scottcl88/WordleHinter" target="_blank" rel="noreferrer">github.com/scottcl88/WordleHinter</a></p>
                             </Col>
                         </Row>
                     </Col>

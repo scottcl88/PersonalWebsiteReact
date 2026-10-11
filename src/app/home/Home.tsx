@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Modal } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import '../../site';
 import PortfolioModal from '../portfolioModal/PortfolioModal';
 import PlateManiaModal from '../plateManiaModal/PlateManiaModal';
@@ -73,16 +74,16 @@ function Home() {
                             <h5 className="text-center mb-0">Portfolio</h5>
                         </div>
                         <div className="text-center mt-5 col-lg-5 offset-lg-1 col-md-12 col-sm-12">
-                            <a className="btn btn-xl btn-outline-dark bold" href="/portfolio#certifications">
+                            <Link className="btn btn-xl btn-outline-dark bold" to="/portfolio#certifications">
                                 <i className="fas fa-star mr-2"></i>
                                 Skills and Certifications
-                            </a>
+                            </Link>
                         </div>
                         <div className="text-center mt-5 col-lg-5 col-md-12 col-sm-12">
-                            <a className="btn btn-xl btn-outline-dark bold" href="/portfolio#portfolio">
+                            <Link className="btn btn-xl btn-outline-dark bold" to="/portfolio#portfolio">
                                 <i className="fas fa-address-card mr-2"></i>
                                 More Work
-                            </a>
+                            </Link>
                         </div>
                         <div className="offset-lg-1">
                         </div>
@@ -109,22 +110,22 @@ function Home() {
                     </div>
                     <div className="row justify-content-center mt-5 text-center">
                         <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                            <a className="btn btn-xl btn-outline-light mr-3 bold btn-sm-3" href="/about">
+                            <Link className="btn btn-xl btn-outline-light mr-3 bold btn-sm-3" to="/about">
                                 <i className="fas fa-address-card mr-2"></i>
                                 More About Me
-                            </a>
+                            </Link>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 custom-mt">
-                            <a className="btn btn-xl btn-outline-light mr-3 bold btn-sm-3" href="/resume">
+                            <Link className="btn btn-xl btn-outline-light mr-3 bold btn-sm-3" to="/resume">
                                 <i className="fas fa-file-alt mr-2"></i>
                                 View Resume
-                            </a>
+                            </Link>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 custom-mt">
-                            <a className="btn btn-xl btn-outline-light bold btn-sm-3" href="/contact">
+                            <Link className="btn btn-xl btn-outline-light bold btn-sm-3" to="/contact">
                                 <i className="fas fa-paper-plane mr-2"></i>
                                 Contact Me
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
