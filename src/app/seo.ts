@@ -108,11 +108,15 @@ export function usePageMetadata(pathname: string) {
     setMetaTag({ property: 'og:url', content: canonicalUrl });
     setMetaTag({ property: 'og:image', content: imageUrl });
     setMetaTag({ property: 'og:site_name', content: 'Scott Lewis' });
+    setMetaTag({ property: 'og:locale', content: 'en_US' });
     setMetaTag({ name: 'twitter:card', content: 'summary_large_image' });
     setMetaTag({ name: 'twitter:title', content: fullTitle });
     setMetaTag({ name: 'twitter:description', content: description });
     setMetaTag({ name: 'twitter:image', content: imageUrl });
+    setMetaTag({ name: 'twitter:site', content: '@scottcl88' });
+    setMetaTag({ name: 'twitter:creator', content: '@scottcl88' });
     setMetaTag({ name: 'theme-color', content: '#1a89bc' });
+    setMetaTag({ name: 'application-name', content: 'Scott Lewis Portfolio' });
 
     const canonicalLink = document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
     if (canonicalLink) {
@@ -124,28 +128,68 @@ export function usePageMetadata(pathname: string) {
       document.head.appendChild(link);
     }
 
-    setJsonLd({
+    const personSchema = {
       '@context': 'https://schema.org',
-      '@type': pathname === '/contact' ? 'ContactPage' : pathname === '/resume' ? 'ProfilePage' : 'WebSite',
+      '@type': 'Person',
       name: 'Scott Lewis',
-      url: SITE_URL,
+      jobTitle: 'Senior Full Stack Developer',
       description,
-      inLanguage: 'en-US',
-      author: {
-        '@type': 'Person',
-        name: 'Scott Lewis',
-        url: SITE_URL,
-        sameAs: [
-          'https://www.linkedin.com/in/sclewis1',
-          'https://github.com/scottcl88',
-        ],
+      url: SITE_URL,
+      sameAs: [
+        'https://www.linkedin.com/in/sclewis1',
+        'https://github.com/scottcl88',
+      ],
+      email: 'mailto:scottcl@outlook.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'US',
       },
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: `${SITE_URL}/portfolio?q={search_term_string}`,
-        'query-input': 'required name=search_term_string',
-      },
-    });
+      knowsAbout: [
+        'React',
+        '.NET',
+        'Full Stack Development',
+        'Cloud Architecture',
+        'Software Engineering',
+        'Product Engineering',
+      ],
+    };
+
+    const pageSchema = pathname === '/contact'
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'ContactPage',
+          name: 'Contact Scott Lewis',
+          url: `${SITE_URL}/contact`,
+          description,
+          about: personSchema,
+          mainEntity: personSchema,
+        }
+      : pathname === '/resume'
+        ? {
+            '@context': 'https://schema.org',
+            '@type': 'ProfilePage',
+            name: 'Scott Lewis Resume',
+            url: `${SITE_URL}/resume`,
+            description,
+            about: personSchema,
+            mainEntity: personSchema,
+          }
+        : {
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'Scott Lewis',
+            url: SITE_URL,
+            description,
+            inLanguage: 'en-US',
+            author: personSchema,
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: `${SITE_URL}/portfolio?q={search_term_string}`,
+              'query-input': 'required name=search_term_string',
+            },
+          };
+
+    setJsonLd(pageSchema);
   }, [pathname]);
 }
 

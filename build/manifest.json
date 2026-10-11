@@ -1,6 +1,9 @@
 {
-  "short_name": "ReactPortfolioApp",
+  "short_name": "Scott Lewis",
   "name": "Scott Lewis Portfolio",
+  "description": "Senior full stack developer portfolio for Scott Lewis, featuring projects, resume, and contact information.",
+  "lang": "en-US",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +21,11 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "theme_color": "#1a89bc",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "categories": ["developer", "productivity", "business"],
+  "screenshots": []
 }

@@ -1,0 +1,23 @@
+# Scott Lewis
+
+## About
+Scott Lewis is a senior full stack developer focused on building modern web applications, cloud-native solutions, and developer tooling with React, .NET, and JavaScript-based product engineering.
+
+## Professional focus
+- Full stack web development
+- React and TypeScript application architecture
+- .NET, cloud integration, and backend services
+- Product engineering, mentoring, and team leadership
+
+## Site
+- Homepage: https://www.scottcl.com/
+- About: https://www.scottcl.com/about
+- Portfolio: https://www.scottcl.com/portfolio
+- Resume: https://www.scottcl.com/resume
+- Contact: https://www.scottcl.com/contact
+
+## Contact
+- Email: scottcl@outlook.com
+- LinkedIn: https://www.linkedin.com/in/sclewis1
+- GitHub: https://github.com/scottcl88
+- Schedule: https://tidycal.com/scottcl
