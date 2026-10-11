@@ -4,6 +4,13 @@ object-assign
 @license MIT
 */
 
+/* @license
+Papa Parse
+v5.4.1
+https://github.com/mholt/PapaParse
+License: MIT
+*/
+
 /*!
     * Start Bootstrap - Freelancer v6.0.5 (https://startbootstrap.com/theme/freelancer)
     * Copyright 2013-2020 Start Bootstrap
@@ -39,6 +46,17 @@ object-assign
  * https://jquery.org/license
  *
  * Date: 2021-03-02T17:08Z
+ */
+
+/**
+ * React Router DOM v6.1.1
+ *
+ * Copyright (c) Remix Software Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
  */
 
 /**
