@@ -250,7 +250,6 @@ function Portfolio() {
     };
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
-        console.log("useEffect called");
         setIsLoading(true);
         getSkills();
     }, []);
@@ -271,7 +270,7 @@ function Portfolio() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/sharkToothTracker.png")} alt="" />
+                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/sharkToothTracker.png")} alt="Shark Tooth Tracker" />
                             </div>
                             <h5 className="text-center mb-0">Shark Tooth Tracker</h5>
                         </div>
@@ -280,7 +279,7 @@ function Portfolio() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/LicensePlateMania_180px.png")} alt="" />
+                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/LicensePlateMania_180px.png")} alt="License Plate Mania" />
                             </div>
                             <h5 className="text-center mb-0">License Plate Mania</h5>
                         </div>
@@ -289,7 +288,7 @@ function Portfolio() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ height: "100px", marginLeft: "28%" }} src={require("../../assets/img/portfolio/logo.svg").default} alt="" />
+                                <img className="img-fluid" style={{ height: "100px", marginLeft: "28%" }} src={require("../../assets/img/portfolio/logo.svg").default} alt="Personal Website" />
                             </div>
                             <h5 className="text-center mb-0">Portfolio</h5>
                         </div>
@@ -298,7 +297,7 @@ function Portfolio() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/blazor_wasm.png")} alt="" />
+                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/blazor_wasm.png")} alt="Recipe Lewis" />
                             </div>
                             <h5 className="text-center mb-0">Recipe Lewis</h5>
                         </div>
@@ -307,7 +306,7 @@ function Portfolio() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" src={require("../../assets/img/portfolio/magicMirrorLogo.png")} alt="" />
+                                <img className="img-fluid" src={require("../../assets/img/portfolio/magicMirrorLogo.png")} alt="MMM-DynamicWeather" />
                             </div>
                             <h5 className="text-center mb-0">MMM-DynamicWeather</h5>
                         </div>
@@ -316,7 +315,7 @@ function Portfolio() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "20%" }} src={require("../../assets/img/portfolio/surf_n_eat.png")} alt="" />
+                                <img className="img-fluid" style={{ marginLeft: "20%" }} src={require("../../assets/img/portfolio/surf_n_eat.png")} alt="Surf-N-Eat" />
                             </div>
                             <h5 className="text-center mb-0">Surf-N-Eat</h5>
                         </div>
@@ -325,7 +324,7 @@ function Portfolio() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "40%", height: "100px" }} src={require("../../assets/img/portfolio/java-logo3.png")} alt="" />
+                                <img className="img-fluid" style={{ marginLeft: "40%", height: "100px" }} src={require("../../assets/img/portfolio/java-logo3.png")} alt="Capacitor Plugin" />
                             </div>
                             <h5 className="text-center mb-0">Capacitor Plugin</h5>
                         </div>
@@ -334,7 +333,7 @@ function Portfolio() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/blazor_wasm.png")} alt="" />
+                                <img className="img-fluid" style={{ marginLeft: "34%", height: "100px" }} src={require("../../assets/img/portfolio/blazor_wasm.png")} alt="Benji World" />
                             </div>
                             <h5 className="text-center mb-0">Benji World</h5>
                         </div>
@@ -343,7 +342,7 @@ function Portfolio() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "30%", height: "100px" }} src={require("../../assets/img/portfolio/net_6.png")} alt="" />
+                                <img className="img-fluid" style={{ marginLeft: "30%", height: "100px" }} src={require("../../assets/img/portfolio/net_6.png")} alt="File Indexer Service" />
                             </div>
                             <h5 className="text-center mb-0">File Indexer Service</h5>
                         </div>
@@ -352,7 +351,7 @@ function Portfolio() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "27%", height: "100px" }} src={require("../../assets/img/portfolio/asp_net_mvc.png")} alt="" />
+                                <img className="img-fluid" style={{ marginLeft: "27%", height: "100px" }} src={require("../../assets/img/portfolio/asp_net_mvc.png")} alt="File Searcher" />
                             </div>
                             <h5 className="text-center mb-0">File Searcher</h5>
                         </div>
@@ -361,7 +360,7 @@ function Portfolio() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "32%", height: "100px" }} src={require("../../assets/img/portfolio/vue.png")} alt="" />
+                                <img className="img-fluid" style={{ marginLeft: "32%", height: "100px" }} src={require("../../assets/img/portfolio/vue.png")} alt="Secure Lewis" />
                             </div>
                             <h5 className="text-center mb-0">Secure Lewis</h5>
                         </div>
@@ -370,7 +369,7 @@ function Portfolio() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "26%", height: "100px" }} src={require("../../assets/img/portfolio/nodejs.png")} alt="" />
+                                <img className="img-fluid" style={{ marginLeft: "26%", height: "100px" }} src={require("../../assets/img/portfolio/nodejs.png")} alt="TP Link Control" />
                             </div>
                             <h5 className="text-center mb-0">TP Link Control</h5>
                         </div>
@@ -379,7 +378,7 @@ function Portfolio() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "23%", height: "100px" }} src={require("../../assets/img/portfolio/PHP-logo.png")} alt="" />
+                                <img className="img-fluid" style={{ marginLeft: "23%", height: "100px" }} src={require("../../assets/img/portfolio/PHP-logo.png")} alt="Email Subscription Management" />
                             </div>
                             <h5 className="text-center mb-0">Email Sub Manager</h5>
                         </div>
@@ -388,7 +387,7 @@ function Portfolio() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "33%", height: "100px" }} src={require("../../assets/img/portfolio/python_icon.png")} alt="" />
+                                <img className="img-fluid" style={{ marginLeft: "33%", height: "100px" }} src={require("../../assets/img/portfolio/python_icon.png")} alt="Wordle Hinter" />
                             </div>
                             <h5 className="text-center mb-0">Wordle Hinter</h5>
                         </div>
@@ -397,7 +396,7 @@ function Portfolio() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "40%", height: "100px" }} src={require("../../assets/img/portfolio/java-logo3.png")} alt="" />
+                                <img className="img-fluid" style={{ marginLeft: "40%", height: "100px" }} src={require("../../assets/img/portfolio/java-logo3.png")} alt="Java Word Search" />
                             </div>
                             <h5 className="text-center mb-0">Word Search</h5>
                         </div>
@@ -406,7 +405,7 @@ function Portfolio() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid" style={{ marginLeft: "40%", height: "100px" }} src={require("../../assets/img/portfolio/java-logo3.png")} alt="" />
+                                <img className="img-fluid" style={{ marginLeft: "40%", height: "100px" }} src={require("../../assets/img/portfolio/java-logo3.png")} alt="Asteroid Collector" />
                             </div>
                             <h5 className="text-center mb-0">2D Game</h5>
                         </div>
@@ -427,91 +426,91 @@ function Portfolio() {
                             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickAzureDeveloperAssociate} className="pointer text-center hover-context">
                                     <h3>Microsoft Azure Developer Associate</h3>
-                                    <img src={require("../../assets/img/microsoft-certified-associate-badge.png")} style={{ height: "150px" }} />
+                                    <img src={require("../../assets/img/microsoft-certified-associate-badge.png")} style={{ height: "150px" }} alt="Microsoft Azure Developer Associate badge" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickAzureFundamentals} className="pointer text-center hover-context">
                                     <h3>Microsoft Azure Fundamentals</h3>
-                                    <img src={require("../../assets/img/microsoft-certified-fundamentals-badge.png")} style={{ height: "150px" }} />
+                                    <img src={require("../../assets/img/microsoft-certified-fundamentals-badge.png")} style={{ height: "150px" }} alt="Microsoft Azure Fundamentals badge" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickScrumMaster} className="pointer text-center hover-context">
                                     <h3>Professional Scrum Master I</h3>
-                                    <img src={require("../../assets/img/BADGES_FINAL_PSM-I_600.png")} style={{ height: "150px" }} />
+                                    <img src={require("../../assets/img/BADGES_FINAL_PSM-I_600.png")} style={{ height: "150px" }} alt="Professional Scrum Master I badge" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickScrumMaster2} className="pointer text-center hover-context">
                                     <h3>Professional Scrum Master II</h3>
-                                    <img src={require("../../assets/img/professional-scrum-master-ii-psm-ii.png")} style={{ height: "150px" }} />
+                                    <img src={require("../../assets/img/professional-scrum-master-ii-psm-ii.png")} style={{ height: "150px" }} alt="Professional Scrum Master II badge" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickPSD1} className="pointer text-center hover-context">
                                     <h3>Professional Scrum Developer I</h3>
-                                    <img src={require("../../assets/img/professional-scrum-developer-i-psd-i.png")} style={{ height: "150px" }} />
+                                    <img src={require("../../assets/img/professional-scrum-developer-i-psd-i.png")} style={{ height: "150px" }} alt="Professional Scrum Developer I badge" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickPSK1} className="pointer text-center hover-context">
                                     <h3>Professional Scrum with Kanban I</h3>
-                                    <img src={require("../../assets/img/professional-scrum-kanban-i-psk-i.png")} style={{ height: "150px" }} />
+                                    <img src={require("../../assets/img/professional-scrum-kanban-i-psk-i.png")} style={{ height: "150px" }} alt="Professional Scrum with Kanban I badge" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickGoogleProjectManagementCertificate} className="pointer text-center hover-context">
                                     <h3>Google Project Management</h3>
-                                    <img src={require("../../assets/img/google-project-management-certificate.png")} style={{ height: "150px" }} />
+                                    <img src={require("../../assets/img/google-project-management-certificate.png")} style={{ height: "150px" }} alt="Google Project Management certificate" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickStrategicManagementCertificate} className="pointer text-center hover-context">
                                     <h4>Strategic Leadership and Management</h4>
-                                    <img src={require("../../assets/img/Illinois_blue-background2.png")} style={{ height: "150px" }} />
+                                    <img src={require("../../assets/img/Illinois_blue-background2.png")} style={{ height: "150px" }} alt="Strategic Leadership and Management certificate" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickCorporateStrategy} className="pointer text-center hover-context">
                                     <h3>Corporate Strategy</h3>
-                                    <img src={require("../../assets/img/Illinois_blue-background2.png")} style={{ height: "150px" }} />
+                                    <img src={require("../../assets/img/Illinois_blue-background2.png")} style={{ height: "150px" }} alt="Corporate Strategy certificate" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickTeamLeadership} className="pointer text-center hover-context">
                                     <h3>Team Leadership</h3>
-                                    <img src={require("../../assets/img/GoSkillsBadge.png")} style={{ height: "150px" }} />
+                                    <img src={require("../../assets/img/GoSkillsBadge.png")} style={{ height: "150px" }} alt="Team Leadership certificate" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={opswatAcademyDoShow} data-toggle="modal" data-target="#portfolioModal7" className="pointer text-center hover-context">
                                     <h3>OPSWAT Academy (8)</h3>
-                                    <img src={require("../../assets/img/owpa.png")} style={{ height: "150px" }} />
+                                    <img src={require("../../assets/img/owpa.png")} style={{ height: "150px" }} alt="OPSWAT Academy Web-Traffic Protection badge" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickSoftwareDevelopmentLifecycle} className="pointer text-center hover-context">
                                     <h3>Software Development Lifecycle</h3>
-                                    <img src={require("../../assets/img/FB-GoldM-maroon.png")} style={{ height: "150px" }} />
+                                    <img src={require("../../assets/img/FB-GoldM-maroon.png")} style={{ height: "150px" }} alt="Software Development Lifecycle certificate" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickCybersecurityForEveryone} className="pointer text-center hover-context">
                                     <h3>Cybersecurity for Everyone</h3>
-                                    <img src={require("../../assets/img/umd_square_transparent.png")} style={{ height: "150px" }} />
+                                    <img src={require("../../assets/img/umd_square_transparent.png")} style={{ height: "150px" }} alt="Cybersecurity for Everyone certificate" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickCybersecurityITFundamentalsSpecialization} className="pointer text-center hover-context">
                                     <h3>IT Fundamentals for Cybersecurity</h3>
-                                    <img src={require("../../assets/img/IT_Fund_for_Cyber_Specialist.png")} style={{ height: "150px" }} />
+                                    <img src={require("../../assets/img/IT_Fund_for_Cyber_Specialist.png")} style={{ height: "150px" }} alt="IT Fundamentals for Cybersecurity certificate" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-4">
                                 <div onClick={clickGoogleStoreCertificate} className="pointer text-center hover-context">
                                     <h3>Google Play Store Listing</h3>
-                                    <img src={require("../../assets/img/Google_Play_Store_Listing_Certificate.png")} style={{ height: "150px" }} />
+                                    <img src={require("../../assets/img/Google_Play_Store_Listing_Certificate.png")} style={{ height: "150px" }} alt="Google Play Store Listing certificate" />
                                 </div>
                             </div>
                         </div>

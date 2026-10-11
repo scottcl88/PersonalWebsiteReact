@@ -27,7 +27,7 @@ function Home() {
         <div className="home">
             <header className="masthead bg-primary text-white text-center" id="page-top">
                 <div className="container d-flex align-items-center flex-column">
-                    <img className="masthead-avatar mb-5" src={require("../../assets/img/ProfilePic2.png")} alt="" />
+                    <img className="masthead-avatar mb-5" src={require("../../assets/img/ProfilePic2.png")} alt="Scott Lewis" />
                     <h1 className="masthead-heading text-uppercase mb-0">Scott Lewis</h1>
                     <div className="divider-custom divider-light">
                         <div className="divider-custom-line"></div>
@@ -51,7 +51,7 @@ function Home() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid sharkTooth-img" style={{ marginLeft: "" }} src={require("../../assets/img/portfolio/sharkToothTracker.png")} alt="" />
+                                <img className="img-fluid sharkTooth-img" style={{ marginLeft: "" }} src={require("../../assets/img/portfolio/sharkToothTracker.png")} alt="Shark Tooth Tracker" />
                             </div>
                             <h5 className="text-center mb-0">Shark Tooth Tracker</h5>
                         </div>
@@ -60,7 +60,7 @@ function Home() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid plateMania-img" src={require("../../assets/img/portfolio/LicensePlateMania_180px.png")} alt="" />
+                                <img className="img-fluid plateMania-img" src={require("../../assets/img/portfolio/LicensePlateMania_180px.png")} alt="License Plate Mania" />
                             </div>
                             <h5 className="text-center mb-0">License Plate Mania</h5>
                         </div>
@@ -69,7 +69,7 @@ function Home() {
                                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-search fa-3x"></i></div>
                                 </div>
-                                <img className="img-fluid portfolio-img" style={{ height: "100px", marginLeft: "" }} src={require("../../assets/img/portfolio/logo.svg").default} alt="" />
+                                <img className="img-fluid portfolio-img" style={{ height: "100px", marginLeft: "" }} src={require("../../assets/img/portfolio/logo.svg").default} alt="Personal Website" />
                             </div>
                             <h5 className="text-center mb-0">Portfolio</h5>
                         </div>

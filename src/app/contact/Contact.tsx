@@ -36,8 +36,7 @@ class Contact extends React.Component {
         let headers = { 'Content-Type': 'application/json', 'x-functions-key': 'Vv4ApfIJJbMiVsUKRJMVD-A8OUuHlvzkuiWB-56iO-LUAzFum52-Hg==' };
         axios.post("https://scottcl-emailfunction.azurewebsites.net/api/SendEmail", request, { headers: headers }).then(res => {
             this.setState({ showSuccessToast: true });
-        }).catch(err => {
-            console.error("Failed to submit form: ", err);
+        }).catch(() => {
             this.setState({ showErrorToast: true });
         }).finally(() => {
             this.setState({ disableButton: false });

@@ -4,13 +4,6 @@ object-assign
 @license MIT
 */
 
-/* @license
-Papa Parse
-v5.4.1
-https://github.com/mholt/PapaParse
-License: MIT
-*/
-
 /*!
     * Start Bootstrap - Freelancer v6.0.5 (https://startbootstrap.com/theme/freelancer)
     * Copyright 2013-2020 Start Bootstrap
