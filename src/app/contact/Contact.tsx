@@ -33,7 +33,14 @@ class Contact extends React.Component {
             Subject: this.state?.subject,
             Message: this.state?.message
         };
-        let headers = { 'Content-Type': 'application/json', 'x-functions-key': 'Vv4ApfIJJbMiVsUKRJMVD-A8OUuHlvzkuiWB-56iO-LUAzFum52-Hg==' };
+        // The function key is injected at build time via REACT_APP_EMAIL_FUNCTION_KEY.
+        // It must never be hardcoded: this file is bundled into public static assets,
+        // so any literal here is served to every visitor.
+        const emailFunctionKey = process.env.REACT_APP_EMAIL_FUNCTION_KEY;
+        const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+        if (emailFunctionKey) {
+            headers['x-functions-key'] = emailFunctionKey;
+        }
         axios.post("https://scottcl-emailfunction.azurewebsites.net/api/SendEmail", request, { headers: headers }).then(res => {
             this.setState({ showSuccessToast: true });
         }).catch(() => {
