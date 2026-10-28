@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react';
 import { Toast } from 'react-bootstrap';
 
@@ -26,10 +27,27 @@ class Contact extends React.Component {
             return;
         }
         this.setState({ disableButton: true });
-        const subject = encodeURIComponent(this.state?.subject || '');
-        const body = encodeURIComponent(`Name: ${this.state?.name}\n\n${this.state?.message}`);
-        window.location.href = `mailto:scott@scottcl.com?subject=${subject}&body=${body}`;
-        this.setState({ showSuccessToast: true, disableButton: false });
+        var request = {
+            FromEmail: this.state?.email,
+            Name: this.state?.name,
+            Subject: this.state?.subject,
+            Message: this.state?.message
+        };
+        // The function key is injected at build time via VITE_EMAIL_FUNCTION_KEY (was REACT_APP_EMAIL_FUNCTION_KEY under CRA).
+        // It must never be hardcoded: this file is bundled into public static assets, so any literal is served to every visitor.
+        // (process.env does not exist in a Vite browser build; import.meta.env is the replacement.)
+        const emailFunctionKey = (import.meta as any).env?.VITE_EMAIL_FUNCTION_KEY;
+        const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+        if (emailFunctionKey) {
+            headers['x-functions-key'] = emailFunctionKey;
+        }
+        axios.post("https://scottcl-emailfunction.azurewebsites.net/api/SendEmail", request, { headers: headers }).then(() => {
+            this.setState({ showSuccessToast: true });
+        }).catch(() => {
+            this.setState({ showErrorToast: true });
+        }).finally(() => {
+            this.setState({ disableButton: false });
+        });
     }
     render() {
         return (
