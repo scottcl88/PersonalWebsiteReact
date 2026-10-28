@@ -45,6 +45,8 @@ import jQuery from 'jquery';
   setTimeout(() => {
     
   var navbarCollapse = function() {
+    // #mainNav is absent on some routes/states; offset() on an empty set is undefined and would throw every scroll.
+    if (!$("#mainNav").length) return;
     if ($("#mainNav").offset().top > 100) {
       $("#mainNav").addClass("navbar-shrink");
     } else {
