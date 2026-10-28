@@ -1,15 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './app/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from "react-router-dom";
 
-ReactDOM.render(
-    <Router  basename="/">
-      <App />
-    </Router>,
-  document.getElementById('root')
+const container = document.getElementById('root');
+if (!container) throw new Error('Root element not found');
+
+const root = createRoot(container);
+root.render(
+  <Router basename="/">
+    <App />
+  </Router>
 );
 
 // If you want to start measuring performance in your app, pass a function

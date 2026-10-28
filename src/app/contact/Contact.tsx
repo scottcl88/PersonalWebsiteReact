@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React from 'react';
 import { Toast } from 'react-bootstrap';
 
@@ -27,27 +26,10 @@ class Contact extends React.Component {
             return;
         }
         this.setState({ disableButton: true });
-        var request = {
-            FromEmail: this.state?.email,
-            Name: this.state?.name,
-            Subject: this.state?.subject,
-            Message: this.state?.message
-        };
-        // The function key is injected at build time via REACT_APP_EMAIL_FUNCTION_KEY.
-        // It must never be hardcoded: this file is bundled into public static assets,
-        // so any literal here is served to every visitor.
-        const emailFunctionKey = process.env.REACT_APP_EMAIL_FUNCTION_KEY;
-        const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-        if (emailFunctionKey) {
-            headers['x-functions-key'] = emailFunctionKey;
-        }
-        axios.post("https://scottcl-emailfunction.azurewebsites.net/api/SendEmail", request, { headers: headers }).then(res => {
-            this.setState({ showSuccessToast: true });
-        }).catch(() => {
-            this.setState({ showErrorToast: true });
-        }).finally(() => {
-            this.setState({ disableButton: false });
-        });
+        const subject = encodeURIComponent(this.state?.subject || '');
+        const body = encodeURIComponent(`Name: ${this.state?.name}\n\n${this.state?.message}`);
+        window.location.href = `mailto:scott@scottcl.com?subject=${subject}&body=${body}`;
+        this.setState({ showSuccessToast: true, disableButton: false });
     }
     render() {
         return (
