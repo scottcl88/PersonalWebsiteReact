@@ -1,13 +1,15 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { afterEach, beforeEach, expect, test, vi } from 'vitest';
+import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import App from './App';
 
 beforeEach(() => {
-  jest.spyOn(window, 'scrollTo').mockImplementation(() => {});
+  vi.spyOn(window, 'scrollTo').mockImplementation(() => {});
 });
 
 afterEach(() => {
-  jest.restoreAllMocks();
+  cleanup();
+  vi.restoreAllMocks();
 });
 
 test('renders the home page inside its router', () => {
@@ -22,7 +24,7 @@ test('renders the home page inside its router', () => {
 });
 
 test('scrolls to the fragment after its route renders', () => {
-  jest.spyOn(HTMLElement.prototype, 'getBoundingClientRect').mockReturnValue({ top: 200 });
+  vi.spyOn(HTMLElement.prototype, 'getBoundingClientRect').mockReturnValue({ top: 200 });
 
   render(
     <MemoryRouter initialEntries={['/portfolio#certifications']}>
